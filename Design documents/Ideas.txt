@@ -1,0 +1,17 @@
+- Quan mates a un enemic fas un dash cap a ell
+	- Si hi ha un enemic pel mig te'l carregues
+
+- Tu protegeixes un objectiu que esta al centre
+
+UI
+- Tens un combo (temps sense errors)
+- Tens un numero de rondes
+
+Moviments enemics
+- Espirals al voltant del centre
+- Va rebotant als bordes de la pantalla
+- Boss:Son cinc peces
+	Si les fas en ordre d'estrella el mates amb ritual satanic
+
+Cosas a buscar:
+- Noms d'un bestiari de dimonis
