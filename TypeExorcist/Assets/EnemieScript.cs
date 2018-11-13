@@ -7,6 +7,8 @@ public class EnemieScript : MonoBehaviour {
 	public
 	string enemyName= "hola";
     GameObject target;
+    public GameObject text;
+
     private Rigidbody2D rb;
     // Use this for initialization
     void Start () {
