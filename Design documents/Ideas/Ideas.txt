@@ -7,6 +7,10 @@ UI
 - Tens un combo (temps sense errors)
 - Tens un numero de rondes
 
+Controls
+- Space: Show reference
+- Enter: Unfocus target
+
 Moviments enemics
 - Espirals al voltant del centre
 - Va rebotant als bordes de la pantalla
