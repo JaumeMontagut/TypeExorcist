@@ -7,19 +7,24 @@ public class EnemyManager : MonoBehaviour {
     public GameObject enemyPrefab;
     private List<GameObject> enemies;
 
+    private void Start()
+    {
+        enemies = new List<GameObject>();
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            position.z = 0;
-            CreateEnemy(position);
+            Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            enemyPos.z = 0;
+            CreateEnemy(enemyPos);
         }
     }
 
-    void CreateEnemy(Vector3 position)
+    void CreateEnemy(Vector3 enemyPos)
     {
-        GameObject newEnemy = Instantiate(enemyPrefab, position, Quaternion.identity);
+        GameObject newEnemy = Instantiate(enemyPrefab, enemyPos, Quaternion.identity);
         enemies.Add(newEnemy);
     }
 
