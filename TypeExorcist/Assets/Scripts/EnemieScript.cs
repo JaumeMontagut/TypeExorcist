@@ -1,25 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemieScript : MonoBehaviour {
 
-	public
-	string enemyName= "hola";
-    GameObject target;
-    public GameObject text;
+	public string enemyName= "hola";
+    public TextMeshProUGUI text;
 
+    private GameObject player;
     private Rigidbody2D rb;
-    // Use this for initialization
+
     void Start () {
-        target = GameObject.FindGameObjectWithTag("player");
+        player = GameObject.FindGameObjectWithTag("player");
         rb = GetComponent<Rigidbody2D>();
-        Vector2 vec = new Vector2(target.transform.position.x-rb.position.x , target.transform.position.y - rb.position.y);
+        Vector2 vec = new Vector2(player.transform.position.x-rb.position.x , player.transform.position.y - rb.position.y);
         vec.Normalize();
         rb.velocity = vec;
+        text.text = "Hello";
     }
-	
-	// Update is called once per frame
+
 	void Update () {
 		
 	}
