@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
 
     public GameObject enemyPrefab;
+    private List<GameObject> enemies;
 
     void Update()
     {
@@ -12,7 +13,14 @@ public class EnemyManager : MonoBehaviour {
         {
             Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             position.z = 0;
-            Instantiate(enemyPrefab, position, Quaternion.identity);
+            CreateEnemy(position);
         }
     }
+
+    void CreateEnemy(Vector3 position)
+    {
+        GameObject newEnemy = Instantiate(enemyPrefab, position, Quaternion.identity);
+        enemies.Add(newEnemy);
+    }
+
 }
