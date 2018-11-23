@@ -113,63 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &38073167
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4888968100359392, guid: e16965e333d4a334abb598cc253cf49e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 6.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888968100359392, guid: e16965e333d4a334abb598cc253cf49e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888968100359392, guid: e16965e333d4a334abb598cc253cf49e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888968100359392, guid: e16965e333d4a334abb598cc253cf49e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888968100359392, guid: e16965e333d4a334abb598cc253cf49e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888968100359392, guid: e16965e333d4a334abb598cc253cf49e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888968100359392, guid: e16965e333d4a334abb598cc253cf49e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888968100359392, guid: e16965e333d4a334abb598cc253cf49e, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 223239431447753540, guid: e16965e333d4a334abb598cc253cf49e,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 376425255}
-    - target: {fileID: 114676495862571604, guid: e16965e333d4a334abb598cc253cf49e,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114676495862571604, guid: e16965e333d4a334abb598cc253cf49e,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e16965e333d4a334abb598cc253cf49e, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &311815185
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,11 +256,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &527939327 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1493599337553198, guid: e16965e333d4a334abb598cc253cf49e,
-    type: 2}
-  m_PrefabInternal: {fileID: 38073167}
 --- !u!1 &732389159
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +266,7 @@ GameObject:
   - component: {fileID: 732389162}
   - component: {fileID: 732389161}
   - component: {fileID: 732389160}
+  - component: {fileID: 732389163}
   m_Layer: 0
   m_Name: Character
   m_TagString: player
@@ -411,6 +350,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &732389163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732389159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49a571a44dde2d4ebd1fb9a52408594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &734225157
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0c1d98b9c69904686674a934818f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 527939327}
+  enemyPrefab: {fileID: 1493599337553198, guid: e16965e333d4a334abb598cc253cf49e,
+    type: 2}
 --- !u!4 &734225159
 Transform:
   m_ObjectHideFlags: 0
@@ -450,5 +401,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

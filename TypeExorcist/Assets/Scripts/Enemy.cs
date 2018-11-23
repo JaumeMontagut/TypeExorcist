@@ -6,7 +6,7 @@ using TMPro;
 public class Enemy : MonoBehaviour
 {
 
-    public string enemyName = "hola";
+    public string enemyName;
     public TextMeshProUGUI text;
 
     private GameObject player;
@@ -16,14 +16,34 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("player");
         rb = GetComponent<Rigidbody2D>();
+        UpdateName();
+    }
+
+    public void Update()
+    {
+        MoveToPlayer();
+    }
+
+    private void MoveToPlayer()
+    {
         Vector2 vec = new Vector2(player.transform.position.x - rb.position.x, player.transform.position.y - rb.position.y);
         vec.Normalize();
         rb.velocity = vec;
-        text.text = "Hello";
     }
 
-    void Update()
+    public bool EnemyDeath()
     {
-
+        if (enemyName.Length == 0)
+        {
+            Destroy(this.gameObject);
+            return true;
+        }
+        return false;
     }
+
+    public void UpdateName()
+    {
+        text.text = enemyName;
+    }
+
 };

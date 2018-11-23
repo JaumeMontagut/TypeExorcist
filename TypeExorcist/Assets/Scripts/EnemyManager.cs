@@ -5,11 +5,11 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
 
     public GameObject enemyPrefab;
-    private List<GameObject> enemies;
+    private List<Enemy> enemies;
 
     private void Start()
     {
-        enemies = new List<GameObject>();
+        enemies = new List<Enemy>();
     }
 
     void Update()
@@ -24,8 +24,26 @@ public class EnemyManager : MonoBehaviour {
 
     void CreateEnemy(Vector3 enemyPos)
     {
-        GameObject newEnemy = Instantiate(enemyPrefab, enemyPos, Quaternion.identity);
+        Enemy newEnemy = Instantiate(enemyPrefab, enemyPos, Quaternion.identity).GetComponent<Enemy>();
         enemies.Add(newEnemy);
+    }
+
+    //Returns the closest enemy to the center of the screen that starts with the specified letter
+    public Enemy GetCloserEnemyWithName (KeyCode firstLetter)
+    {
+        Enemy closerEnemy = null;
+
+        foreach (Enemy enemy in enemies)
+        {
+            if (enemy.enemyName.StartsWith(firstLetter.ToString()))
+            {
+                if (closerEnemy == null || (enemy.transform.position.sqrMagnitude < closerEnemy.transform.position.sqrMagnitude))
+                {
+                    closerEnemy = enemy;
+                }
+            }
+        }
+        return closerEnemy;
     }
 
 }
