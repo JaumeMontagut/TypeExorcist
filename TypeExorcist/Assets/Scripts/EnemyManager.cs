@@ -29,13 +29,13 @@ public class EnemyManager : MonoBehaviour {
     }
 
     //Returns the closest enemy to the center of the screen that starts with the specified letter
-    public Enemy GetCloserEnemyWithName (KeyCode firstLetter)
+    public Enemy GetCloserEnemyWithName (string firstLetter)
     {
         Enemy closerEnemy = null;
 
         foreach (Enemy enemy in enemies)
         {
-            if (enemy.enemyName.StartsWith(firstLetter.ToString()))
+            if (enemy.enemyName.StartsWith(firstLetter))
             {
                 if (closerEnemy == null || (enemy.transform.position.sqrMagnitude < closerEnemy.transform.position.sqrMagnitude))
                 {

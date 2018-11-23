@@ -18,12 +18,12 @@ public class PlayerController : MonoBehaviour {
         {
             if (Input.GetKeyDown(currKey))
             {
-                TypeLetter(currKey);
+                TypeLetter(currKey.ToString().ToLower());
             }
         }
     }
 
-    private void TypeLetter(KeyCode key)
+    private void TypeLetter(string key)
     {
         if (focusedEnemy == null)
         {
@@ -32,15 +32,15 @@ public class PlayerController : MonoBehaviour {
         }
         if (focusedEnemy != null)
         {
-            //if (focusedEnemy.enemyName[0] == key.ToString()[0])
-            //{
+            if (key[0] == focusedEnemy.enemyName[0])
+            {
                 focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
                 focusedEnemy.UpdateName();
                 if (focusedEnemy.EnemyDeath())
                 {
                     focusedEnemy = null;
                 }
-            //}
+            }
         }
     }
 }
