@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour {
 
     private Enemy focusedEnemy = null;
     private EnemyManager enemyManger = null;
+    private Animator playerAnim;
 
     private void Start()
     {
         enemyManger = FindObjectOfType<EnemyManager>();
+        playerAnim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour {
             focusedEnemy.UpdateName();
             if (focusedEnemy.EnemyDeath())
             {
+                playerAnim.SetTrigger("attack");
                 focusedEnemy = null;
             }
         }

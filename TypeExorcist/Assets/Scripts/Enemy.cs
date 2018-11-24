@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
     {
         if (enemyName.Length == 0)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return true;
         }
         return false;
