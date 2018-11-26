@@ -103,26 +103,31 @@ public class PlayerController : MonoBehaviour {
             Mistake();
         }
         //If it found an enemy
-        else if (key[0] == focusedEnemy.enemyName[0])
-        {
-            //And you typed its letter correctly
-            focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
-            focusedEnemy.UpdateName();
-            scoreManager.Score++;
-            if (focusedEnemy.CheckEnemyDeath())
-            {
-                scoreManager.Combo++;
-                anim.SetTrigger("attack");
-                StartMoving(focusedEnemy.transform.position);
-                focusedEnemy.DestroyEnemy();
-                focusedEnemy = null;
-            }
-        }
         else
         {
             //And you didn't type its letter correctly
-            Mistake();
+            if (key[0] != focusedEnemy.enemyName[0])
+            {
+
+                Mistake();
+            }
+            //And you typed its letter correctly
+            else
+            {
+                focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
+                focusedEnemy.UpdateName();
+                scoreManager.Score++;
+                if (focusedEnemy.CheckEnemyDeath())
+                {
+                    scoreManager.Combo++;
+                    anim.SetTrigger("attack");
+                    StartMoving(focusedEnemy.transform.position);
+                    focusedEnemy.DestroyEnemy();
+                    focusedEnemy = null;
+                }
+            }
         }
+        
     }
 
     private void Mistake()
