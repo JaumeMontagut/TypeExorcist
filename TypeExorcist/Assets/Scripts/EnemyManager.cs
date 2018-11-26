@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
-    public GameObject enemyBasic;
-    public GameObject enemySquare;
-    public GameObject enemyCircle;
+    enum enemyIndex:int
+    {
+        TRIANGLE,
+        SQUARE,
+        CIRCLE
+    }
+
+    public List<GameObject> enemiesPrefabs;
     private List<Enemy> enemies;
 
     private void Start()
@@ -20,7 +25,7 @@ public class EnemyManager : MonoBehaviour {
         {
             Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             enemyPos.z = 0;
-            CreateEnemy(enemyPos, enemyBasic);
+            GenerateRandomEnemy();
         }
     }
 
@@ -53,6 +58,7 @@ public class EnemyManager : MonoBehaviour {
         Enemy generatedEnemy = null;
 
         int index = Random.Range(0, 100);
+        int enemyIndexType = -1;
         Vector3 position = new Vector3(0, 0, 0);
 
         int positionRandomX = Random.Range(1, Screen.width);
@@ -60,7 +66,21 @@ public class EnemyManager : MonoBehaviour {
 
         position.x = positionRandomX;
         position.y = positionRandomY;
+        if (index<33)
+        {
+            enemyIndexType = (int)enemyIndex.TRIANGLE;
+        }
+        if (index >= 33 && index< 67)
+        {
+            enemyIndexType = (int)enemyIndex.SQUARE;
+        }
+        if (index >= 67 && index <= 100)
+        {
+            enemyIndexType = (int)enemyIndex.CIRCLE;
+        }
 
-        CreateEnemy(position, enemyBasic);
+
+
+        CreateEnemy(position, enemiesPrefabs[enemyIndexType]);
     }
 }
