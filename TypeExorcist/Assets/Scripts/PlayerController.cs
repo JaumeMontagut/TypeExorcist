@@ -5,14 +5,35 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour {
 
+    //Player components
+    private Animator anim = null; 
+    private Rigidbody2D rb = null;
+
+    //Move to enemy
+    private float moveSpeed = 17.5f;
+    private Vector2 trgPos = new Vector2(0.0f, 0.0f);
+    private float stopDist = 0.1f;//The distance in which the player will stop moving to the enemy
+
+    //References to other entities
     private Enemy focusedEnemy = null;
     private EnemyManager enemyManger = null;
-    private Animator playerAnim;
 
     private void Start()
     {
+        anim = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+
         enemyManger = FindObjectOfType<EnemyManager>();
-        playerAnim = GetComponentInChildren<Animator>();
+    }
+
+    private void FixedUpdate()
+    {
+        //Stop moving when it reaches a point
+        if (rb.velocity != Vector2.zero && Utilities.DistanceSquared(transform.position, trgPos) <= stopDist)
+        {
+            Debug.Log("Src Pos" + transform.position + ", Trg Pos" + trgPos);
+            StopMoving();
+        }
     }
 
     private void Update()
@@ -61,11 +82,25 @@ public class PlayerController : MonoBehaviour {
         {
             focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
             focusedEnemy.UpdateName();
-            if (focusedEnemy.EnemyDeath())
+            if (focusedEnemy.CheckEnemyDeath())
             {
-                playerAnim.SetTrigger("attack");
+                anim.SetTrigger("attack");
+                StartMoving(focusedEnemy.transform.position);
+                focusedEnemy.DestroyEnemy();
                 focusedEnemy = null;
             }
         }
+    }
+
+    private void StartMoving(Vector2 trgPos)
+    {
+        this.trgPos = trgPos;
+        Vector2 dir = trgPos - new Vector2(transform.position.x, transform.position.y);
+        rb.velocity = dir.normalized * moveSpeed;
+    }
+
+    private void StopMoving()
+    {
+        rb.velocity = new Vector2(0.0f, 0.0f);
     }
 }

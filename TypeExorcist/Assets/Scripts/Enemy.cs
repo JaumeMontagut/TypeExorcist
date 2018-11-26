@@ -31,14 +31,14 @@ public class Enemy : MonoBehaviour
         rb.velocity = vec;
     }
 
-    public bool EnemyDeath()
+    public bool CheckEnemyDeath()
     {
-        if (enemyName.Length == 0)
-        {
-            Destroy(gameObject);
-            return true;
-        }
-        return false;
+        return (enemyName.Length == 0);
+    }
+
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 
     public void UpdateName()
