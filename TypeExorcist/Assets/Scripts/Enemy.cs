@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("player");
+        player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         UpdateName();
     }
@@ -44,6 +44,15 @@ public class Enemy : MonoBehaviour
     public void UpdateName()
     {
         text.text = enemyName;
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        //If the player hits the enemy while moving, it kills it
+        if (collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<Rigidbody2D>().velocity != Vector2.zero)
+        {
+            DestroyEnemy();
+        }
     }
 
 };

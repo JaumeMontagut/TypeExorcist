@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D rb = null;
 
     //Move to enemy
-    private float moveSpeed = 17.5f;
+    public float moveSpeed;
     private Vector2 trgPos = new Vector2(0.0f, 0.0f);
     private float stopDist = 0.1f;//The distance in which the player will stop moving to the enemy
 
@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour {
         //Stop moving when it reaches a point
         if (rb.velocity != Vector2.zero && Utilities.DistanceSquared(transform.position, trgPos) <= stopDist)
         {
-            Debug.Log("Src Pos" + transform.position + ", Trg Pos" + trgPos);
             StopMoving();
         }
     }
