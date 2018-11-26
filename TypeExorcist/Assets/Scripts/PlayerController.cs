@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     //References to other entities
     private Enemy focusedEnemy = null;
     private EnemyManager enemyManger = null;
+    private ScoreManager scoreManager = null;
 
     private void Start()
     {
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
 
         enemyManger = FindObjectOfType<EnemyManager>();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void FixedUpdate()
@@ -37,17 +39,23 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
+        KeyCode currKey;
         if (Input.GetKeyDown(KeyCode.Return))
         {
             UnfocusEnemy();
         }
 
-        for (KeyCode currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
+        for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
         {
             if (Input.GetKeyDown(currKey))
             {
                 TypeLetter(currKey.ToString().ToLower());
             }
+        }
+        currKey = KeyCode.Space;
+        if (Input.GetKeyDown(currKey))
+        {
+            TypeLetter(" ");
         }
     }
 
@@ -83,22 +91,48 @@ public class PlayerController : MonoBehaviour {
 
     private void TypeLetter(string key)
     {
+        //Focus enemy if there was none focused already
         if (focusedEnemy == null)
         {
             FocusEnemy(enemyManger.GetCloserEnemyWithName(key, transform.position));
         }
-        if (focusedEnemy != null && key[0] == focusedEnemy.enemyName[0])
+
+        //If it didn't find an enemy, you made a typing mistake
+        if (focusedEnemy == null)
         {
-            focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
-            focusedEnemy.UpdateName();
-            if (focusedEnemy.CheckEnemyDeath())
+            Mistake();
+        }
+        //If it found an enemy
+        else
+        {
+            //And you didn't type its letter correctly
+            if (key[0] != focusedEnemy.enemyName[0])
             {
-                anim.SetTrigger("attack");
-                StartMoving(focusedEnemy.transform.position);
-                focusedEnemy.DestroyEnemy();
-                focusedEnemy = null;
+
+                Mistake();
+            }
+            //And you typed its letter correctly
+            else
+            {
+                focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
+                focusedEnemy.UpdateName();
+                scoreManager.Score++;
+                if (focusedEnemy.CheckEnemyDeath())
+                {
+                    scoreManager.Combo++;
+                    anim.SetTrigger("attack");
+                    StartMoving(focusedEnemy.transform.position);
+                    focusedEnemy.DestroyEnemy();
+                    focusedEnemy = null;
+                }
             }
         }
+        
+    }
+
+    private void Mistake()
+    {
+        scoreManager.Combo = 1;
     }
 
     private void StartMoving(Vector2 trgPos)

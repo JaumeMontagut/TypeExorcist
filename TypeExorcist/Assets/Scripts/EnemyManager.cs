@@ -11,12 +11,18 @@ public class EnemyManager : MonoBehaviour {
         CIRCLE
     }
 
+    private List<string> enemyNames;
     public List<GameObject> enemiesPrefabs;
     private List<Enemy> enemies;
 
     private void Start()
     {
         enemies = new List<Enemy>();
+        enemyNames = new List<string>();
+        enemyNames.Add("holy water");
+        enemyNames.Add("bible");
+        enemyNames.Add("randomlygeneratedstring a");
+        enemyNames.Add("randomlygeneratedstring b");
     }
 
     void Update()
@@ -29,9 +35,10 @@ public class EnemyManager : MonoBehaviour {
         }
     }
 
-    void CreateEnemy(Vector3 enemyPos,GameObject enemyPrefab)
+    void CreateEnemy(Vector3 enemyPos,GameObject enemyPrefab,string enemyName)
     {
         Enemy newEnemy = Instantiate(enemyPrefab, enemyPos, Quaternion.identity).GetComponent<Enemy>();
+        newEnemy.enemyName = enemyName;
         enemies.Add(newEnemy);
     }
 
@@ -55,7 +62,6 @@ public class EnemyManager : MonoBehaviour {
     }
     public void GenerateRandomEnemy()
     {
-        Enemy generatedEnemy = null;
 
         int index = Random.Range(0, 100);
         int enemyIndexType = -1;
@@ -101,6 +107,6 @@ public class EnemyManager : MonoBehaviour {
 
 
 
-        CreateEnemy(position, enemiesPrefabs[enemyIndexType]);
+        CreateEnemy(position, enemiesPrefabs[enemyIndexType],enemyNames[Random.Range(0, 4)]);
     }
 }
