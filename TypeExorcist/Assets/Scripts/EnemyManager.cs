@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
-    public GameObject enemyPrefab;
+    public GameObject enemyBasic;
+    public GameObject enemySquare;
+    public GameObject enemyCircle;
     private List<Enemy> enemies;
 
     private void Start()
@@ -18,11 +20,11 @@ public class EnemyManager : MonoBehaviour {
         {
             Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             enemyPos.z = 0;
-            CreateEnemy(enemyPos);
+            CreateEnemy(enemyPos, enemyBasic);
         }
     }
 
-    void CreateEnemy(Vector3 enemyPos)
+    void CreateEnemy(Vector3 enemyPos,GameObject enemyPrefab)
     {
         Enemy newEnemy = Instantiate(enemyPrefab, enemyPos, Quaternion.identity).GetComponent<Enemy>();
         enemies.Add(newEnemy);
@@ -46,5 +48,19 @@ public class EnemyManager : MonoBehaviour {
         }
         return closerEnemy;
     }
+    public void GenerateRandomEnemy()
+    {
+        Enemy generatedEnemy = null;
 
+        int index = Random.Range(0, 100);
+        Vector3 position = new Vector3(0, 0, 0);
+
+        int positionRandomX = Random.Range(1, Screen.width);
+        int positionRandomY = Random.Range(1, Screen.height);
+
+        position.x = positionRandomX;
+        position.y = positionRandomY;
+
+        CreateEnemy(position, enemyBasic);
+    }
 }
