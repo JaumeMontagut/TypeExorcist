@@ -21,8 +21,8 @@ public class EnemyManager : MonoBehaviour {
         enemyNames = new List<string>();
         enemyNames.Add("holy water");
         enemyNames.Add("bible");
-        enemyNames.Add("randomlygeneratedstring1");
-        enemyNames.Add("randomlygeneratedstring2");
+        enemyNames.Add("randomlygeneratedstring a");
+        enemyNames.Add("randomlygeneratedstring b");
     }
 
     void Update()

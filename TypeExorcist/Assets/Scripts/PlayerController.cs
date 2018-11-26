@@ -54,9 +54,9 @@ public class PlayerController : MonoBehaviour {
         }
         currKey = KeyCode.Space;
         if (Input.GetKeyDown(currKey))
-            {
+        {
             TypeLetter(" ");
-             }
+        }
     }
 
     private void FocusEnemy(Enemy enemyToFocus)
@@ -91,12 +91,21 @@ public class PlayerController : MonoBehaviour {
 
     private void TypeLetter(string key)
     {
+        //Focus enemy if there was none focused already
         if (focusedEnemy == null)
         {
             FocusEnemy(enemyManger.GetCloserEnemyWithName(key, transform.position));
         }
-        if (focusedEnemy != null && key[0] == focusedEnemy.enemyName[0])
+
+        //If it didn't find an enemy, you made a typing mistake
+        if (focusedEnemy == null)
         {
+            Mistake();
+        }
+        //If it found an enemy
+        else if (key[0] == focusedEnemy.enemyName[0])
+        {
+            //And you typed its letter correctly
             focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
             focusedEnemy.UpdateName();
             scoreManager.Score++;
@@ -109,6 +118,16 @@ public class PlayerController : MonoBehaviour {
                 focusedEnemy = null;
             }
         }
+        else
+        {
+            //And you didn't type its letter correctly
+            Mistake();
+        }
+    }
+
+    private void Mistake()
+    {
+        scoreManager.Combo = 1;
     }
 
     private void StartMoving(Vector2 trgPos)

@@ -20,6 +20,10 @@ public class ScoreManager : MonoBehaviour {
         set
         {
             score = value;
+            if (score < 0)
+            {
+                score = 0;
+            }
             //Update score text
             scoreText.text = score.ToString();
         }
@@ -34,6 +38,10 @@ public class ScoreManager : MonoBehaviour {
         set
         {
             combo = value;
+            if (combo < 1)
+            {
+                combo = 1;
+            }
             //Update combo text
             comboText.text = "x" + combo.ToString();
         }
