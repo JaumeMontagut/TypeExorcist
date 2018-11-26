@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     //Move to enemy
     public float moveSpeed;
     private Vector2 trgPos = new Vector2(0.0f, 0.0f);
-    private float stopDist = 0.1f;//The distance in which the player will stop moving to the enemy
+    private const float stopDist = 0.1f;//The distance in which the player will stop moving to the enemy
 
     //References to other entities
     private Enemy focusedEnemy = null;
@@ -58,6 +58,15 @@ public class PlayerController : MonoBehaviour {
         {
             focusedEnemy.text.color = new Color(255, 255, 255, 255);
             //focusedEnemy.text.havePropertiesChanged = true;
+        }
+
+        if (focusedEnemy.transform.position.x < transform.position.x)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (focusedEnemy.transform.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
 
