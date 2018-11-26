@@ -37,18 +37,24 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
+        KeyCode currKey;
         if (Input.GetKeyDown(KeyCode.Return))
         {
             UnfocusEnemy();
         }
 
-        for (KeyCode currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
+        for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
         {
             if (Input.GetKeyDown(currKey))
             {
                 TypeLetter(currKey.ToString().ToLower());
             }
         }
+        currKey = KeyCode.Space;
+        if (Input.GetKeyDown(currKey))
+            {
+            TypeLetter(" ");
+             }
     }
 
     private void FocusEnemy(Enemy enemyToFocus)
