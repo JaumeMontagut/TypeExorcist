@@ -61,11 +61,31 @@ public class EnemyManager : MonoBehaviour {
         int enemyIndexType = -1;
         Vector3 position = new Vector3(0, 0, 0);
 
-        int positionRandomX = Random.Range(1, Screen.width);
-        int positionRandomY = Random.Range(1, Screen.height);
+        int startingPosition = Random.Range(1, 5);
 
-        position.x = positionRandomX;
-        position.y = positionRandomY;
+        switch (startingPosition)
+        {
+            case 1:
+                position.x = -9;
+                position.y = Random.Range(-5, 6); 
+                break;
+            case 2:
+                position.x = 9;
+                position.y = Random.Range(-5, 6);
+                break;
+            case 3:
+                position.y = -5;
+                position.x = Random.Range(-9, 10);
+                break;
+            case 4:
+                position.y = 5;
+                position.x = Random.Range(-9, 10);
+                break;
+
+            default:
+                break;
+        }
+        
         if (index<33)
         {
             enemyIndexType = (int)enemyIndex.TRIANGLE;
