@@ -29,7 +29,7 @@ public class EnemyManager : MonoBehaviour {
     }
 
     //Returns the closest enemy to the center of the screen that starts with the specified letter
-    public Enemy GetCloserEnemyWithName (string firstLetter)
+    public Enemy GetCloserEnemyWithName (string firstLetter, Vector2 point)
     {
         Enemy closerEnemy = null;
 
@@ -38,7 +38,7 @@ public class EnemyManager : MonoBehaviour {
             if (enemy.enemyName.StartsWith(firstLetter))
             {
                 //The position that is closer to the center wins
-                if (closerEnemy == null || Utilities.DistanceSquared(enemy.transform.position, Vector2.zero) < Utilities.DistanceSquared(closerEnemy.transform.position, Vector2.zero))
+                if (closerEnemy == null || Utilities.DistanceSquared(enemy.transform.position, point) < Utilities.DistanceSquared(closerEnemy.transform.position, point))
                 {
                     closerEnemy = enemy;
                 }

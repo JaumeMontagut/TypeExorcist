@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (focusedEnemy == null)
         {
-            FocusEnemy(enemyManger.GetCloserEnemyWithName(key));
+            FocusEnemy(enemyManger.GetCloserEnemyWithName(key, transform.position));
         }
         if (focusedEnemy != null && key[0] == focusedEnemy.enemyName[0])
         {
