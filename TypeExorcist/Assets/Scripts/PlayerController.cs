@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 
     //Move to enemy
     public float moveSpeed;
-    private Vector2 trgPos = new Vector2(0.0f, 0.0f);
+    private Vector2 trgPos = Vector2.zero;
     private const float stopDist = 0.1f;//The distance in which the player will stop moving to the enemy
 
     //References to other entities
