@@ -53,12 +53,13 @@ public class PlayerController : MonoBehaviour {
 
     private void FocusEnemy(Enemy enemyToFocus)
     {
-        focusedEnemy = enemyToFocus;
-        if (focusedEnemy != null)
+        if (enemyToFocus == null)
         {
-            focusedEnemy.text.color = new Color(255, 255, 255, 255);
-            //focusedEnemy.text.havePropertiesChanged = true;
+            return;
         }
+
+        focusedEnemy = enemyToFocus;
+        focusedEnemy.text.color = new Color(255, 255, 255, 255);
 
         if (focusedEnemy.transform.position.x < transform.position.x)
         {
