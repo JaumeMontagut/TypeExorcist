@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     //References to other entities
     private Enemy focusedEnemy = null;
     private EnemyManager enemyManger = null;
+    private ScoreManager scoreManager = null;
 
     private void Start()
     {
@@ -91,8 +92,10 @@ public class PlayerController : MonoBehaviour {
         {
             focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
             focusedEnemy.UpdateName();
+            scoreManager.Score++;
             if (focusedEnemy.CheckEnemyDeath())
             {
+                scoreManager.Combo++;
                 anim.SetTrigger("attack");
                 StartMoving(focusedEnemy.transform.position);
                 focusedEnemy.DestroyEnemy();
