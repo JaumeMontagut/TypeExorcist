@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
 
         enemyManger = FindObjectOfType<EnemyManager>();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void FixedUpdate()

@@ -35,7 +35,7 @@ public class ScoreManager : MonoBehaviour {
         {
             combo = value;
             //Update combo text
-            comboText.text = comboText.ToString();
+            comboText.text = "x" + combo.ToString();
         }
     }
 
