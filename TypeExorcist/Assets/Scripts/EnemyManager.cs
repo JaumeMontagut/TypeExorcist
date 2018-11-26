@@ -37,7 +37,8 @@ public class EnemyManager : MonoBehaviour {
         {
             if (enemy.enemyName.StartsWith(firstLetter))
             {
-                if (closerEnemy == null || (enemy.transform.position.sqrMagnitude < closerEnemy.transform.position.sqrMagnitude))
+                //The position that is closer to the center wins
+                if (closerEnemy == null || Utilities.DistanceSquared(enemy.transform.position, Vector2.zero) < Utilities.DistanceSquared(closerEnemy.transform.position, Vector2.zero))
                 {
                     closerEnemy = enemy;
                 }
