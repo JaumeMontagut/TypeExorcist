@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour {
         //Focus enemy if there was none focused already
         if (focusedEnemy == null)
         {
-            FocusEnemy(enemyManger.GetCloserEnemyWithName(key, transform.position));
+            FocusEnemy(enemyManger.GetCloserEnemyWithName(key, Vector2.zero));
         }
 
         //If it didn't find an enemy, you made a typing mistake
