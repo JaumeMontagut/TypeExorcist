@@ -8,7 +8,8 @@ public class EnemyManager : MonoBehaviour {
     {
         TRIANGLE,
         SQUARE,
-        CIRCLE
+        CIRCLE,
+		DEMONIC_ARCHANGEL
     }
 
     private List<string> enemyNames;
@@ -93,18 +94,23 @@ public class EnemyManager : MonoBehaviour {
                 break;
         }
         
-        if (index<33)
+        if (index<25)
         {
             enemyIndexType = (int)enemyIndex.TRIANGLE;
         }
-        if (index >= 33 && index< 67)
+        if (index >= 25 && index< 50)
         {
             enemyIndexType = (int)enemyIndex.SQUARE;
         }
-        if (index >= 67 && index <= 100)
+        if (index >= 50 && index <= 75)
         {
             enemyIndexType = (int)enemyIndex.CIRCLE;
         }
+		if (index >= 75 && index <= 100)
+		{
+			enemyIndexType = (int)enemyIndex.DEMONIC_ARCHANGEL;
+		}
+
 
 
 
