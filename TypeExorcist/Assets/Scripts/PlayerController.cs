@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class PlayerController : MonoBehaviour {
+    private bool death = false;
 
     //Player components
     private Animator anim = null; 
@@ -39,24 +40,32 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
-        KeyCode currKey;
-        if (Input.GetKeyDown(KeyCode.Return))
+        if(death==false)
         {
-            UnfocusEnemy();
-        }
+            KeyCode currKey;
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                UnfocusEnemy();
+            }
 
-        for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
-        {
+            for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
+            {
+                if (Input.GetKeyDown(currKey))
+                {
+                    TypeLetter(currKey.ToString().ToLower());
+                }
+            }
+            currKey = KeyCode.Space;
             if (Input.GetKeyDown(currKey))
             {
-                TypeLetter(currKey.ToString().ToLower());
+                TypeLetter(" ");
             }
         }
-        currKey = KeyCode.Space;
-        if (Input.GetKeyDown(currKey))
+        else
         {
-            TypeLetter(" ");
+
         }
+       
     }
 
     private void FocusEnemy(Enemy enemyToFocus)
@@ -67,7 +76,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         focusedEnemy = enemyToFocus;
-        focusedEnemy.text.color = new Color(255, 255, 255, 255);
+        focusedEnemy.text.color = new Color32(255, 255, 255, 255);
 
         if (focusedEnemy.transform.position.x < transform.position.x)
         {
@@ -83,8 +92,8 @@ public class PlayerController : MonoBehaviour {
     {
         if (focusedEnemy != null)
         {
-            focusedEnemy.text.color = new Color(128, 128, 128, 255);
-            //focusedEnemy.text.havePropertiesChanged = true;
+            focusedEnemy.text.color = new Color32(128, 128, 128, 255);
+            focusedEnemy.text.havePropertiesChanged = true;
             focusedEnemy = null;
         }
     }
