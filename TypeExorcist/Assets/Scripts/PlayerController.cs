@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour {
             {
                 focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
                 focusedEnemy.UpdateName();
-                scoreManager.Score++;
+                scoreManager.Score += 1 * scoreManager.Combo;
                 if (focusedEnemy.CheckEnemyDeath())
                 {
                     scoreManager.Combo++;

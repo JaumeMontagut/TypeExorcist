@@ -9,24 +9,29 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public TextMeshProUGUI text;
 
-    private GameObject player;
+    private Vector2 target;
     private Rigidbody2D rb;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         UpdateName();
     }
 
-    public void Update()
+    public void SetTarget(Vector2 target)
     {
-        MoveToPlayer();
+        this.target = target;
     }
 
-    private void MoveToPlayer()
+    public void Update()
     {
-        Vector2 vec = new Vector2(player.transform.position.x - rb.position.x, player.transform.position.y - rb.position.y);
+        MoveToTarget();
+    }
+
+    private void MoveToTarget()
+    {
+        Vector2 vec = target - new Vector2(transform.position.x, transform.position.y);
+
         vec.Normalize();
         rb.velocity = vec;
     }
