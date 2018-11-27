@@ -38,6 +38,7 @@ public class EnemyManager : MonoBehaviour {
     void CreateEnemy(Vector3 enemyPos,GameObject enemyPrefab,string enemyName)
     {
         Enemy newEnemy = Instantiate(enemyPrefab, enemyPos, Quaternion.identity).GetComponent<Enemy>();
+        newEnemy.SetTarget(Vector2.zero);//Move to the center
         newEnemy.enemyName = enemyName;
         enemies.Add(newEnemy);
     }
