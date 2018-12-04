@@ -25,6 +25,15 @@ public class EnemyManager : MonoBehaviour {
         enemyNames.Add("bible");
         enemyNames.Add("randomlygeneratedstring a");
         enemyNames.Add("randomlygeneratedstring b");
+        int totalChance = 0;
+        for (int i =0;i< enemiesSpawnRate.Count; i++)
+        {
+            totalChance += enemiesSpawnRate[i];
+        }
+        for (int i = 0; i < enemiesSpawnRate.Count; i++)
+        {
+            enemiesSpawnRate[i] = (enemiesSpawnRate[i] / totalChance) * 100;
+        }
     }
 
     void Update()
@@ -117,6 +126,6 @@ public class EnemyManager : MonoBehaviour {
 
 
 
-        CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, 4)]);
+        CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, enemyNames.Count + 1)]);
     }
 }
