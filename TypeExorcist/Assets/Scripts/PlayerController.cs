@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            particles.SetActive(true);
+            
         }
 
     }
@@ -158,16 +158,12 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector2(0.0f, 0.0f);
     }
-   private void OnTriggerEnter(Collider collision) 
+   private void OnTriggerEnter2D(Collider2D collision) 
     {
-
-        Debug.Log("ENTER ON TRIGGER");
-
         if(rb.velocity.magnitude==0 && death==false)
         {
-            
             death = true;
-     
+            particles.SetActive(true);
         }
     }
 }
