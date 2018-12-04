@@ -8,17 +8,27 @@ public class ScaleBGtoScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        sr = GetComponent<SpriteRenderer>();
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 
         float cameraHeight = Camera.main.orthographicSize * 2;
         Vector2 cameraSize = new Vector2(Camera.main.aspect * cameraHeight, cameraHeight);
-        Vector2 spriteSize = sr.sprite.bounds.size;
+        Vector2 spriteSize = spriteRenderer.sprite.bounds.size;
 
-        if (cameraSize.x >= cameraSize.y)
-        {
-            transform.localScale *= cameraSize.x / spriteSize.x;
-        }
-        else transform.localScale *= cameraSize.y / spriteSize.y;
+        //Vector2 scale = transform.localScale;
+        //if (cameraSize.x >= cameraSize.y)
+        //{ 
+        //    scale *= cameraSize.x / spriteSize.x;
+        //}
+        //else
+        //{ 
+        //    scale *= cameraSize.y / spriteSize.y;
+        //}
+
+        float scale = cameraSize.y / spriteSize.y;
+        Vector2 scaleVec = new Vector2(scale, scale);
+
+        transform.position = Vector2.zero; 
+        transform.localScale = scaleVec;
 
     }
 	
