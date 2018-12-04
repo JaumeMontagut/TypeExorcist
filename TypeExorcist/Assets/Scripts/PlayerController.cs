@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
     private bool death = false;
-
+    private GameObject particles = null;
     //Player components
-    private Animator anim = null; 
+    private Animator anim = null;
     private Rigidbody2D rb = null;
 
     //Move to enemy
@@ -27,6 +28,8 @@ public class PlayerController : MonoBehaviour {
 
         enemyManger = FindObjectOfType<EnemyManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
+        particles = transform.Find("Particle System").gameObject;
+
     }
 
     private void FixedUpdate()
@@ -40,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
-        if(death==false)
+        if (death == false)
         {
             KeyCode currKey;
             if (Input.GetKeyDown(KeyCode.Return))
@@ -63,9 +66,9 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {
-
+            
         }
-       
+
     }
 
     private void FocusEnemy(Enemy enemyToFocus)
@@ -136,7 +139,7 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
-        
+
     }
 
     private void Mistake()
@@ -154,5 +157,13 @@ public class PlayerController : MonoBehaviour {
     private void StopMoving()
     {
         rb.velocity = new Vector2(0.0f, 0.0f);
+    }
+   private void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if(rb.velocity.magnitude==0 && death==false)
+        {
+            death = true;
+            particles.SetActive(true);
+        }
     }
 }

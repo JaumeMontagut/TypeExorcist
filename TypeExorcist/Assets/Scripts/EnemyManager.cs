@@ -15,6 +15,7 @@ public class EnemyManager : MonoBehaviour {
 
     private List<string> enemyNames;
     public List<GameObject> enemiesPrefabs;
+    public List<int> enemiesSpawnRate;
     private List<Enemy> enemies;
 
     public Color inactiveColor;
@@ -72,35 +73,38 @@ public class EnemyManager : MonoBehaviour {
     public void GenerateRandomEnemy()
     {
 
-        int index = Random.Range(0, 100);
-        int enemyIndexType = -1;
+        int probabilityManager = Random.Range(0, 100);
+        int enemyIndex = -1;
         Vector3 position = new Vector3(0, 0, 0);
 
         int startingPosition = Random.Range(1, 5);
+        int cameraHeight = (int)Camera.main.orthographicSize;
+        int cameraWidth = (int)(Camera.main.orthographicSize * Camera.main.aspect);
 
         switch (startingPosition)
         {
             case 1:
-                position.x = -9;
-                position.y = Random.Range(-5, 6); 
+                position.x = -cameraWidth;
+                position.y = Random.Range(-cameraHeight, cameraHeight + 1); 
                 break;
             case 2:
-                position.x = 9;
-                position.y = Random.Range(-5, 6);
+                position.x = cameraWidth;
+                position.y = Random.Range(-cameraHeight, cameraHeight + 1);
                 break;
             case 3:
-                position.y = -5;
-                position.x = Random.Range(-9, 10);
+                position.y = -cameraHeight;
+                position.x = Random.Range(-cameraWidth, cameraWidth + 1);
                 break;
             case 4:
-                position.y = 5;
-                position.x = Random.Range(-9, 10);
+                position.y = cameraHeight;
+                position.x = Random.Range(-cameraWidth, cameraWidth + 1);
                 break;
 
             default:
                 break;
         }
         
+<<<<<<< HEAD
         if (index<25)
         {
             enemyIndexType = (int)enemyIndex.TRIANGLE;
@@ -119,5 +123,28 @@ public class EnemyManager : MonoBehaviour {
 		}
 
         CreateEnemy(position, enemiesPrefabs[enemyIndexType], inactiveColorString + enemyNames[Random.Range(0, 4)]);
+=======
+  //      if (index<25)
+  //      {
+  //          enemyIndexType = (int)enemyIndex.TRIANGLE;
+  //      }
+  //      if (index >= 25 && index< 50)
+  //      {
+  //          enemyIndexType = (int)enemyIndex.SQUARE;
+  //      }
+  //      if (index >= 50 && index <= 75)
+  //      {
+  //          enemyIndexType = (int)enemyIndex.CIRCLE;
+  //      }
+		//if (index >= 75 && index <= 100)
+		//{
+		//	enemyIndexType = (int)enemyIndex.DEMONIC_ARCHANGEL;
+		//}
+
+
+
+
+        CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, 4)]);
+>>>>>>> b8cc17d503b75c08dfd7262d884f697e690e33d1
     }
 }
