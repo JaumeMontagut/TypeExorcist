@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyManager : MonoBehaviour {
 
@@ -16,6 +17,10 @@ public class EnemyManager : MonoBehaviour {
     public List<GameObject> enemiesPrefabs;
     private List<Enemy> enemies;
 
+    public Color inactiveColor;
+    public Color32 activeColor;
+    private string inactiveColorString;
+
     private void Start()
     {
         enemies = new List<Enemy>();
@@ -24,6 +29,7 @@ public class EnemyManager : MonoBehaviour {
         enemyNames.Add("bible");
         enemyNames.Add("randomlygeneratedstring a");
         enemyNames.Add("randomlygeneratedstring b");
+        inactiveColorString = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
 
     void Update()
@@ -41,6 +47,7 @@ public class EnemyManager : MonoBehaviour {
         Enemy newEnemy = Instantiate(enemyPrefab, enemyPos, Quaternion.identity).GetComponent<Enemy>();
         newEnemy.SetTarget(Vector2.zero);//Move to the center
         newEnemy.enemyName = enemyName;
+        newEnemy.GetComponentInChildren<TextMeshProUGUI>().color = activeColor;
         enemies.Add(newEnemy);
     }
 
@@ -111,9 +118,6 @@ public class EnemyManager : MonoBehaviour {
 			enemyIndexType = (int)enemyIndex.DEMONIC_ARCHANGEL;
 		}
 
-
-
-
-        CreateEnemy(position, enemiesPrefabs[enemyIndexType],enemyNames[Random.Range(0, 4)]);
+        CreateEnemy(position, enemiesPrefabs[enemyIndexType], inactiveColorString + enemyNames[Random.Range(0, 4)]);
     }
 }
