@@ -30,6 +30,15 @@ public class EnemyManager : MonoBehaviour {
         enemyNames.Add("bible");
         enemyNames.Add("randomlygeneratedstring a");
         enemyNames.Add("randomlygeneratedstring b");
+        int totalChance = 0;
+        for (int i =0;i< enemiesSpawnRate.Count; i++)
+        {
+            totalChance += enemiesSpawnRate[i];
+        }
+        for (int i = 0; i < enemiesSpawnRate.Count; i++)
+        {
+            enemiesSpawnRate[i] = (enemiesSpawnRate[i] / totalChance) * 100;
+        }
         inactiveColorString = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
 
@@ -104,26 +113,6 @@ public class EnemyManager : MonoBehaviour {
                 break;
         }
         
-<<<<<<< HEAD
-        if (index<25)
-        {
-            enemyIndexType = (int)enemyIndex.TRIANGLE;
-        }
-        if (index >= 25 && index< 50)
-        {
-            enemyIndexType = (int)enemyIndex.SQUARE;
-        }
-        if (index >= 50 && index <= 75)
-        {
-            enemyIndexType = (int)enemyIndex.CIRCLE;
-        }
-		if (index >= 75 && index <= 100)
-		{
-			enemyIndexType = (int)enemyIndex.DEMONIC_ARCHANGEL;
-		}
-
-        CreateEnemy(position, enemiesPrefabs[enemyIndexType], inactiveColorString + enemyNames[Random.Range(0, 4)]);
-=======
   //      if (index<25)
   //      {
   //          enemyIndexType = (int)enemyIndex.TRIANGLE;
@@ -144,7 +133,6 @@ public class EnemyManager : MonoBehaviour {
 
 
 
-        CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, 4)]);
->>>>>>> b8cc17d503b75c08dfd7262d884f697e690e33d1
+        CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, enemyNames.Count + 1)]);
     }
 }
