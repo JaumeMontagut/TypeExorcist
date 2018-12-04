@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyManager : MonoBehaviour {
 
@@ -17,6 +18,10 @@ public class EnemyManager : MonoBehaviour {
     public List<int> enemiesSpawnRate;
     private List<Enemy> enemies;
 
+    public Color inactiveColor;
+    public Color32 activeColor;
+    private string inactiveColorString;
+
     private void Start()
     {
         enemies = new List<Enemy>();
@@ -25,6 +30,7 @@ public class EnemyManager : MonoBehaviour {
         enemyNames.Add("bible");
         enemyNames.Add("randomlygeneratedstring a");
         enemyNames.Add("randomlygeneratedstring b");
+        inactiveColorString = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
 
     void Update()
@@ -42,6 +48,7 @@ public class EnemyManager : MonoBehaviour {
         Enemy newEnemy = Instantiate(enemyPrefab, enemyPos, Quaternion.identity).GetComponent<Enemy>();
         newEnemy.SetTarget(Vector2.zero);//Move to the center
         newEnemy.enemyName = enemyName;
+        newEnemy.GetComponentInChildren<TextMeshProUGUI>().color = activeColor;
         enemies.Add(newEnemy);
     }
 
@@ -97,6 +104,26 @@ public class EnemyManager : MonoBehaviour {
                 break;
         }
         
+<<<<<<< HEAD
+        if (index<25)
+        {
+            enemyIndexType = (int)enemyIndex.TRIANGLE;
+        }
+        if (index >= 25 && index< 50)
+        {
+            enemyIndexType = (int)enemyIndex.SQUARE;
+        }
+        if (index >= 50 && index <= 75)
+        {
+            enemyIndexType = (int)enemyIndex.CIRCLE;
+        }
+		if (index >= 75 && index <= 100)
+		{
+			enemyIndexType = (int)enemyIndex.DEMONIC_ARCHANGEL;
+		}
+
+        CreateEnemy(position, enemiesPrefabs[enemyIndexType], inactiveColorString + enemyNames[Random.Range(0, 4)]);
+=======
   //      if (index<25)
   //      {
   //          enemyIndexType = (int)enemyIndex.TRIANGLE;
@@ -118,5 +145,6 @@ public class EnemyManager : MonoBehaviour {
 
 
         CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, 4)]);
+>>>>>>> b8cc17d503b75c08dfd7262d884f697e690e33d1
     }
 }
