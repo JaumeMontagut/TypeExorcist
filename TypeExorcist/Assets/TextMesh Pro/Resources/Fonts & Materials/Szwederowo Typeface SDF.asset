@@ -1021,21 +1021,21 @@ Material:
     - _FaceDilate: 0.295
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
-    - _GlowInner: 0.153
+    - _GlowInner: 0.67
     - _GlowOffset: 1
     - _GlowOuter: 1
-    - _GlowPower: 0.351
+    - _GlowPower: 0.437
     - _GradientScale: 6
     - _LightAngle: 5.66
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
-    - _OutlineSoftness: 0
+    - _OutlineSoftness: 0.874
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.257
+    - _OutlineWidth: 0.485
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10.41
-    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioA: 0.45252964
     - _ScaleRatioB: 0.215625
     - _ScaleRatioC: 0.21638234
     - _ScaleX: 1
