@@ -5595,10 +5595,11 @@ MonoBehaviour:
   - {fileID: 1537788752826810, guid: 7ce32350ed982c44783ddc58740d3ba8, type: 2}
   - {fileID: 1435185760403062, guid: fbdeda93c9d98af4f9fe570e764ef8d6, type: 2}
   enemiesSpawnRate: 
-  inactiveColor: {r: 0, g: 0, b: 0, a: 0}
+  inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294967295
+  inactiveColorStr: 
 --- !u!4 &734225159
 Transform:
   m_ObjectHideFlags: 0
@@ -6089,7 +6090,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -6272,7 +6273,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -6381,7 +6382,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 49.6
+  m_fontSize: 43.75
   m_fontSizeBase: 62.3
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6997,7 +6998,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
