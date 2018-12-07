@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private bool death = false;
     private GameObject particles = null;
+    private GameObject TextGameOver = null;
     //Player components
     private Animator anim = null;
     private Rigidbody2D rb = null;
@@ -28,7 +29,12 @@ public class PlayerController : MonoBehaviour
 
         enemyManger = FindObjectOfType<EnemyManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
+
         particles = transform.Find("Particle System").gameObject;
+
+        TextGameOver = GameObject.Find("GameOver");
+        if(TextGameOver)
+            TextGameOver.SetActive(false);
 
     }
 
@@ -64,10 +70,7 @@ public class PlayerController : MonoBehaviour
                 TypeLetter(" ");
             }
         }
-        else
-        {
-            
-        }
+       
 
     }
 
@@ -164,6 +167,7 @@ public class PlayerController : MonoBehaviour
         {
             death = true;
             particles.SetActive(true);
+            TextGameOver.SetActive(true);
         }
     }
 }
