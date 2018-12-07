@@ -5,7 +5,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    private bool death = false;
+    private bool dead = false;
     private GameObject particles = null;
     private GameObject TextGameOver = null;
     //Player components
@@ -18,24 +18,25 @@ public class PlayerController : MonoBehaviour
     private const float stopDist = 0.1f;//The distance in which the player will stop moving to the enemy
 
     //References to other entities
-    private Enemy focusedEnemy = null;
+    private List<Enemy> focusedEnemies = null;
     private EnemyManager enemyManger = null;
     private ScoreManager scoreManager = null;
 
     private void Start()
     {
+        focusedEnemies = new List<Enemy>();
+
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
         enemyManger = FindObjectOfType<EnemyManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
-
         particles = transform.Find("Particle System").gameObject;
-
         TextGameOver = GameObject.Find("GameOver");
-        if(TextGameOver)
+        if (TextGameOver)
+        {
             TextGameOver.SetActive(false);
-
+        }
     }
 
     private void FixedUpdate()
@@ -49,100 +50,114 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (death == false)
-        {
-            KeyCode currKey;
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                UnfocusEnemy();
-            }
-
-            for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
-            {
-                if (Input.GetKeyDown(currKey))
-                {
-                    TypeLetter(currKey.ToString().ToLower());
-                }
-            }
-            currKey = KeyCode.Space;
-            if (Input.GetKeyDown(currKey))
-            {
-                TypeLetter(" ");
-            }
-        }
-       
-
-    }
-
-    private void FocusEnemy(Enemy enemyToFocus)
-    {
-        if (enemyToFocus == null)
+        if (dead)
         {
             return;
         }
 
-        focusedEnemy = enemyToFocus;
-        focusedEnemy.text.color = new Color32(255, 255, 255, 255);
+        KeyCode currKey;
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            UnfocusEnemies();
+        }
 
-        if (focusedEnemy.transform.position.x < transform.position.x)
+        for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
+        {
+            if (Input.GetKeyDown(currKey))
+            {
+                TypeLetter(currKey.ToString().ToLower()[0]);
+            }
+        }
+        currKey = KeyCode.Space;
+        if (Input.GetKeyDown(currKey))
+        {
+            TypeLetter(' ');
+        }
+    }
+
+    private void FocusEnemy(List<Enemy> enemiesToFocus)
+    {
+        //Security check
+        if (enemiesToFocus == null)
+        {
+            return;
+        }
+
+        //Add enemy to focused list
+        UnfocusEnemies();
+        focusedEnemies = enemiesToFocus;
+
+        //Change face direction depending on where the first selected enemy is
+        if (focusedEnemies[0].transform.position.x < transform.position.x)
         {
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
-        else if (focusedEnemy.transform.position.x > transform.position.x)
+        else if (focusedEnemies[0].transform.position.x > transform.position.x)
         {
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
 
-    private void UnfocusEnemy()
+    private void UnfocusEnemies()
     {
-        if (focusedEnemy != null)
+        foreach (Enemy enemy in focusedEnemies)
         {
-            focusedEnemy.text.color = new Color32(128, 128, 128, 255);
-            focusedEnemy.text.havePropertiesChanged = true;
-            focusedEnemy = null;
+            enemy.text.color = enemyManger.inactiveColor;
+            enemy.text.havePropertiesChanged = true;
         }
+        focusedEnemies.Clear();
     }
 
-    private void TypeLetter(string key)
+    private void TypeLetter(char key)
     {
-        //Focus enemy if there was none focused already
-        if (focusedEnemy == null)
+        //If hadn't enemies focused
+        if (focusedEnemies.Count == 0)
         {
-            FocusEnemy(enemyManger.GetCloserEnemyWithName(key, Vector2.zero));
+            FocusEnemy(enemyManger.GetEnemiesStartingWith(key));
+            //If it didn't find an enemy after focusing, you made a typing mistake
+            if (focusedEnemies.Count == 0)
+            {
+                Mistake();
+                return;
+            }
         }
-
-        //If it didn't find an enemy, you made a typing mistake
-        if (focusedEnemy == null)
-        {
-            Mistake();
-        }
-        //If it found an enemy
+        //If it had enemies focused
         else
         {
             //And you didn't type its letter correctly
-            if (key[0] != focusedEnemy.enemyName[0])
+            if (!TypeInFocusedEnemies(key))
             {
-
                 Mistake();
-            }
-            //And you typed its letter correctly
-            else
-            {
-                focusedEnemy.enemyName = focusedEnemy.enemyName.Remove(0, 1);
-                focusedEnemy.UpdateName();
-                scoreManager.Score += 1 * scoreManager.Combo;
-                if (focusedEnemy.CheckEnemyDeath())
-                {
-                    scoreManager.Combo++;
-                    anim.SetTrigger("attack");
-                    StartMoving(focusedEnemy.transform.position);
-                    focusedEnemy.DestroyEnemy();
-                    focusedEnemy = null;
-                }
+                return;
             }
         }
+        //If it reaches this point letters have been typed correctly, reduce the letter
+        scoreManager.Score += 1 * scoreManager.Combo;
+        foreach (Enemy enemy in focusedEnemies)
+        {
+            enemy.CompleteNextLetter();
+            //Dash to the enemy if you kill it
+            if (enemy.CheckDeath())
+            {
+                scoreManager.Combo++;
+                anim.SetTrigger("attack");
+                StartMoving(enemy.transform.position);
+                focusedEnemies.Remove(enemy);
+            }
+        }
+    }
 
+    //Returns false if none of the enemies in which it was typed had that letter
+    private bool TypeInFocusedEnemies(char letter)
+    {
+        foreach (Enemy enemy in focusedEnemies)
+        {
+            if (enemy.GetCurrentLetter() == letter)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void Mistake()
@@ -159,15 +174,21 @@ public class PlayerController : MonoBehaviour
 
     private void StopMoving()
     {
-        rb.velocity = new Vector2(0.0f, 0.0f);
+        rb.velocity = Vector2.zero;
     }
-   private void OnTriggerEnter2D(Collider2D collision) 
+
+    //private void OnTriggerEnter2D(Collider2D collision) 
+    //{
+    //    if (!IsMoving() && !death)
+    //    {
+    //        death = true;
+    //        particles.SetActive(true);
+    //        TextGameOver.SetActive(true);
+    //    }
+    //}
+
+    public bool IsMoving()
     {
-        if(rb.velocity.magnitude==0 && death==false)
-        {
-            death = true;
-            particles.SetActive(true);
-            TextGameOver.SetActive(true);
-        }
+        return (rb.velocity != Vector2.zero);
     }
 }

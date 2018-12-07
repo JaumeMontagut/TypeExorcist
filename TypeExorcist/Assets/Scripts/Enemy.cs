@@ -10,11 +10,16 @@ public class Enemy : MonoBehaviour
     public TextMeshProUGUI text;
 
     private Vector2 target;
+    //private Animator anim;
     private Rigidbody2D rb;
+    private EnemyManager eM;
+    private int completedLetters = 0;//The number of completed letters
 
     void Start()
     {
+        //anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        eM = FindObjectOfType<EnemyManager>();
         UpdateName();
     }
 
@@ -36,28 +41,49 @@ public class Enemy : MonoBehaviour
         rb.velocity = vec;
     }
 
-    public bool CheckEnemyDeath()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        return (enemyName.Length == 0);
+        //If the player hits the enemy while moving, it kills it
+        if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PlayerController>().IsMoving())
+        {
+            //anim.SetTrigger("Death");
+        }
     }
 
+    public void CompleteNextLetter()
+    {
+        completedLetters++;
+        UpdateName();
+    }
+
+    //Called each time you type a letter and when some other effects remove letters from the string
+    public bool CheckDeath()
+    {
+        if (completedLetters == enemyName.Length)
+        {
+            //anim.SetTrigger("Death");
+            return true;
+        }
+        return false;
+    }
+
+    //Called at the end of the animation
     public void DestroyEnemy()
     {
         Destroy(gameObject);
     }
 
-    public void UpdateName()
+    public char GetCurrentLetter()
     {
-        text.text = enemyName;
+        return enemyName[completedLetters];
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void UpdateName()
     {
-        //If the player hits the enemy while moving, it kills it
-        if (collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<Rigidbody2D>().velocity != Vector2.zero)
-        {
-            DestroyEnemy();
-        }
+        string newText = enemyName;
+        newText = newText.Insert(completedLetters, eM.inactiveColorStr);
+
+        text.text = newText;
     }
 
 };

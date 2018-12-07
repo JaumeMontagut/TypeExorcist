@@ -13,14 +13,14 @@ public class EnemyManager : MonoBehaviour {
 		DEMONIC_ARCHANGEL
     }
 
-    private List<string> enemyNames;
     public List<GameObject> enemiesPrefabs;
     public List<int> enemiesSpawnRate;
     private List<Enemy> enemies;
+    private List<string> enemyNames;
 
     public Color inactiveColor;
     public Color32 activeColor;
-    private string inactiveColorString;
+    [HideInInspector]public string inactiveColorStr;
 
     private void Start()
     {
@@ -39,7 +39,7 @@ public class EnemyManager : MonoBehaviour {
         {
             enemiesSpawnRate[i] = (enemiesSpawnRate[i] / totalChance) * 100;
         }
-        inactiveColorString = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
+        inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
 
     void Update()
@@ -61,29 +61,10 @@ public class EnemyManager : MonoBehaviour {
         enemies.Add(newEnemy);
     }
 
-    //Returns the closest enemy to the center of the screen that starts with the specified letter
-    public Enemy GetCloserEnemyWithName (string firstLetter, Vector2 point)
-    {
-        Enemy closerEnemy = null;
-
-        foreach (Enemy enemy in enemies)
-        {
-            if (enemy.enemyName.StartsWith(firstLetter))
-            {
-                //The position that is closer to the center wins
-                if (closerEnemy == null || Utilities.DistanceSquared(enemy.transform.position, point) < Utilities.DistanceSquared(closerEnemy.transform.position, point))
-                {
-                    closerEnemy = enemy;
-                }
-            }
-        }
-        return closerEnemy;
-    }
     public void GenerateRandomEnemy()
     {
-
         int probabilityManager = Random.Range(0, 100);
-        int enemyIndex = -1;
+        int enemyIndex = Random.Range(0, enemiesPrefabs.Count);
         Vector3 position = new Vector3(0, 0, 0);
 
         int startingPosition = Random.Range(1, 5);
@@ -112,27 +93,20 @@ public class EnemyManager : MonoBehaviour {
             default:
                 break;
         }
-        
-  //      if (index<25)
-  //      {
-  //          enemyIndexType = (int)enemyIndex.TRIANGLE;
-  //      }
-  //      if (index >= 25 && index< 50)
-  //      {
-  //          enemyIndexType = (int)enemyIndex.SQUARE;
-  //      }
-  //      if (index >= 50 && index <= 75)
-  //      {
-  //          enemyIndexType = (int)enemyIndex.CIRCLE;
-  //      }
-		//if (index >= 75 && index <= 100)
-		//{
-		//	enemyIndexType = (int)enemyIndex.DEMONIC_ARCHANGEL;
-		//}
-
-
-
-
         CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, enemyNames.Count + 1)]);
+    }
+
+    //Returns a list of all the enemies whose name starts with the specified letter
+    public List<Enemy> GetEnemiesStartingWith (char firstLetter)
+    {
+        List<Enemy> enemiesStartingWith = new List<Enemy>();
+        foreach (Enemy enemy in enemies)
+        {
+            if (enemy.GetCurrentLetter() == firstLetter)
+            {
+                enemiesStartingWith.Add(enemy);
+            }
+        }
+        return enemiesStartingWith;
     }
 }
