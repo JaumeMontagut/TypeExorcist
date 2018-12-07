@@ -5319,7 +5319,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5501,6 +5501,11 @@ MonoBehaviour:
   - {fileID: 1968525545585196, guid: 5a068e2a56794ba4cbe37481206be07e, type: 2}
   - {fileID: 1537788752826810, guid: 7ce32350ed982c44783ddc58740d3ba8, type: 2}
   - {fileID: 1435185760403062, guid: fbdeda93c9d98af4f9fe570e764ef8d6, type: 2}
+  enemiesSpawnRate: 
+  inactiveColor: {r: 0, g: 0, b: 0, a: 0}
+  activeColor:
+    serializedVersion: 2
+    rgba: 0
 --- !u!4 &734225159
 Transform:
   m_ObjectHideFlags: 0
@@ -5723,7 +5728,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
