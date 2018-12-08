@@ -102,8 +102,7 @@ public class PlayerController : MonoBehaviour
     {
         foreach (Enemy enemy in focusedEnemies)
         {
-            enemy.text.color = enemyManger.inactiveColor;
-            enemy.text.havePropertiesChanged = true;
+            enemy.ResetLetter();
         }
         focusedEnemies.Clear();
     }
@@ -133,6 +132,16 @@ public class PlayerController : MonoBehaviour
         }
         //If it reaches this point letters have been typed correctly, reduce the letter
         scoreManager.Score += 1 * scoreManager.Combo;
+        for (int i = 0; i < focusedEnemies.Count; ++i)
+        {
+            if (focusedEnemies[i].CheckDeath())
+            {
+                scoreManager.Combo++;
+                anim.SetTrigger("attack");
+                StartMoving(focusedEnemies[i].transform.position);
+                focusedEnemies.RemoveAt(i);
+            }
+        }
         foreach (Enemy enemy in focusedEnemies)
         {
             enemy.CompleteNextLetter();
@@ -142,7 +151,7 @@ public class PlayerController : MonoBehaviour
                 scoreManager.Combo++;
                 anim.SetTrigger("attack");
                 StartMoving(enemy.transform.position);
-                focusedEnemies.Remove(enemy);
+                //focusedEnemies.Remove(enemy);
             }
         }
     }

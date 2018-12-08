@@ -93,7 +93,8 @@ public class EnemyManager : MonoBehaviour {
             default:
                 break;
         }
-        CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, enemyNames.Count + 1)]);
+        Debug.Log(enemyIndex);
+        CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, enemyNames.Count)]);
     }
 
     //Returns a list of all the enemies whose name starts with the specified letter
