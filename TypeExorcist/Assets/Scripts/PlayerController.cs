@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     //References to other entities
     private List<Enemy> focusedEnemies = null;
-    private EnemyManager enemyManger = null;
+    private EnemyManager eM = null;
     private ScoreManager scoreManager = null;
 
     private void Start()
@@ -29,7 +27,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
-        enemyManger = FindObjectOfType<EnemyManager>();
+        eM = FindObjectOfType<EnemyManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
         particles = transform.Find("Particle System").gameObject;
         TextGameOver = GameObject.Find("GameOver");
@@ -75,98 +73,93 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FocusEnemy(List<Enemy> enemiesToFocus)
-    {
-        //Security check
-        if (enemiesToFocus == null)
-        {
-            return;
-        }
-
-        //Add enemy to focused list
-        UnfocusEnemies();
-        focusedEnemies = enemiesToFocus;
-
-        //Change face direction depending on where the first selected enemy is
-        if (focusedEnemies[0].transform.position.x < transform.position.x)
-        {
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-        else if (focusedEnemies[0].transform.position.x > transform.position.x)
-        {
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-    }
-
     private void UnfocusEnemies()
     {
         foreach (Enemy enemy in focusedEnemies)
         {
-            enemy.ResetLetter();
+            enemy.Reset();
         }
         focusedEnemies.Clear();
     }
 
     private void TypeLetter(char key)
     {
-        //If hadn't enemies focused
+        bool typeCorrect;
         if (focusedEnemies.Count == 0)
         {
-            FocusEnemy(enemyManger.GetEnemiesStartingWith(key));
-            //If it didn't find an enemy after focusing, you made a typing mistake
-            if (focusedEnemies.Count == 0)
-            {
-                Mistake();
-                return;
-            }
+            typeCorrect = TypeNewEnemies(key);
         }
-        //If it had enemies focused
         else
         {
-            //And you didn't type its letter correctly
-            if (!TypeInFocusedEnemies(key))
-            {
-                Mistake();
-                return;
-            }
+            typeCorrect = TypeFocusedEnemies(key);
         }
-        //If it reaches this point letters have been typed correctly, reduce the letter
-        scoreManager.Score += 1 * scoreManager.Combo;
-        for (int i = 0; i < focusedEnemies.Count; ++i)
+        //See if the player typed the correct letter
+        if (typeCorrect)
         {
-            if (focusedEnemies[i].CheckDeath())
-            {
-                scoreManager.Combo++;
-                anim.SetTrigger("attack");
-                StartMoving(focusedEnemies[i].transform.position);
-                focusedEnemies.RemoveAt(i);
-            }
+            Correct();
         }
-        foreach (Enemy enemy in focusedEnemies)
+        else
         {
-            enemy.CompleteNextLetter();
-            //Dash to the enemy if you kill it
-            if (enemy.CheckDeath())
-            {
-                scoreManager.Combo++;
-                anim.SetTrigger("attack");
-                StartMoving(enemy.transform.position);
-                //focusedEnemies.Remove(enemy);
-            }
+            Mistake();
         }
     }
 
-    //Returns false if none of the enemies in which it was typed had that letter
-    private bool TypeInFocusedEnemies(char letter)
+    private bool TypeNewEnemies(char key)
     {
-        foreach (Enemy enemy in focusedEnemies)
+        for (int i = 0; i < eM.enemies.Count; ++i)
         {
-            if (enemy.GetCurrentLetter() == letter)
+            if (eM.enemies[i].GetFirstLetter() == key)
             {
-                return true;
+                eM.enemies[i].CompleteNextLetter();
+                ChangeFacingDir(eM.enemies[i].transform.position);
+                focusedEnemies.Add(eM.enemies[i]);
             }
         }
-        return false;
+        return (focusedEnemies.Count > 0);
+    }
+
+    private bool TypeFocusedEnemies(char key)
+    {
+        bool someCorrect = false;
+        for (int i = 0; i < focusedEnemies.Count; ++i)
+        {
+            if (focusedEnemies[i].GetCurrentLetter() == key)
+            {
+                focusedEnemies[i].CompleteNextLetter();
+                //Checks if it kills the enemy
+                if (!focusedEnemies[i].alive)
+                {
+                    scoreManager.Combo++;
+                    anim.SetTrigger("attack");
+                    StartMoving(focusedEnemies[i].transform.position);
+                    focusedEnemies.RemoveAt(i);
+                }
+                someCorrect = true;
+            }
+            else
+            {
+                focusedEnemies[i].Reset();
+                focusedEnemies.RemoveAt(i);
+            }
+        }
+        return someCorrect;
+    }
+
+    private void ChangeFacingDir(Vector3 target)
+    {
+        if (target.x < transform.position.x)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (target.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+    private void Correct()
+    {
+        scoreManager.Score += 1 * scoreManager.Combo;
     }
 
     private void Mistake()

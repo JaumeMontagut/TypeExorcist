@@ -15,7 +15,7 @@ public class EnemyManager : MonoBehaviour {
 
     public List<GameObject> enemiesPrefabs;
     public List<int> enemiesSpawnRate;
-    private List<Enemy> enemies;
+    [HideInInspector] public List<Enemy> enemies;
     private List<string> enemyNames;
 
     public Color inactiveColor;
@@ -26,10 +26,10 @@ public class EnemyManager : MonoBehaviour {
     {
         enemies = new List<Enemy>();
         enemyNames = new List<string>();
-        enemyNames.Add("holy water");
+        enemyNames.Add("water");
         enemyNames.Add("bible");
-        enemyNames.Add("randomlygeneratedstring a");
-        enemyNames.Add("randomlygeneratedstring b");
+        enemyNames.Add("hello");
+        enemyNames.Add("bye");
         int totalChance = 0;
         for (int i =0;i< enemiesSpawnRate.Count; i++)
         {
@@ -93,21 +93,6 @@ public class EnemyManager : MonoBehaviour {
             default:
                 break;
         }
-        Debug.Log(enemyIndex);
         CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, enemyNames.Count)]);
-    }
-
-    //Returns a list of all the enemies whose name starts with the specified letter
-    public List<Enemy> GetEnemiesStartingWith (char firstLetter)
-    {
-        List<Enemy> enemiesStartingWith = new List<Enemy>();
-        foreach (Enemy enemy in enemies)
-        {
-            if (enemy.GetCurrentLetter() == firstLetter)
-            {
-                enemiesStartingWith.Add(enemy);
-            }
-        }
-        return enemiesStartingWith;
     }
 }

@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private EnemyManager eM;
+    [HideInInspector] public bool alive = true;
     private int completedLetters = 0;//The number of completed letters
 
     void Start()
@@ -55,29 +56,36 @@ public class Enemy : MonoBehaviour
     {
         completedLetters++;
         UpdateName();
+
+        CheckDeath();
     }
 
-    public void ResetLetter()
+    public void Reset()
     {
         completedLetters = 0;
         UpdateName();
     }
 
     //Called each time you type a letter and when some other effects remove letters from the string
-    public bool CheckDeath()
+    public void CheckDeath()
     {
-        if (completedLetters == enemyName.Length)
+        if (completedLetters >= enemyName.Length)
         {
             anim.SetTrigger("death");
-            return true;
+            alive = false;
+            eM.enemies.Remove(this);
         }
-        return false;
     }
 
     //Called at the end of the animation
     public void DestroyEnemy()
     {
         Destroy(gameObject);
+    }
+
+    public char GetFirstLetter()
+    {
+        return enemyName[0];
     }
 
     public char GetCurrentLetter()
