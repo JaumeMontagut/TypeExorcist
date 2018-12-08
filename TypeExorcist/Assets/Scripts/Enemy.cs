@@ -6,9 +6,9 @@ using TMPro;
 public class Enemy : MonoBehaviour
 {
 
-    public string enemyName;
-    public TextMeshProUGUI text;
+    [HideInInspector] public string enemyName;
 
+    private TextMeshProUGUI text;
     private Vector2 target;
     private Animator anim;
     private Rigidbody2D rb;
@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
+        text = GetComponentInChildren<TextMeshProUGUI>();
         rb = GetComponent<Rigidbody2D>();
         eM = FindObjectOfType<EnemyManager>();
         UpdateName();
