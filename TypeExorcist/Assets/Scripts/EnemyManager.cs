@@ -5,18 +5,11 @@ using TMPro;
 
 public class EnemyManager : MonoBehaviour {
 
-    enum enemyIndex:int
-    {
-        TRIANGLE,
-        SQUARE,
-        CIRCLE,
-		DEMONIC_ARCHANGEL
-    }
 
-    public List<GameObject> enemiesPrefabs;
-    public List<int> enemiesSpawnRate;
-    private List<Enemy> enemies;
-    private List<string> enemyNames;
+    public List<GameObject> enemiesPrefabs;      //List of enemy types
+    public List<int> enemiesSpawnRate;           //List of enemy types spawnrate
+    private List<Enemy> enemies;                 //List of all enemy entities
+    private List<string> enemyNames;             //List of all enemy entities names
 
     public Color inactiveColor;
     public Color32 activeColor;
@@ -30,17 +23,9 @@ public class EnemyManager : MonoBehaviour {
         enemyNames.Add("bible");
         enemyNames.Add("randomlygeneratedstring a");
         enemyNames.Add("randomlygeneratedstring b");
-        int totalChance = 0;
-        for (int i =0;i< enemiesSpawnRate.Count; i++)
-        {
-            totalChance += enemiesSpawnRate[i];
-        }
-        for (int i = 0; i < enemiesSpawnRate.Count; i++)
-        {
-            enemiesSpawnRate[i] = (enemiesSpawnRate[i] / totalChance) * 100;
-        }
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
+    
 
     void Update()
     {
@@ -48,8 +33,9 @@ public class EnemyManager : MonoBehaviour {
         {
             Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             enemyPos.z = 0;
-            GenerateRandomEnemy();
+            GenerateRandomEnemy("small");
         }
+
     }
 
     void CreateEnemy(Vector3 enemyPos,GameObject enemyPrefab,string enemyName)
@@ -61,16 +47,23 @@ public class EnemyManager : MonoBehaviour {
         enemies.Add(newEnemy);
     }
 
-    public void GenerateRandomEnemy()
+    public void GenerateRandomEnemy(string type)
     {
-        int probabilityManager = Random.Range(0, 100);
-        int enemyIndex = Random.Range(0, enemiesPrefabs.Count);
+        int index = -1;
+        
+
         Vector3 position = new Vector3(0, 0, 0);
 
+
+        // camera data------------------------------------------------------------
+        //------------------------------------------------------------------------
         int startingPosition = Random.Range(1, 5);
         int cameraHeight = (int)Camera.main.orthographicSize;
         int cameraWidth = (int)(Camera.main.orthographicSize * Camera.main.aspect);
+        //------------------------------------------------------------------------
+        //------------------------------------------------------------------------
 
+        //Position randomizer
         switch (startingPosition)
         {
             case 1:
@@ -93,7 +86,52 @@ public class EnemyManager : MonoBehaviour {
             default:
                 break;
         }
-        CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, enemyNames.Count + 1)]);
+
+        //Enemy type randomizer
+        switch (type)
+        {
+            case "small":
+                int totalchance = enemiesSpawnRate[0] + enemiesSpawnRate[1];
+                int unitvalue = totalchance / 100;
+                enemiesSpawnRate[0] = enemiesSpawnRate[0] / unitvalue;
+                enemiesSpawnRate[1] = enemiesSpawnRate[1] / unitvalue;
+                float randomIndex = Random.Range(0.0f, 100.0f);
+                if (randomIndex <= enemiesSpawnRate[0])
+                {
+                    index = 0;
+                }
+                else index = 1;
+                break;
+            case "mid":
+                int totalchance2 = enemiesSpawnRate[2] + enemiesSpawnRate[3];
+                int unitvalue2 = totalchance2 / 100;
+                enemiesSpawnRate[2] = enemiesSpawnRate[2] / unitvalue2;
+                enemiesSpawnRate[3] = enemiesSpawnRate[3] / unitvalue2;
+                float randomIndex2 = Random.Range(0.0f, 100.0f);
+                if (randomIndex2 <= enemiesSpawnRate[2])
+                {
+                    index = 2;
+                }
+                else index = 3;
+                break;
+            case "big":
+                int totalchance3 = enemiesSpawnRate[4] + enemiesSpawnRate[5] + enemiesSpawnRate[6];
+                int unitvalue3 = totalchance3 / 100;
+                enemiesSpawnRate[4] = enemiesSpawnRate[0] / unitvalue3;
+                enemiesSpawnRate[1] = enemiesSpawnRate[1] / unitvalue3;
+                float randomIndex3 = Random.Range(0.0f, 100.0f);
+                if (randomIndex3 <= enemiesSpawnRate[4])
+                {
+                    index = 4;
+                }
+                else if (randomIndex3 > enemiesSpawnRate[4] && randomIndex3 < enemiesSpawnRate[6])
+                    index = 5;
+                else index = 6;
+                break;
+            default:
+                break;
+        }
+        CreateEnemy(position, enemiesPrefabs[index],enemyNames[Random.Range(0, enemyNames.Count)]);
     }
 
     //Returns a list of all the enemies whose name starts with the specified letter
