@@ -6061,11 +6061,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4195230608022646, guid: 7166b1274687f804c96711bf8c811d61, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.34
+      value: 2.62
       objectReference: {fileID: 0}
     - target: {fileID: 4195230608022646, guid: 7166b1274687f804c96711bf8c811d61, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.27
+      value: 2.74
       objectReference: {fileID: 0}
     - target: {fileID: 4195230608022646, guid: 7166b1274687f804c96711bf8c811d61, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6410,7 +6410,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -6593,7 +6593,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -6702,7 +6702,9 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
+
   m_fontSize: 49.7
+
   m_fontSizeBase: 62.3
   m_fontWeight: 400
   m_enableAutoSizing: 1
