@@ -23,8 +23,6 @@ public class EnemyManager : MonoBehaviour {
         enemyNames.Add("bible");
         enemyNames.Add("randomlygeneratedstring a");
         enemyNames.Add("randomlygeneratedstring b");
-        int totalChance = 0;
-
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
     
@@ -51,10 +49,9 @@ public class EnemyManager : MonoBehaviour {
 
     public void GenerateRandomEnemy(string type)
     {
-        int enemyIndexSmall = Random.Range(0, 2);
-        int enemyIndexMed = Random.Range(2, 4);
-        int enemyIndexBig = Random.Range(4, 7);
         int index = -1;
+        
+
         Vector3 position = new Vector3(0, 0, 0);
 
 
@@ -94,13 +91,42 @@ public class EnemyManager : MonoBehaviour {
         switch (type)
         {
             case "small":
-                index = enemyIndexSmall;
+                int totalchance = enemiesSpawnRate[0] + enemiesSpawnRate[1];
+                int unitvalue = totalchance / 100;
+                enemiesSpawnRate[0] = enemiesSpawnRate[0] / unitvalue;
+                enemiesSpawnRate[1] = enemiesSpawnRate[1] / unitvalue;
+                float randomIndex = Random.Range(0.0f, 100.0f);
+                if (randomIndex <= enemiesSpawnRate[0])
+                {
+                    index = 0;
+                }
+                else index = 1;
                 break;
-            case "medium":
-                index = enemyIndexMed;
+            case "mid":
+                int totalchance2 = enemiesSpawnRate[2] + enemiesSpawnRate[3];
+                int unitvalue2 = totalchance2 / 100;
+                enemiesSpawnRate[2] = enemiesSpawnRate[2] / unitvalue2;
+                enemiesSpawnRate[3] = enemiesSpawnRate[3] / unitvalue2;
+                float randomIndex2 = Random.Range(0.0f, 100.0f);
+                if (randomIndex2 <= enemiesSpawnRate[2])
+                {
+                    index = 2;
+                }
+                else index = 3;
                 break;
             case "big":
-                index = enemyIndexBig;
+                int totalchance3 = enemiesSpawnRate[4] + enemiesSpawnRate[5] + enemiesSpawnRate[6];
+                int unitvalue3 = totalchance3 / 100;
+                enemiesSpawnRate[4] = enemiesSpawnRate[0] / unitvalue3;
+                enemiesSpawnRate[1] = enemiesSpawnRate[1] / unitvalue3;
+                float randomIndex3 = Random.Range(0.0f, 100.0f);
+                if (randomIndex3 <= enemiesSpawnRate[4])
+                {
+                    index = 4;
+                }
+                else if (randomIndex3 > enemiesSpawnRate[4] && randomIndex3 < enemiesSpawnRate[6])
+                    index = 5;
+                else index = 6;
                 break;
             default:
                 break;
