@@ -73,7 +73,6 @@ public class Enemy : MonoBehaviour
         {
             anim.SetTrigger("death");
             alive = false;
-            eM.enemies.Remove(this);
         }
     }
 

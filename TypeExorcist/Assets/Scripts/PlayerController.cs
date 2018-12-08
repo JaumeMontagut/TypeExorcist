@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
     {
         for (int i = 0; i < eM.enemies.Count; ++i)
         {
-            if (eM.enemies[i].GetFirstLetter() == key)
+            if (eM.enemies[i].alive && eM.enemies[i].GetFirstLetter() == key)
             {
                 eM.enemies[i].CompleteNextLetter();
                 ChangeFacingDir(eM.enemies[i].transform.position);
@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
     private bool TypeFocusedEnemies(char key)
     {
         bool someCorrect = false;
-        for (int i = 0; i < focusedEnemies.Count; ++i)
+        for (int i = focusedEnemies.Count - 1; i >= 0; --i)
         {
             if (focusedEnemies[i].GetCurrentLetter() == key)
             {
