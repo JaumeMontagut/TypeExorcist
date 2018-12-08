@@ -84,28 +84,19 @@ public class PlayerController : MonoBehaviour
 
     private void TypeLetter(char key)
     {
-        bool typeCorrect;
         if (focusedEnemies.Count == 0)
         {
-            typeCorrect = TypeNewEnemies(key);
+            TypeNewEnemies(key);
         }
         else
         {
-            typeCorrect = TypeFocusedEnemies(key);
-        }
-        //See if the player typed the correct letter
-        if (typeCorrect)
-        {
-            Correct();
-        }
-        else
-        {
-            Mistake();
+            TypeFocusedEnemies(key);
         }
     }
 
-    private bool TypeNewEnemies(char key)
+    private void TypeNewEnemies(char key)
     {
+        //Add enemies that start with the same character
         for (int i = 0; i < eM.enemies.Count; ++i)
         {
             if (eM.enemies[i].alive && eM.enemies[i].GetFirstLetter() == key)
@@ -115,34 +106,62 @@ public class PlayerController : MonoBehaviour
                 focusedEnemies.Add(eM.enemies[i]);
             }
         }
-        return (focusedEnemies.Count > 0);
+        //1.1. If an enemy has been added
+        if (focusedEnemies.Count > 0)
+        {
+            Correct();
+        }
+        //1.2. If no enemy has been added
+        else
+        {
+            Mistake();
+        }
     }
 
-    private bool TypeFocusedEnemies(char key)
+    private void TypeFocusedEnemies(char key)
     {
+        //Determine if any enemy has been typed correctly
         bool someCorrect = false;
         for (int i = focusedEnemies.Count - 1; i >= 0; --i)
         {
             if (focusedEnemies[i].GetCurrentLetter() == key)
             {
-                focusedEnemies[i].CompleteNextLetter();
-                //Checks if it kills the enemy
-                if (!focusedEnemies[i].alive)
-                {
-                    scoreManager.Combo++;
-                    anim.SetTrigger("attack");
-                    StartMoving(focusedEnemies[i].transform.position);
-                    focusedEnemies.RemoveAt(i);
-                }
                 someCorrect = true;
-            }
-            else
-            {
-                focusedEnemies[i].Reset();
-                focusedEnemies.RemoveAt(i);
+                break;
             }
         }
-        return someCorrect;
+
+        //1.1. If there was some correct, complete them and reset the others
+        if (someCorrect)
+        {
+            Correct();
+            for (int i = focusedEnemies.Count - 1; i >= 0; --i)
+            {
+                if (focusedEnemies[i].GetCurrentLetter() == key)
+                {
+                    focusedEnemies[i].CompleteNextLetter();
+                    ChangeFacingDir(eM.enemies[i].transform.position);
+                    //Checks if it kills the enemy
+                    if (!focusedEnemies[i].alive)
+                    {
+                        scoreManager.Combo++;
+                        anim.SetTrigger("attack");
+                        StartMoving(focusedEnemies[i].transform.position);
+                        focusedEnemies.RemoveAt(i);
+                    }
+                }
+                else
+                {
+                    focusedEnemies[i].Reset();
+                    focusedEnemies.RemoveAt(i);
+                }
+            }
+        }
+        //1.2. If there wasn't any correct, don't reset them
+        else
+        {
+            Mistake();
+        }
     }
 
     private void ChangeFacingDir(Vector3 target)
