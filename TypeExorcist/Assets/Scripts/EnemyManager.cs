@@ -5,18 +5,11 @@ using TMPro;
 
 public class EnemyManager : MonoBehaviour {
 
-    enum enemyIndex:int
-    {
-        TRIANGLE,
-        SQUARE,
-        CIRCLE,
-		DEMONIC_ARCHANGEL
-    }
 
-    public List<GameObject> enemiesPrefabs;
-    public List<int> enemiesSpawnRate;
-    private List<Enemy> enemies;
-    private List<string> enemyNames;
+    public List<GameObject> enemiesPrefabs;      //List of enemy types
+    public List<int> enemiesSpawnRate;           //List of enemy types spawnrate
+    private List<Enemy> enemies;                 //List of all enemy entities
+    private List<string> enemyNames;             //List of all enemy entities names
 
     public Color inactiveColor;
     public Color32 activeColor;
@@ -31,16 +24,10 @@ public class EnemyManager : MonoBehaviour {
         enemyNames.Add("randomlygeneratedstring a");
         enemyNames.Add("randomlygeneratedstring b");
         int totalChance = 0;
-        for (int i =0;i< enemiesSpawnRate.Count; i++)
-        {
-            totalChance += enemiesSpawnRate[i];
-        }
-        for (int i = 0; i < enemiesSpawnRate.Count; i++)
-        {
-            enemiesSpawnRate[i] = (enemiesSpawnRate[i] / totalChance) * 100;
-        }
+
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
+    
 
     void Update()
     {
@@ -48,8 +35,9 @@ public class EnemyManager : MonoBehaviour {
         {
             Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             enemyPos.z = 0;
-            GenerateRandomEnemy();
+            GenerateRandomEnemy("small");
         }
+
     }
 
     void CreateEnemy(Vector3 enemyPos,GameObject enemyPrefab,string enemyName)
@@ -61,16 +49,24 @@ public class EnemyManager : MonoBehaviour {
         enemies.Add(newEnemy);
     }
 
-    public void GenerateRandomEnemy()
+    public void GenerateRandomEnemy(string type)
     {
-        int probabilityManager = Random.Range(0, 100);
-        int enemyIndex = Random.Range(0, enemiesPrefabs.Count);
+        int enemyIndexSmall = Random.Range(0, 2);
+        int enemyIndexMed = Random.Range(2, 4);
+        int enemyIndexBig = Random.Range(4, 7);
+        int index = -1;
         Vector3 position = new Vector3(0, 0, 0);
 
+
+        // camera data------------------------------------------------------------
+        //------------------------------------------------------------------------
         int startingPosition = Random.Range(1, 5);
         int cameraHeight = (int)Camera.main.orthographicSize;
         int cameraWidth = (int)(Camera.main.orthographicSize * Camera.main.aspect);
+        //------------------------------------------------------------------------
+        //------------------------------------------------------------------------
 
+        //Position randomizer
         switch (startingPosition)
         {
             case 1:
@@ -93,7 +89,23 @@ public class EnemyManager : MonoBehaviour {
             default:
                 break;
         }
-        CreateEnemy(position, enemiesPrefabs[enemyIndex],enemyNames[Random.Range(0, enemyNames.Count + 1)]);
+
+        //Enemy type randomizer
+        switch (type)
+        {
+            case "small":
+                index = enemyIndexSmall;
+                break;
+            case "medium":
+                index = enemyIndexMed;
+                break;
+            case "big":
+                index = enemyIndexBig;
+                break;
+            default:
+                break;
+        }
+        CreateEnemy(position, enemiesPrefabs[index],enemyNames[Random.Range(0, enemyNames.Count)]);
     }
 
     //Returns a list of all the enemies whose name starts with the specified letter
