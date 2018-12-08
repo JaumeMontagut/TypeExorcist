@@ -5,60 +5,60 @@ TextureImporter:
     21300000: f2_deathphantom_0
     21300002: f2_deathphantom_1
     21300004: f2_deathphantom_2
-    21300006: f2_deathphantom_3
-    21300008: f2_deathphantom_4
+    21300006: w_deathphantom_3
+    21300008: a_deathphantom_100
     21300010: f2_deathphantom_5
     21300012: f2_deathphantom_6
     21300014: f2_deathphantom_7
-    21300016: f2_deathphantom_8
-    21300018: f2_deathphantom_9
+    21300016: w_deathphantom_8
+    21300018: a_deathphantom_101
     21300020: f2_deathphantom_10
     21300022: f2_deathphantom_11
     21300024: f2_deathphantom_12
     21300026: f2_deathphantom_13
-    21300028: f2_deathphantom_14
+    21300028: a_deathphantom_102
     21300030: f2_deathphantom_15
     21300032: f2_deathphantom_16
     21300034: f2_deathphantom_17
     21300036: f2_deathphantom_18
-    21300038: f2_deathphantom_19
+    21300038: a_deathphantom_104
     21300040: f2_deathphantom_20
     21300042: f2_deathphantom_21
     21300044: f2_deathphantom_22
     21300046: f2_deathphantom_23
-    21300048: f2_deathphantom_24
+    21300048: a_deathphantom_105
     21300050: f2_deathphantom_25
     21300052: f2_deathphantom_26
     21300054: f2_deathphantom_27
     21300056: f2_deathphantom_28
-    21300058: f2_deathphantom_29
+    21300058: a_deathphantom_106
     21300060: f2_deathphantom_30
     21300062: f2_deathphantom_31
-    21300064: f2_deathphantom_32
+    21300064: w_deathphantom_32
     21300066: f2_deathphantom_33
-    21300068: f2_deathphantom_34
+    21300068: a_deathphantom_107
     21300070: f2_deathphantom_35
     21300072: f2_deathphantom_36
-    21300074: f2_deathphantom_37
+    21300074: w_deathphantom_37
     21300076: f2_deathphantom_38
-    21300078: f2_deathphantom_39
+    21300078: a_deathphantom_108
     21300080: f2_deathphantom_40
     21300082: f2_deathphantom_41
-    21300084: f2_deathphantom_42
-    21300086: f2_deathphantom_43
-    21300088: f2_deathphantom_44
+    21300084: w_deathphantom_42
+    21300086: a_deathphantom_43
+    21300088: a_deathphantom_109
     21300090: f2_deathphantom_45
     21300092: f2_deathphantom_46
-    21300094: f2_deathphantom_47
-    21300096: f2_deathphantom_48
+    21300094: w_deathphantom_47
+    21300096: a_deathphantom_48
     21300098: f2_deathphantom_49
     21300100: f2_deathphantom_50
-    21300102: f2_deathphantom_51
-    21300104: f2_deathphantom_52
+    21300102: w_deathphantom_51
+    21300104: a_deathphantom_52
     21300106: f2_deathphantom_53
     21300108: f2_deathphantom_54
-    21300110: f2_deathphantom_55
-    21300112: f2_deathphantom_56
+    21300110: w_deathphantom_55
+    21300112: a_deathphantom_56
     21300114: f2_deathphantom_57
     21300116: f2_deathphantom_58
     21300118: f2_deathphantom_59
@@ -109,7 +109,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -165,18 +165,18 @@ TextureImporter:
       name: f2_deathphantom_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 959
-        width: 37
-        height: 41
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 943
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ffc83cf3cb116141a862f1353c43211
+      spriteID: a2ff122954894734bb5a462a5cda0c3c
       vertices: []
       indices: 
       edges: []
@@ -185,18 +185,18 @@ TextureImporter:
       name: f2_deathphantom_1
       rect:
         serializedVersion: 2
-        x: 105
-        y: 958
-        width: 37
-        height: 41
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 943
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7655ab4fa0710bf46ab5ade77360689a
+      spriteID: 494eacbcdea9bb7498f5be62bc6f0cdd
       vertices: []
       indices: 
       edges: []
@@ -205,58 +205,58 @@ TextureImporter:
       name: f2_deathphantom_2
       rect:
         serializedVersion: 2
-        x: 177
-        y: 989
-        width: 43
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 943
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a37330278ba32b0469a2eb4586dab746
+      spriteID: abd8edcf598d2574ab37724df16ef98d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_3
+      name: w_deathphantom_3
       rect:
         serializedVersion: 2
-        x: 205
-        y: 994
-        width: 6
-        height: 6
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 943
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c0d06a163d96504bbbb4672e6aac027
+      spriteID: d5aaea1e30b4d554e87a22aa4ad18c59
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_4
+      name: a_deathphantom_100
       rect:
         serializedVersion: 2
-        x: 339
-        y: 946
-        width: 65
-        height: 76
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 324
+        y: 943
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bed44bcabd45e243bf916acaa863075
+      spriteID: ead5d3eb4c0686d499d455f0f65fe2bd
       vertices: []
       indices: 
       edges: []
@@ -265,18 +265,18 @@ TextureImporter:
       name: f2_deathphantom_5
       rect:
         serializedVersion: 2
-        x: 175
-        y: 975
-        width: 32
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 862
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc8df9e4754de454d8b2b81e90a9ae1a
+      spriteID: 611723c5cacf09647a1eeed2d5baa464
       vertices: []
       indices: 
       edges: []
@@ -285,18 +285,18 @@ TextureImporter:
       name: f2_deathphantom_6
       rect:
         serializedVersion: 2
-        x: 257
-        y: 957
-        width: 62
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 862
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebc978b377d8b834cb1f78e2fc5f5b82
+      spriteID: 3f259fd1911f4a140a5dac11c671a700
       vertices: []
       indices: 
       edges: []
@@ -305,58 +305,58 @@ TextureImporter:
       name: f2_deathphantom_7
       rect:
         serializedVersion: 2
-        x: 181
-        y: 963
-        width: 25
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 862
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2e865aeb0522ba4a8c395c40493453a
+      spriteID: be1e3fcb42d2be04f8147dbfb3a39c84
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_8
+      name: w_deathphantom_8
       rect:
         serializedVersion: 2
-        x: 25
-        y: 877
-        width: 37
-        height: 41
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 862
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 304e870f1e1c3ef458fdbe6d8f133be2
+      spriteID: 84933a7ba462bad4891235aee76580ab
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_9
+      name: a_deathphantom_101
       rect:
         serializedVersion: 2
-        x: 106
-        y: 878
-        width: 36
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 324
+        y: 862
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aabfbf2c95e30264b8d7a35e73ccb822
+      spriteID: d700a748704e0f84d9a3d0e91ba97c73
       vertices: []
       indices: 
       edges: []
@@ -365,18 +365,18 @@ TextureImporter:
       name: f2_deathphantom_10
       rect:
         serializedVersion: 2
-        x: 179
-        y: 880
-        width: 31
-        height: 36
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 781
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac01d10841d17594c84694b3831e53e5
+      spriteID: f8d5d66eedffafd48848ba812a6c873a
       vertices: []
       indices: 
       edges: []
@@ -385,18 +385,18 @@ TextureImporter:
       name: f2_deathphantom_11
       rect:
         serializedVersion: 2
-        x: 189
-        y: 908
-        width: 17
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 781
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df2cf242ec827b7419f48ccb98b6ca52
+      spriteID: 42c713d20af7354479d17085d3b3ce34
       vertices: []
       indices: 
       edges: []
@@ -405,18 +405,18 @@ TextureImporter:
       name: f2_deathphantom_12
       rect:
         serializedVersion: 2
-        x: 209
-        y: 909
-        width: 14
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 781
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60becb1328498914bb4c874333d39df3
+      spriteID: f70cd01e4f8dc3e4da658070d4332d7e
       vertices: []
       indices: 
       edges: []
@@ -425,38 +425,38 @@ TextureImporter:
       name: f2_deathphantom_13
       rect:
         serializedVersion: 2
-        x: 258
-        y: 876
-        width: 56
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 781
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe63b5598e6ca754a9a1f40a570672f5
+      spriteID: 8ae68e1bfed10a84e99896f33c51bda0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_14
+      name: a_deathphantom_102
       rect:
         serializedVersion: 2
-        x: 334
-        y: 874
-        width: 45
-        height: 61
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 324
+        y: 781
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c915e1cfbfd39f4fbf0732d9455bd8f
+      spriteID: 786f2102065cfc34c9658c7027a7f9ef
       vertices: []
       indices: 
       edges: []
@@ -465,18 +465,18 @@ TextureImporter:
       name: f2_deathphantom_15
       rect:
         serializedVersion: 2
-        x: 178
-        y: 896
-        width: 5
-        height: 6
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 700
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e31535c9e2449ff4ca8d5d160920dffe
+      spriteID: f5b96303bc5898b4ab18c3e8ee308201
       vertices: []
       indices: 
       edges: []
@@ -485,18 +485,18 @@ TextureImporter:
       name: f2_deathphantom_16
       rect:
         serializedVersion: 2
-        x: 25
-        y: 799
-        width: 37
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 700
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74eac54c5cd998d42802333c0d492e49
+      spriteID: 57ed8a5fc510b8f4dbc6ee3b51174234
       vertices: []
       indices: 
       edges: []
@@ -505,18 +505,18 @@ TextureImporter:
       name: f2_deathphantom_17
       rect:
         serializedVersion: 2
-        x: 107
-        y: 794
-        width: 32
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 700
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27ff90b1b9ca47d4f9f5285ac7a65056
+      spriteID: 822f71623c6eefc4eb81ee44c3780548
       vertices: []
       indices: 
       edges: []
@@ -525,38 +525,38 @@ TextureImporter:
       name: f2_deathphantom_18
       rect:
         serializedVersion: 2
-        x: 181
-        y: 796
-        width: 40
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 700
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bddca9ec4cce34408e6614ae241e84d
+      spriteID: 1d9c6af2261cba1459a5b1f31895b1a6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_19
+      name: a_deathphantom_104
       rect:
         serializedVersion: 2
-        x: 210
-        y: 826
-        width: 12
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 324
+        y: 700
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef2695735df8b3045a7162ce6367f87d
+      spriteID: cbb2dc1eb74ee7c489f2908d71de53ed
       vertices: []
       indices: 
       edges: []
@@ -565,18 +565,18 @@ TextureImporter:
       name: f2_deathphantom_20
       rect:
         serializedVersion: 2
-        x: 268
-        y: 802
-        width: 35
-        height: 40
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 619
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d990031d5c67264489dd72bb3609d706
+      spriteID: bbfa875e2d77d734397c70b4f053e2ab
       vertices: []
       indices: 
       edges: []
@@ -585,18 +585,18 @@ TextureImporter:
       name: f2_deathphantom_21
       rect:
         serializedVersion: 2
-        x: 335
-        y: 799
-        width: 49
-        height: 58
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 619
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88da0ee0e4e64bd46bb2f4647ef11836
+      spriteID: 11f08cc6bdbbe0b48a1d1c2ebd9fefc7
       vertices: []
       indices: 
       edges: []
@@ -605,18 +605,18 @@ TextureImporter:
       name: f2_deathphantom_22
       rect:
         serializedVersion: 2
-        x: 23
-        y: 721
-        width: 41
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 619
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f8b7755c79cb674985b722b68dd5e3a
+      spriteID: 40f3a7f07c7163b42b1e0216ede6de07
       vertices: []
       indices: 
       edges: []
@@ -625,38 +625,38 @@ TextureImporter:
       name: f2_deathphantom_23
       rect:
         serializedVersion: 2
-        x: 103
-        y: 712
-        width: 23
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 619
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2d4fa80e245b304d9e5c66abe8c6fdc
+      spriteID: 960a33066de100a42932e005a5f95a52
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_24
+      name: a_deathphantom_105
       rect:
         serializedVersion: 2
-        x: 183
-        y: 714
-        width: 40
-        height: 47
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 324
+        y: 619
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7345e780daf6ed340bc0cc54b203d2ca
+      spriteID: 10bc7cf4050060c419b72b6651f95e8f
       vertices: []
       indices: 
       edges: []
@@ -665,18 +665,18 @@ TextureImporter:
       name: f2_deathphantom_25
       rect:
         serializedVersion: 2
-        x: 267
-        y: 720
-        width: 36
-        height: 40
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 538
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 288c8939b5b3d8d44bdbc77c0a20b4e8
+      spriteID: 7760a03cc4de85e4dbd22c570e00d506
       vertices: []
       indices: 
       edges: []
@@ -685,18 +685,18 @@ TextureImporter:
       name: f2_deathphantom_26
       rect:
         serializedVersion: 2
-        x: 346
-        y: 717
-        width: 38
-        height: 61
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 538
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24a57c4f117bb25489d1eb59cf8ee60e
+      spriteID: 28e48f2241c0fd44d8f0c2819a8010df
       vertices: []
       indices: 
       edges: []
@@ -705,18 +705,18 @@ TextureImporter:
       name: f2_deathphantom_27
       rect:
         serializedVersion: 2
-        x: 23
-        y: 640
-        width: 41
-        height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 538
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d56adca615c4ac0499fe97f5dcf95139
+      spriteID: c907ac9d1b2cd0a4ca62dafb5526c45b
       vertices: []
       indices: 
       edges: []
@@ -725,38 +725,38 @@ TextureImporter:
       name: f2_deathphantom_28
       rect:
         serializedVersion: 2
-        x: 111
-        y: 631
-        width: 15
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 538
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9004d267c0a602849916a4050d85bcdc
+      spriteID: a8c2028f6507cd945994ea940f24fc85
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_29
+      name: a_deathphantom_106
       rect:
         serializedVersion: 2
-        x: 187
-        y: 636
-        width: 37
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 324
+        y: 538
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 765d1e3837464d448bc2d74e87a008ee
+      spriteID: 9801c5f54ef73fd4c812b836863fe0e7
       vertices: []
       indices: 
       edges: []
@@ -765,18 +765,18 @@ TextureImporter:
       name: f2_deathphantom_30
       rect:
         serializedVersion: 2
-        x: 267
-        y: 637
-        width: 36
-        height: 41
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 457
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0554eb6de2734c469f92f8f8bc9a38c
+      spriteID: 7a19eab07b806a64aba77d2b7d39ff2c
       vertices: []
       indices: 
       edges: []
@@ -785,38 +785,38 @@ TextureImporter:
       name: f2_deathphantom_31
       rect:
         serializedVersion: 2
-        x: 351
-        y: 634
-        width: 29
-        height: 59
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 457
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6a761f341a168143b8853f54b58b98d
+      spriteID: b3e840203b8822d48a747b4243a05f19
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_32
+      name: w_deathphantom_32
       rect:
         serializedVersion: 2
-        x: 103
-        y: 633
-        width: 9
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 457
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 268cb04adf8859f4db032df72d5dd0b3
+      spriteID: 532fc1223f9a2f748ba554cece12d8f1
       vertices: []
       indices: 
       edges: []
@@ -825,38 +825,38 @@ TextureImporter:
       name: f2_deathphantom_33
       rect:
         serializedVersion: 2
-        x: 24
-        y: 559
-        width: 40
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 457
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c010142e91f340c4a8c9c067b3056b35
+      spriteID: 28e6398c921b16f428bf5c7f84b7342e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_34
+      name: a_deathphantom_107
       rect:
         serializedVersion: 2
-        x: 103
-        y: 550
-        width: 23
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 324
+        y: 457
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e57aca3a7a728b2429f1ba8c13513066
+      spriteID: 687c01029127fed489a7bed5a99c91d5
       vertices: []
       indices: 
       edges: []
@@ -865,18 +865,18 @@ TextureImporter:
       name: f2_deathphantom_35
       rect:
         serializedVersion: 2
-        x: 187
-        y: 551
-        width: 34
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 376
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74c9e8d447ee16b45be10dbbe7c49106
+      spriteID: 3ae7280e72e03d849b4d4a128b6dd8f5
       vertices: []
       indices: 
       edges: []
@@ -885,38 +885,38 @@ TextureImporter:
       name: f2_deathphantom_36
       rect:
         serializedVersion: 2
-        x: 266
-        y: 554
-        width: 37
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 376
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0326d0ee43cd81043b3ba57ac2765b20
+      spriteID: 5607b2e1ebc684140ad37a7c97e61f62
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_37
+      name: w_deathphantom_37
       rect:
         serializedVersion: 2
-        x: 349
-        y: 548
-        width: 28
-        height: 54
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 376
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2d6af3037736f047b9d766550e1ba3b
+      spriteID: 1c9b404550e4c7c4ab40a77e1b43da95
       vertices: []
       indices: 
       edges: []
@@ -925,38 +925,38 @@ TextureImporter:
       name: f2_deathphantom_38
       rect:
         serializedVersion: 2
-        x: 25
-        y: 479
-        width: 36
-        height: 40
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 376
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f82dea203feaee24eb0e856c7f88cc8e
+      spriteID: 1e86e76b8d6f6da4d9bb5936dd8793a0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_39
+      name: a_deathphantom_108
       rect:
         serializedVersion: 2
-        x: 103
-        y: 473
-        width: 9
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 324
+        y: 376
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4126190a3653aa24ca739da1e33967f8
+      spriteID: ed35fc82391816240933984ed83bdb9f
       vertices: []
       indices: 
       edges: []
@@ -965,18 +965,18 @@ TextureImporter:
       name: f2_deathphantom_40
       rect:
         serializedVersion: 2
-        x: 111
-        y: 478
-        width: 13
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 295
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf338de537d774c4fb42a0815b488007
+      spriteID: 3d60752e0d0d6fd488a83b09365d1648
       vertices: []
       indices: 
       edges: []
@@ -985,78 +985,78 @@ TextureImporter:
       name: f2_deathphantom_41
       rect:
         serializedVersion: 2
-        x: 177
-        y: 471
-        width: 45
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 295
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20013339c822158429b22a14150e9b0d
+      spriteID: 69e37511889931b4cbd07050acdd6701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_42
+      name: w_deathphantom_42
       rect:
         serializedVersion: 2
-        x: 266
-        y: 473
-        width: 37
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 295
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f14c40155038df140b60aaca6460939d
+      spriteID: e25cd9b274fdc2e41a252a9a4a5789fa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_43
+      name: a_deathphantom_43
       rect:
         serializedVersion: 2
-        x: 349
-        y: 465
-        width: 34
-        height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 295
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa5d1dd3f3727084d8b09814243844f5
+      spriteID: 3026556499d2196438d6033948bca151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_44
+      name: a_deathphantom_109
       rect:
         serializedVersion: 2
-        x: 111
-        y: 469
-        width: 15
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 324
+        y: 295
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 713df3b82f340844986de15710fb4fa0
+      spriteID: 3691828e2959aa546b90a3210f2d1cb5
       vertices: []
       indices: 
       edges: []
@@ -1065,18 +1065,18 @@ TextureImporter:
       name: f2_deathphantom_45
       rect:
         serializedVersion: 2
-        x: 24
-        y: 396
-        width: 36
-        height: 41
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 214
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 105dead0c0d45554b88040d774805e76
+      spriteID: 26d16d393042f694c8377be01c74f379
       vertices: []
       indices: 
       edges: []
@@ -1085,58 +1085,58 @@ TextureImporter:
       name: f2_deathphantom_46
       rect:
         serializedVersion: 2
-        x: 112
-        y: 407
-        width: 11
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 214
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c0fe737866fcea48bab59faaa509a54
+      spriteID: 42677f5ea97d8e14fb6ce7d07eb4107e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_47
+      name: w_deathphantom_47
       rect:
         serializedVersion: 2
-        x: 177
-        y: 390
-        width: 45
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 214
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8bdd67f8a879c840a00a0abeca390de
+      spriteID: 6525539344b6f404db621a3d965c1763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_48
+      name: a_deathphantom_48
       rect:
         serializedVersion: 2
-        x: 268
-        y: 392
-        width: 39
-        height: 43
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 214
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b7982b5695c7144785688aaa5b12449
+      spriteID: df18062f129ba8546a87f5b3c1a145e8
       vertices: []
       indices: 
       edges: []
@@ -1145,18 +1145,18 @@ TextureImporter:
       name: f2_deathphantom_49
       rect:
         serializedVersion: 2
-        x: 349
-        y: 389
-        width: 40
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 133
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50af1642129f8274abb041bdb7de0458
+      spriteID: 29ed05e6bf103364fb3e15a143d80f62
       vertices: []
       indices: 
       edges: []
@@ -1165,58 +1165,58 @@ TextureImporter:
       name: f2_deathphantom_50
       rect:
         serializedVersion: 2
-        x: 103
-        y: 399
-        width: 9
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 133
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cac87713c3ccf64e998f3e726623d65
+      spriteID: c769bd25b387b56429cab84c0bd15312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_51
+      name: w_deathphantom_51
       rect:
         serializedVersion: 2
-        x: 111
-        y: 390
-        width: 15
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 133
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b0f1e9b7c773264baf1b0dbd94caee7
+      spriteID: c4849abcf92f09a4dbe10cd72ac07abd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_52
+      name: a_deathphantom_52
       rect:
         serializedVersion: 2
-        x: 24
-        y: 314
-        width: 36
-        height: 41
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 133
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17225524cf7ad3f4db72d3c5f7fd7fae
+      spriteID: 1d12b3d32f761924780381cec7f375cd
       vertices: []
       indices: 
       edges: []
@@ -1225,18 +1225,18 @@ TextureImporter:
       name: f2_deathphantom_53
       rect:
         serializedVersion: 2
-        x: 103
-        y: 326
-        width: 9
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 52
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cb256a36b3cecf498ad59cca34fdcbc
+      spriteID: 35df25a5d83ca4e449710ddb5f09bef7
       vertices: []
       indices: 
       edges: []
@@ -1245,518 +1245,58 @@ TextureImporter:
       name: f2_deathphantom_54
       rect:
         serializedVersion: 2
-        x: 112
-        y: 331
-        width: 11
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 52
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63f139d64382f9844bee1cd74ace8ff4
+      spriteID: 977221fc2d8eacb46aa249fb92b6d42a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_55
+      name: w_deathphantom_55
       rect:
         serializedVersion: 2
-        x: 178
-        y: 294
-        width: 47
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 162
+        y: 52
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bf13aed69d359c45b1b157e154c8580
+      spriteID: 354504f03e763d842b09079b9052fe04
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f2_deathphantom_56
+      name: a_deathphantom_56
       rect:
         serializedVersion: 2
-        x: 268
-        y: 310
-        width: 37
-        height: 43
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 52
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e3f822c66197e0468580b8dfb4665ea
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_57
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 308
-        width: 32
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 691c5fb5cccd9fd4e9cea7147f1394fa
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_58
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 318
-        width: 11
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 828f3e10b2e267e448f16d27f271f06d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_59
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 307
-        width: 10
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dba2e15a09ad5e74293dbaa2a7eb87a5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_60
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 231
-        width: 37
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43f63be46ae60c541902783dfbbf699f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_61
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 250
-        width: 9
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 403492350169d2d49b3c4463ed679bbf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_62
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 256
-        width: 24
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cff24d7ccf8efc4f804f6c308b8d4d3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_63
-      rect:
-        serializedVersion: 2
-        x: 182
-        y: 230
-        width: 41
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 370d8a4607b94a24e9821dd0c5063e56
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_64
-      rect:
-        serializedVersion: 2
-        x: 263
-        y: 221
-        width: 37
-        height: 49
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0342e558a23bd3245845d73d65c34264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_65
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 241
-        width: 17
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd54938be38cd804da847cffd2263ae7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_66
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 232
-        width: 9
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36c9a5e7d6f6b6345959f7dd60e3f8f6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_67
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 149
-        width: 36
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f56c6896b7e8c744bc4831f2daed779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_68
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 168
-        width: 53
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a5bc961c2ab2ee43b82dba69ce92b05
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_69
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 159
-        width: 21
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 431334d4c03cf054295fb7911a92b667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_70
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 168
-        width: 9
-        height: 10
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc7ab38dd5825e048900fcc6af66b86b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_71
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 149
-        width: 47
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 922995cf15f0e4d42a4f8ec5ebe7576d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_72
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 140
-        width: 42
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4bffaa9e66322d4499febfb205fb833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_73
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 154
-        width: 9
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 132007539250d5542b2a49de8fd61df8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_74
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 66
-        width: 37
-        height: 43
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e988a3523bebe694aba5cd7a95fd05fc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_75
-      rect:
-        serializedVersion: 2
-        x: 89
-        y: 87
-        width: 48
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c38e1504bda506942a56d2b2d38b7df7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_76
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 85
-        width: 20
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2ac0d14d948ec04395d28d38f4abb09
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_77
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 68
-        width: 57
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ddca1c9f98670d49b95fec5a776cd34
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_78
-      rect:
-        serializedVersion: 2
-        x: 263
-        y: 54
-        width: 47
-        height: 50
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f320bd41ac4d2654aa83dbd4d8102af7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f2_deathphantom_79
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 74
-        width: 27
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f65719104f9d0048a84034d1b02064c
+      spriteID: 522766c3d1177454b8b67fa7afadd4da
       vertices: []
       indices: 
       edges: []
