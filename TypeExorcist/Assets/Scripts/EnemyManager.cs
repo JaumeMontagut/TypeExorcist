@@ -47,6 +47,11 @@ public class EnemyManager : MonoBehaviour {
         enemies.Add(newEnemy);
     }
 
+
+    //Recieves the type of enemy to spawn ANY enemy by default. 
+    // "small" spawns only small enemies
+    // "mid"   spawns only mid size enemies
+    // "big"   spawns only big enemies
     public void GenerateRandomEnemy(string type)
     {
         int index = -1;
