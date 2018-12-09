@@ -57,7 +57,7 @@ public class EnemyManager : MonoBehaviour {
 
         // camera data------------------------------------------------------------
         //------------------------------------------------------------------------
-        int startingPosition = Random.Range(1, 5);
+        int startingPosition = Random.Range(1, 3);
         int cameraHeight = (int)Camera.main.orthographicSize;
         int cameraWidth = (int)(Camera.main.orthographicSize * Camera.main.aspect);
         //------------------------------------------------------------------------
@@ -68,19 +68,11 @@ public class EnemyManager : MonoBehaviour {
         {
             case 1:
                 position.x = -cameraWidth;
-                position.y = Random.Range(-cameraHeight, cameraHeight + 1); 
+                position.y = Random.Range(-cameraHeight, cameraHeight); 
                 break;
             case 2:
                 position.x = cameraWidth;
-                position.y = Random.Range(-cameraHeight, cameraHeight + 1);
-                break;
-            case 3:
-                position.y = -cameraHeight;
-                position.x = Random.Range(-cameraWidth, cameraWidth + 1);
-                break;
-            case 4:
-                position.y = cameraHeight;
-                position.x = Random.Range(-cameraWidth, cameraWidth + 1);
+                position.y = Random.Range(-cameraHeight, cameraHeight);
                 break;
 
             default:
