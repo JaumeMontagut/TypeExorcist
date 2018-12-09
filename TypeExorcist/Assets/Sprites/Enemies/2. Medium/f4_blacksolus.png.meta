@@ -2,97 +2,97 @@ fileFormatVersion: 2
 guid: 64441e9b5bb6a4545a74f4757df79f58
 TextureImporter:
   fileIDToRecycleName:
-    21300000: f4_blacksolus_0
-    21300002: f4_blacksolus_1
+    21300000: w1
+    21300002: i5
     21300004: f4_blacksolus_2
     21300006: f4_blacksolus_3
     21300008: f4_blacksolus_4
     21300010: f4_blacksolus_5
-    21300012: f4_blacksolus_6
-    21300014: f4_blacksolus_7
-    21300016: f4_blacksolus_8
-    21300018: f4_blacksolus_9
-    21300020: f4_blacksolus_10
-    21300022: f4_blacksolus_11
+    21300012: a32
+    21300014: a22
+    21300016: a12
+    21300018: a2
+    21300020: w2
+    21300022: i6
     21300024: f4_blacksolus_12
     21300026: f4_blacksolus_13
     21300028: f4_blacksolus_14
     21300030: f4_blacksolus_15
-    21300032: f4_blacksolus_16
-    21300034: f4_blacksolus_17
-    21300036: f4_blacksolus_18
-    21300038: f4_blacksolus_19
-    21300040: f4_blacksolus_20
-    21300042: f4_blacksolus_21
+    21300032: a31
+    21300034: a21
+    21300036: a11
+    21300038: a1
+    21300040: w3
+    21300042: i7
     21300044: f4_blacksolus_22
     21300046: f4_blacksolus_23
     21300048: f4_blacksolus_24
     21300050: f4_blacksolus_25
-    21300052: f4_blacksolus_26
-    21300054: f4_blacksolus_27
-    21300056: f4_blacksolus_28
-    21300058: f4_blacksolus_29
-    21300060: f4_blacksolus_30
+    21300052: a30
+    21300054: a20
+    21300056: a10
+    21300058: w4
+    21300060: i8
     21300062: f4_blacksolus_31
     21300064: f4_blacksolus_32
     21300066: f4_blacksolus_33
     21300068: f4_blacksolus_34
-    21300070: f4_blacksolus_35
-    21300072: f4_blacksolus_36
-    21300074: f4_blacksolus_37
-    21300076: f4_blacksolus_38
-    21300078: f4_blacksolus_39
+    21300070: a29
+    21300072: a19
+    21300074: a9
+    21300076: w5
+    21300078: i9
     21300080: f4_blacksolus_40
     21300082: f4_blacksolus_41
     21300084: f4_blacksolus_42
     21300086: f4_blacksolus_43
-    21300088: f4_blacksolus_44
-    21300090: f4_blacksolus_45
-    21300092: f4_blacksolus_46
-    21300094: f4_blacksolus_47
-    21300096: f4_blacksolus_48
+    21300088: a28
+    21300090: a18
+    21300092: a8
+    21300094: w6
+    21300096: i10
     21300098: f4_blacksolus_49
     21300100: f4_blacksolus_50
     21300102: f4_blacksolus_51
     21300104: f4_blacksolus_52
-    21300106: f4_blacksolus_53
-    21300108: f4_blacksolus_54
-    21300110: f4_blacksolus_55
-    21300112: f4_blacksolus_56
-    21300114: f4_blacksolus_57
+    21300106: a27
+    21300108: a17
+    21300110: a7
+    21300112: i1
+    21300114: i11
     21300116: f4_blacksolus_58
     21300118: f4_blacksolus_59
     21300120: f4_blacksolus_60
-    21300122: f4_blacksolus_61
-    21300124: f4_blacksolus_62
-    21300126: f4_blacksolus_63
-    21300128: f4_blacksolus_64
-    21300130: f4_blacksolus_65
-    21300132: f4_blacksolus_66
+    21300122: a36
+    21300124: a26
+    21300126: a16
+    21300128: a6
+    21300130: i2
+    21300132: i12
     21300134: f4_blacksolus_67
     21300136: f4_blacksolus_68
     21300138: f4_blacksolus_69
-    21300140: f4_blacksolus_70
-    21300142: f4_blacksolus_71
-    21300144: f4_blacksolus_72
-    21300146: f4_blacksolus_73
-    21300148: f4_blacksolus_74
+    21300140: a35
+    21300142: a25
+    21300144: a15
+    21300146: a5
+    21300148: i3
     21300150: f4_blacksolus_75
     21300152: f4_blacksolus_76
     21300154: f4_blacksolus_77
-    21300156: f4_blacksolus_78
-    21300158: f4_blacksolus_79
-    21300160: f4_blacksolus_80
-    21300162: f4_blacksolus_81
-    21300164: f4_blacksolus_82
+    21300156: a34
+    21300158: a24
+    21300160: a14
+    21300162: a4
+    21300164: i4
     21300166: f4_blacksolus_83
     21300168: f4_blacksolus_84
     21300170: f4_blacksolus_85
     21300172: f4_blacksolus_86
-    21300174: f4_blacksolus_87
-    21300176: f4_blacksolus_88
-    21300178: f4_blacksolus_89
-    21300180: f4_blacksolus_90
+    21300174: a33
+    21300176: a23
+    21300178: a13
+    21300180: a3
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -120,7 +120,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -228,13 +228,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: f4_blacksolus_0
+      name: w1
       rect:
         serializedVersion: 2
         x: 0
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,19 +242,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf356ca74b9fc3c498b87618ec17fcc4
+      spriteID: aeb87da54c822154e9bee28941e09098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_1
+      name: i5
       rect:
         serializedVersion: 2
-        x: 102
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        x: 101
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,7 +262,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70f412d685c45b540b42cbbd287f2af8
+      spriteID: e7fd91cb2ad24dc4fa618960d6c7f368
       vertices: []
       indices: 
       edges: []
@@ -271,10 +271,10 @@ TextureImporter:
       name: f4_blacksolus_2
       rect:
         serializedVersion: 2
-        x: 204
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,7 +282,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e3d566b32c40124889407d8c1f1fb19
+      spriteID: 538ed6a4393555e4ab52e62ea7efe35d
       vertices: []
       indices: 
       edges: []
@@ -291,10 +291,10 @@ TextureImporter:
       name: f4_blacksolus_3
       rect:
         serializedVersion: 2
-        x: 306
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,7 +302,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc7ef6b0889f3bd47a513a48f5c52ab1
+      spriteID: 09706262240deef45bce14f889d6fd64
       vertices: []
       indices: 
       edges: []
@@ -311,10 +311,10 @@ TextureImporter:
       name: f4_blacksolus_4
       rect:
         serializedVersion: 2
-        x: 408
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,7 +322,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c47deab1e6e1f6d439070d58b89e7d9f
+      spriteID: 0b710e642ba5f894aa86437ba581de20
       vertices: []
       indices: 
       edges: []
@@ -331,10 +331,10 @@ TextureImporter:
       name: f4_blacksolus_5
       rect:
         serializedVersion: 2
-        x: 510
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,19 +342,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a363e9fdb272ba145b5790cb3a28fae5
+      spriteID: 09194c55f80581f41a7be42332ed93a5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_6
+      name: a32
       rect:
         serializedVersion: 2
-        x: 612
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,19 +362,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c4b5688f4cdb4e4b8e377b529348572
+      spriteID: 070849a495a4b89478f99e99b0a44360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_7
+      name: a22
       rect:
         serializedVersion: 2
-        x: 714
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,19 +382,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c519b0d4dc48c2e449c79e353ab79b46
+      spriteID: 73a7c76172aa5f14883b23725fa4affa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_8
+      name: a12
       rect:
         serializedVersion: 2
-        x: 816
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        x: 808
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,19 +402,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03fbcc2c314a65b409810f77e1de32ce
+      spriteID: 8b0ddab216ae5f940b97d5b2379b721f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_9
+      name: a2
       rect:
         serializedVersion: 2
-        x: 918
-        y: 921.6
-        width: 102.4
-        height: 102.4
+        x: 909
+        y: 924
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -422,19 +422,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3b65d479fb274944ba6bfe09de6a853
+      spriteID: 8b109f67592b9814b97ac02ec65d3cea
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_10
+      name: w2
       rect:
         serializedVersion: 2
         x: 0
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,19 +442,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2defad7a82ce01d4e8f08454fad45d1f
+      spriteID: 1cdf4834321bbab488ea95cce7f8a4f6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_11
+      name: i6
       rect:
         serializedVersion: 2
-        x: 102
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        x: 101
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,7 +462,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5830d7843330a844cbc662cb8d64a712
+      spriteID: e31d89b76ae33a148a75871801ae3f88
       vertices: []
       indices: 
       edges: []
@@ -471,10 +471,10 @@ TextureImporter:
       name: f4_blacksolus_12
       rect:
         serializedVersion: 2
-        x: 204
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,7 +482,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c8c6b839cf359042b1731b8b1782a82
+      spriteID: b6f89644854312044b83e0bbacd4556f
       vertices: []
       indices: 
       edges: []
@@ -491,10 +491,10 @@ TextureImporter:
       name: f4_blacksolus_13
       rect:
         serializedVersion: 2
-        x: 306
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,7 +502,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcb0919251074ad498eae99aba2defee
+      spriteID: dbd24abee3c846a4698d367f2d19bf07
       vertices: []
       indices: 
       edges: []
@@ -511,10 +511,10 @@ TextureImporter:
       name: f4_blacksolus_14
       rect:
         serializedVersion: 2
-        x: 408
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -522,7 +522,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea623adfee95119438613aced52df1a9
+      spriteID: b746fb32a0bf6e94c9245425914cc03c
       vertices: []
       indices: 
       edges: []
@@ -531,10 +531,10 @@ TextureImporter:
       name: f4_blacksolus_15
       rect:
         serializedVersion: 2
-        x: 510
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -542,19 +542,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2685dfb106ab8904ea9362733a703436
+      spriteID: 5b9347597190d9f49a514c65349b2c9c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_16
+      name: a31
       rect:
         serializedVersion: 2
-        x: 612
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,19 +562,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a04ac71e5c727b49b2849e123c0e318
+      spriteID: b28f1493d096cd944b3d64227525a34e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_17
+      name: a21
       rect:
         serializedVersion: 2
-        x: 714
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,19 +582,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c78be88c3e837b54b90641d2733d7c20
+      spriteID: 17af09bb77c456340a2094df4ea52ca4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_18
+      name: a11
       rect:
         serializedVersion: 2
-        x: 816
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        x: 808
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -602,19 +602,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ec821aea60355d4488e9e774d6ce84d
+      spriteID: d1b66113b314c7a4bbcb433ae3c8c544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_19
+      name: a1
       rect:
         serializedVersion: 2
-        x: 918
-        y: 819.6
-        width: 102.4
-        height: 102.4
+        x: 909
+        y: 823
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,19 +622,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ac37d499f471574991f550ef33a1baa
+      spriteID: a08161dc777c2894c94f94428d010c55
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_20
+      name: w3
       rect:
         serializedVersion: 2
         x: 0
-        y: 717.6
-        width: 102.4
-        height: 102.4
+        y: 722
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -642,19 +642,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d23e04b6fdb8bbe459bc8fa069753009
+      spriteID: 764637f97afa9924a8b15fca49ce5960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_21
+      name: i7
       rect:
         serializedVersion: 2
-        x: 102
-        y: 717.6
-        width: 102.4
-        height: 102.4
+        x: 101
+        y: 722
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -662,7 +662,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96e11a90453100a4e92140e12581cbe3
+      spriteID: 4d6f4af625a6a7e48a2f66416af5f34e
       vertices: []
       indices: 
       edges: []
@@ -671,10 +671,10 @@ TextureImporter:
       name: f4_blacksolus_22
       rect:
         serializedVersion: 2
-        x: 204
-        y: 717.6
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 722
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -682,7 +682,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6063c60394a9a604ab74896d35c5c5f9
+      spriteID: 98c94cf9e2ffa7d458d4138bf9e653c5
       vertices: []
       indices: 
       edges: []
@@ -691,10 +691,10 @@ TextureImporter:
       name: f4_blacksolus_23
       rect:
         serializedVersion: 2
-        x: 306
-        y: 717.6
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 722
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -702,7 +702,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93c7ca810ffaf5549adde747fbc522a2
+      spriteID: ab60c108799d6ed478ca7406e5456b9b
       vertices: []
       indices: 
       edges: []
@@ -711,10 +711,10 @@ TextureImporter:
       name: f4_blacksolus_24
       rect:
         serializedVersion: 2
-        x: 408
-        y: 717.6
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 722
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -722,7 +722,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8580cb5374c6b241ae9f8904500b0e0
+      spriteID: 54429e3723657264d83bfdc1694a9fc7
       vertices: []
       indices: 
       edges: []
@@ -731,10 +731,10 @@ TextureImporter:
       name: f4_blacksolus_25
       rect:
         serializedVersion: 2
-        x: 510
-        y: 717.6
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 722
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -742,19 +742,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a291389832d3b345abb33dd16751662
+      spriteID: 464609e9d4113a741bbeb42dd8c843e1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_26
+      name: a30
       rect:
         serializedVersion: 2
-        x: 612
-        y: 717.6
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 722
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -762,19 +762,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acd89caff45784d418a380eba3648c14
+      spriteID: 25aab6790e0ec0b4e8eec128f9f67dd0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_27
+      name: a20
       rect:
         serializedVersion: 2
-        x: 714
-        y: 717.6
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 722
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -782,19 +782,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1f3f8c1e2c763445ae561aa3b7851ee
+      spriteID: b364db57cc9a665428e92692f51ab4de
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_28
+      name: a10
       rect:
         serializedVersion: 2
-        x: 816
-        y: 717.6
-        width: 102.4
-        height: 102.4
+        x: 808
+        y: 722
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -802,19 +802,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd75b37e0bbdb99458926debe14254c3
+      spriteID: 9d8ec986d76806946966f26c1f922107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_29
+      name: w4
       rect:
         serializedVersion: 2
         x: 0
-        y: 615.6
-        width: 102.4
-        height: 102.4
+        y: 621
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -822,19 +822,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bd3c841e1032b04fa84767a60114c23
+      spriteID: f82e81d294353294292ba7fcc2475eb9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_30
+      name: i8
       rect:
         serializedVersion: 2
-        x: 102
-        y: 615.6
-        width: 102.4
-        height: 102.4
+        x: 101
+        y: 621
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -842,7 +842,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b9daadcbf8c50d48b5a7c0a9b35e73a
+      spriteID: d6623f6022129934aa9ca05704abd63c
       vertices: []
       indices: 
       edges: []
@@ -851,10 +851,10 @@ TextureImporter:
       name: f4_blacksolus_31
       rect:
         serializedVersion: 2
-        x: 204
-        y: 615.6
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 621
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -862,7 +862,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdd18686947e02346a1030ba809bfbfd
+      spriteID: b0b4774f81fca8b429c008f079e54dea
       vertices: []
       indices: 
       edges: []
@@ -871,10 +871,10 @@ TextureImporter:
       name: f4_blacksolus_32
       rect:
         serializedVersion: 2
-        x: 306
-        y: 615.6
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 621
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -882,7 +882,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56450aedb68fa0c408131da3b6ed2167
+      spriteID: 9f333409b8e9ad541bcde9cb62304bd9
       vertices: []
       indices: 
       edges: []
@@ -891,10 +891,10 @@ TextureImporter:
       name: f4_blacksolus_33
       rect:
         serializedVersion: 2
-        x: 408
-        y: 615.6
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 621
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -902,7 +902,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e31c6d0ca8114c14fa0689a207f53a56
+      spriteID: a2d80c42d01d86a47bb892bcf28b5e4b
       vertices: []
       indices: 
       edges: []
@@ -911,10 +911,10 @@ TextureImporter:
       name: f4_blacksolus_34
       rect:
         serializedVersion: 2
-        x: 510
-        y: 615.6
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 621
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -922,19 +922,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9191fea3a3046ab429cca4b90e4710a4
+      spriteID: e5f7b1ba586b39d41a7eb49c640bf718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_35
+      name: a29
       rect:
         serializedVersion: 2
-        x: 612
-        y: 615.6
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 621
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -942,19 +942,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6f75ca0d5179344c80426bfc10358ec
+      spriteID: eab409dfd29545049bc30d81b79da350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_36
+      name: a19
       rect:
         serializedVersion: 2
-        x: 714
-        y: 615.6
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 621
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -962,19 +962,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76dcc17297bf8634fba0e9d0be4e7605
+      spriteID: 6c445a91be8d45f40babb2943ef9c086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_37
+      name: a9
       rect:
         serializedVersion: 2
-        x: 816
-        y: 615.6
-        width: 102.4
-        height: 102.4
+        x: 806
+        y: 622
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -982,19 +982,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d00aa39c20639f747a0403d733f3ce1c
+      spriteID: bcd1e031d3a5c4846879e7317e415e5b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_38
+      name: w5
       rect:
         serializedVersion: 2
         x: 0
-        y: 513.6
-        width: 102.4
-        height: 102.4
+        y: 520
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1002,19 +1002,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ee115ffcfa6aab408eee057ec479bd2
+      spriteID: ff7cd790f8cf86a47ac1ad0d914da368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_39
+      name: i9
       rect:
         serializedVersion: 2
-        x: 102
-        y: 513.6
-        width: 102.4
-        height: 102.4
+        x: 101
+        y: 520
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1022,7 +1022,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 030fc9bde9ef218498123efdd59f65f5
+      spriteID: 8bc9b85ae3f45aa449e1c756644c4827
       vertices: []
       indices: 
       edges: []
@@ -1031,10 +1031,10 @@ TextureImporter:
       name: f4_blacksolus_40
       rect:
         serializedVersion: 2
-        x: 204
-        y: 513.6
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 520
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1042,7 +1042,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fa90391519db744bad3584f5ce82b5a
+      spriteID: 6820b334e8a7c3c4c95fce925c94c277
       vertices: []
       indices: 
       edges: []
@@ -1051,10 +1051,10 @@ TextureImporter:
       name: f4_blacksolus_41
       rect:
         serializedVersion: 2
-        x: 306
-        y: 513.6
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 520
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1062,7 +1062,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168e585f086c9d143b0b0d6a17e18e01
+      spriteID: 8b7eb5ec007cfec47bd716a0b6ba7a11
       vertices: []
       indices: 
       edges: []
@@ -1071,10 +1071,10 @@ TextureImporter:
       name: f4_blacksolus_42
       rect:
         serializedVersion: 2
-        x: 408
-        y: 513.6
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 520
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1082,7 +1082,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 429674b33504147488bbd88f85cd588e
+      spriteID: 6fa14518b0dead64981592f42841804e
       vertices: []
       indices: 
       edges: []
@@ -1091,10 +1091,10 @@ TextureImporter:
       name: f4_blacksolus_43
       rect:
         serializedVersion: 2
-        x: 510
-        y: 513.6
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 520
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1102,19 +1102,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 986838c944a0e9c4998a61ebd1cb969a
+      spriteID: d1f88f3ed55d04e48a1ce36cf1b939da
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_44
+      name: a28
       rect:
         serializedVersion: 2
-        x: 612
-        y: 513.6
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 520
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1122,19 +1122,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ed4d2c969e8e3c4b94d20f08d55e369
+      spriteID: 42bb668629056c44d95253991cd7cc50
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_45
+      name: a18
       rect:
         serializedVersion: 2
-        x: 714
-        y: 513.6
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 520
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1142,19 +1142,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80f9fc1891b0f6f47a4c5d69f61536d5
+      spriteID: 823ef59d25e9ecf40994fbcc663f5672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_46
+      name: a8
       rect:
         serializedVersion: 2
-        x: 816
-        y: 513.6
-        width: 102.4
-        height: 102.4
+        x: 807
+        y: 518
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1162,19 +1162,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf9c6300a82d7a449b5b367a958d4260
+      spriteID: 9af0707fb1f81c844a278e81ef5b1fd2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_47
+      name: w6
       rect:
         serializedVersion: 2
         x: 0
-        y: 411.6
-        width: 102.4
-        height: 102.4
+        y: 418
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1182,19 +1182,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc360a96681cdf34eadc3684fee860fb
+      spriteID: 4c15f6c212760974586fcb615861f5f1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_48
+      name: i10
       rect:
         serializedVersion: 2
-        x: 102
-        y: 411.6
-        width: 102.4
-        height: 102.4
+        x: 101
+        y: 419
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1202,7 +1202,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f605879390c91964f841e95d1db46bb3
+      spriteID: 78826b279f246a648b1aac944dd853c1
       vertices: []
       indices: 
       edges: []
@@ -1211,10 +1211,10 @@ TextureImporter:
       name: f4_blacksolus_49
       rect:
         serializedVersion: 2
-        x: 204
-        y: 411.6
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 419
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1222,7 +1222,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcc58f7ea398ce04cb74f19e715ac4ea
+      spriteID: 33b5bf33c6e701f4c9cfb57fe82c87a4
       vertices: []
       indices: 
       edges: []
@@ -1231,10 +1231,10 @@ TextureImporter:
       name: f4_blacksolus_50
       rect:
         serializedVersion: 2
-        x: 306
-        y: 411.6
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 419
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1242,7 +1242,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16ce3ce894a07994f98d9996117f7e82
+      spriteID: 0f7182480e8713840bada9f59b57495c
       vertices: []
       indices: 
       edges: []
@@ -1251,10 +1251,10 @@ TextureImporter:
       name: f4_blacksolus_51
       rect:
         serializedVersion: 2
-        x: 408
-        y: 411.6
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 419
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1262,7 +1262,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1bd521fdca50fc4f8a5536aad50ced3
+      spriteID: 0e894d6a5b7f3c142b838a70529dd1b4
       vertices: []
       indices: 
       edges: []
@@ -1271,10 +1271,10 @@ TextureImporter:
       name: f4_blacksolus_52
       rect:
         serializedVersion: 2
-        x: 510
-        y: 411.6
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 419
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1282,19 +1282,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dccd1caaa19a65041aa9bdbac81c10d2
+      spriteID: 54370fffd10cb6d4eb493382494b97b2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_53
+      name: a27
       rect:
         serializedVersion: 2
-        x: 612
-        y: 411.6
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 419
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1302,19 +1302,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35c26c08a4686a8499f91b04094d1943
+      spriteID: 9cfd0d06bb370d9468862ceb75f196cf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_54
+      name: a17
       rect:
         serializedVersion: 2
-        x: 714
-        y: 411.6
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 419
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1322,19 +1322,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dccc6fafd51163f41a9f88c87546d4f5
+      spriteID: 1633bfd319e8a9648ace83f1c4dbba29
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_55
+      name: a7
       rect:
         serializedVersion: 2
-        x: 816
-        y: 411.6
-        width: 102.4
-        height: 102.4
+        x: 808
+        y: 419
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1342,19 +1342,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3ba227175056d045add76c8d897b0d1
+      spriteID: 6f2c18637249fbd4087e9c75190ced0c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_56
+      name: i1
       rect:
         serializedVersion: 2
         x: 0
-        y: 309.6
-        width: 102.4
-        height: 102.4
+        y: 318
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1362,19 +1362,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00be5b4665cd9f847bb7156d5b19fe27
+      spriteID: 735b701abbd736b4b84d330e563d8f10
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_57
+      name: i11
       rect:
         serializedVersion: 2
-        x: 102
-        y: 309.6
-        width: 102.4
-        height: 102.4
+        x: 101
+        y: 318
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1382,7 +1382,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cbe16bc85648984496ea9709e2c23c7
+      spriteID: 8c904aa112bd45a499371b909ad48f6f
       vertices: []
       indices: 
       edges: []
@@ -1391,10 +1391,10 @@ TextureImporter:
       name: f4_blacksolus_58
       rect:
         serializedVersion: 2
-        x: 204
-        y: 309.6
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 318
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1402,7 +1402,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7eaf1689c922f2f4faa9dfb544191a5d
+      spriteID: e58d727b35bdda245b4f6e408181608c
       vertices: []
       indices: 
       edges: []
@@ -1411,10 +1411,10 @@ TextureImporter:
       name: f4_blacksolus_59
       rect:
         serializedVersion: 2
-        x: 306
-        y: 309.6
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 318
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1422,7 +1422,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2abc05fd3cbc00545b98a57440ab5f50
+      spriteID: 7d39127dc5aa70440bf0ef7792dd7a5f
       vertices: []
       indices: 
       edges: []
@@ -1431,10 +1431,10 @@ TextureImporter:
       name: f4_blacksolus_60
       rect:
         serializedVersion: 2
-        x: 408
-        y: 309.6
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 318
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1442,19 +1442,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd80fb4e057d3c14f8b3323467df03ea
+      spriteID: 24e0a2d05f2de4d4b8b05229250bdb06
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_61
+      name: a36
       rect:
         serializedVersion: 2
-        x: 510
-        y: 309.6
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 318
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1462,19 +1462,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf741855957f38a4c9d875d3072b8188
+      spriteID: 7e2c9d9370df1514593e750d61821343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_62
+      name: a26
       rect:
         serializedVersion: 2
-        x: 612
-        y: 309.6
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 318
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1482,19 +1482,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fca2936df1fc304999779f1caa7dc27
+      spriteID: 09bf051adf609cd4999870c151c7cc5c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_63
+      name: a16
       rect:
         serializedVersion: 2
-        x: 714
-        y: 309.6
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 318
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1502,19 +1502,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23d8b1ce9daf59f49a2109930ac40a3b
+      spriteID: 55bedab9e7175f545b495073b53c1929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_64
+      name: a6
       rect:
         serializedVersion: 2
-        x: 816
-        y: 309.6
-        width: 102.4
-        height: 102.4
+        x: 808
+        y: 318
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1522,19 +1522,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83e57b0a113e41040b9960d412fde2f3
+      spriteID: f5b8a067a6e8e91479c4e62f0617d062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_65
+      name: i2
       rect:
         serializedVersion: 2
         x: 0
-        y: 207.6
-        width: 102.4
-        height: 102.4
+        y: 217
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1542,19 +1542,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 857515b647014d74888867dc14db2348
+      spriteID: 8e94ccc5af80371459c109ffef4f2776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_66
+      name: i12
       rect:
         serializedVersion: 2
-        x: 102
-        y: 207.6
-        width: 102.4
-        height: 102.4
+        x: 101
+        y: 217
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1562,7 +1562,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d2b938411c6bc24fa94fb767c3b9ebd
+      spriteID: e4c190f24312e7347a07bf8954b35e0d
       vertices: []
       indices: 
       edges: []
@@ -1571,10 +1571,10 @@ TextureImporter:
       name: f4_blacksolus_67
       rect:
         serializedVersion: 2
-        x: 204
-        y: 207.6
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 217
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1582,7 +1582,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ad6e97394299424e8f45b0b94bde3e9
+      spriteID: 7487b52cfaf1ff7469cbe03802579d9a
       vertices: []
       indices: 
       edges: []
@@ -1591,10 +1591,10 @@ TextureImporter:
       name: f4_blacksolus_68
       rect:
         serializedVersion: 2
-        x: 306
-        y: 207.6
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 217
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1602,7 +1602,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a609a7b2b18eaa14088c546096cc7971
+      spriteID: 3ca8f47dc45f2884abcb41ffd87c19ae
       vertices: []
       indices: 
       edges: []
@@ -1611,10 +1611,10 @@ TextureImporter:
       name: f4_blacksolus_69
       rect:
         serializedVersion: 2
-        x: 408
-        y: 207.6
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 217
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1622,19 +1622,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b35ccca4f85e1546acdd043dd2c0486
+      spriteID: 3119c2717c912c944bdf16ff75fbda03
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_70
+      name: a35
       rect:
         serializedVersion: 2
-        x: 510
-        y: 207.6
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 217
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1642,19 +1642,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2ba351e17c28a541bd46f608e1dc3c6
+      spriteID: d06ff26192685934b82ccf1f2d5d9713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_71
+      name: a25
       rect:
         serializedVersion: 2
-        x: 612
-        y: 207.6
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 217
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1662,19 +1662,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 633dbc4a746d90a498285d58d68b5287
+      spriteID: ba62c71f0e4f83d439ed35e993fcc01c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_72
+      name: a15
       rect:
         serializedVersion: 2
-        x: 714
-        y: 207.6
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 217
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1682,19 +1682,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2a8776a87b0aa54abe5c4edf8e3287a
+      spriteID: 073e6039aa83b5b49a8f36e6c54e038d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_73
+      name: a5
       rect:
         serializedVersion: 2
-        x: 816
-        y: 207.6
-        width: 102.4
-        height: 102.4
+        x: 808
+        y: 217
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1702,19 +1702,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a81bc67cdf4c4c44baaac531487c4f5
+      spriteID: 6913845dad981064aa26c262493788a6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_74
+      name: i3
       rect:
         serializedVersion: 2
         x: 0
-        y: 105.6
-        width: 102.4
-        height: 102.4
+        y: 116
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1722,7 +1722,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6e84656200f72e46b21e147561ee40c
+      spriteID: 758c6e19a7e5a874e81a5d9270bfaa60
       vertices: []
       indices: 
       edges: []
@@ -1731,10 +1731,10 @@ TextureImporter:
       name: f4_blacksolus_75
       rect:
         serializedVersion: 2
-        x: 204
-        y: 105.6
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 116
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1742,7 +1742,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f429020502e6de4dac80c3fe1ca5811
+      spriteID: 246975bffc696e84b8c8593c583f7960
       vertices: []
       indices: 
       edges: []
@@ -1751,10 +1751,10 @@ TextureImporter:
       name: f4_blacksolus_76
       rect:
         serializedVersion: 2
-        x: 306
-        y: 105.6
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 116
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1762,7 +1762,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 011da2d84f806aa47a8d1eece542b682
+      spriteID: c4e3217c7bc6e1045ae011cacdf6f6bf
       vertices: []
       indices: 
       edges: []
@@ -1771,10 +1771,10 @@ TextureImporter:
       name: f4_blacksolus_77
       rect:
         serializedVersion: 2
-        x: 408
-        y: 105.6
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 116
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1782,19 +1782,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7b5b68fe6f738f45abe5b4435bdcb9a
+      spriteID: f69cd04f8ed40c74ba5e63ddf2bc5a32
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_78
+      name: a34
       rect:
         serializedVersion: 2
-        x: 510
-        y: 105.6
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 116
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1802,19 +1802,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c0f467e63cadaa4192322ccfd491461
+      spriteID: 2a81256b18035f9449729ae68243107f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_79
+      name: a24
       rect:
         serializedVersion: 2
-        x: 612
-        y: 105.6
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 116
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1822,19 +1822,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5819b5f41c8cdc54d8e9d53431be25ae
+      spriteID: 16205effcde7a594f8cdcec2dc40782c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_80
+      name: a14
       rect:
         serializedVersion: 2
-        x: 714
-        y: 105.6
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 116
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1842,19 +1842,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ff261647b6d12f4181ed06af671404a
+      spriteID: 5f4c1467fd17ab040bffe439b682deae
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_81
+      name: a4
       rect:
         serializedVersion: 2
-        x: 816
-        y: 105.6
-        width: 102.4
-        height: 102.4
+        x: 808
+        y: 116
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1862,19 +1862,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7504fbbbe514bc40aac86e456ad51ff
+      spriteID: 8a10be2237c802f48af569875ddcb50a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_82
+      name: i4
       rect:
         serializedVersion: 2
         x: 0
-        y: 3.5999985
-        width: 102.4
-        height: 102.4
+        y: 15
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1882,7 +1882,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e6d34d65a435d14d8ceb1b44e4310f3
+      spriteID: 74a1535e4803f854aa9da2382258d1ad
       vertices: []
       indices: 
       edges: []
@@ -1891,10 +1891,10 @@ TextureImporter:
       name: f4_blacksolus_83
       rect:
         serializedVersion: 2
-        x: 102
-        y: 3.5999985
-        width: 102.4
-        height: 102.4
+        x: 101
+        y: 15
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1902,7 +1902,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dff2c0338015e1f4fbd62b5822456f99
+      spriteID: bc90d74b41320224da4b7c464f7299c0
       vertices: []
       indices: 
       edges: []
@@ -1911,10 +1911,10 @@ TextureImporter:
       name: f4_blacksolus_84
       rect:
         serializedVersion: 2
-        x: 204
-        y: 3.5999985
-        width: 102.4
-        height: 102.4
+        x: 202
+        y: 15
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1922,7 +1922,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a81608d288e238342b64078203cee493
+      spriteID: 7571fa349cac3314182019de3a41d7ed
       vertices: []
       indices: 
       edges: []
@@ -1931,10 +1931,10 @@ TextureImporter:
       name: f4_blacksolus_85
       rect:
         serializedVersion: 2
-        x: 306
-        y: 3.5999985
-        width: 102.4
-        height: 102.4
+        x: 303
+        y: 15
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1942,7 +1942,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b11d69607ad7c804bbc152e3337ae702
+      spriteID: e628269c25692c6409bc274688e1e85b
       vertices: []
       indices: 
       edges: []
@@ -1951,10 +1951,10 @@ TextureImporter:
       name: f4_blacksolus_86
       rect:
         serializedVersion: 2
-        x: 408
-        y: 3.5999985
-        width: 102.4
-        height: 102.4
+        x: 404
+        y: 15
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1962,19 +1962,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2f756edb95f5b549bcd9ca8fd333acb
+      spriteID: 1fcd6eecebb023440bfd0d7ef82f8eae
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_87
+      name: a33
       rect:
         serializedVersion: 2
-        x: 510
-        y: 3.5999985
-        width: 102.4
-        height: 102.4
+        x: 505
+        y: 15
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1982,19 +1982,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38bcd5c5ada03964d820d40b34b01a21
+      spriteID: 75b82f9d6569e5d4bbd57d5018afee3a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_88
+      name: a23
       rect:
         serializedVersion: 2
-        x: 612
-        y: 3.5999985
-        width: 102.4
-        height: 102.4
+        x: 606
+        y: 15
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2002,19 +2002,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9932e3f5d3de3b94da43041a8ed68c2e
+      spriteID: 467aa890ab64b154ab89542ce0c3f05c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_89
+      name: a13
       rect:
         serializedVersion: 2
-        x: 714
-        y: 3.5999985
-        width: 102.4
-        height: 102.4
+        x: 707
+        y: 15
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2022,19 +2022,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00baa430454c5b44da67e55e630f5a7d
+      spriteID: 079ccc961f7b48246a7435bfe8bb95cc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: f4_blacksolus_90
+      name: a3
       rect:
         serializedVersion: 2
-        x: 816
-        y: 3.5999985
-        width: 102.4
-        height: 102.4
+        x: 807
+        y: 14
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2042,7 +2042,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d8dbb8e7dab4546a317fe23b3298f5
+      spriteID: d2852be49aa5a7346a29dcbdb518cc2f
       vertices: []
       indices: 
       edges: []
