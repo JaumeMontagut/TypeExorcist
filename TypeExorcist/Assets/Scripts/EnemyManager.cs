@@ -1,6 +1,6 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
 
 public class EnemyManager : MonoBehaviour {
@@ -79,7 +79,6 @@ public class EnemyManager : MonoBehaviour {
                 position.x = cameraWidth;
                 position.y = Random.Range(-cameraHeight, cameraHeight);
                 break;
-
             default:
                 break;
         }
