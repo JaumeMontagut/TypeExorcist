@@ -1,0 +1,1985 @@
+fileFormatVersion: 2
+guid: 3462ea83151d4634d9140fb269b574fc
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: neutral_thescientist_0
+    21300002: neutral_thescientist_1
+    21300004: neutral_thescientist_2
+    21300006: neutral_thescientist_3
+    21300008: neutral_thescientist_4
+    21300010: neutral_thescientist_5
+    21300012: neutral_thescientist_6
+    21300014: neutral_thescientist_7
+    21300016: neutral_thescientist_8
+    21300018: neutral_thescientist_9
+    21300020: neutral_thescientist_10
+    21300022: neutral_thescientist_11
+    21300024: neutral_thescientist_12
+    21300026: neutral_thescientist_13
+    21300028: neutral_thescientist_14
+    21300030: neutral_thescientist_15
+    21300032: neutral_thescientist_16
+    21300034: neutral_thescientist_17
+    21300036: neutral_thescientist_18
+    21300038: neutral_thescientist_19
+    21300040: neutral_thescientist_20
+    21300042: neutral_thescientist_21
+    21300044: neutral_thescientist_22
+    21300046: neutral_thescientist_23
+    21300048: neutral_thescientist_24
+    21300050: neutral_thescientist_25
+    21300052: neutral_thescientist_26
+    21300054: neutral_thescientist_27
+    21300056: neutral_thescientist_28
+    21300058: neutral_thescientist_29
+    21300060: neutral_thescientist_30
+    21300062: neutral_thescientist_31
+    21300064: neutral_thescientist_32
+    21300066: neutral_thescientist_33
+    21300068: neutral_thescientist_34
+    21300070: neutral_thescientist_35
+    21300072: neutral_thescientist_36
+    21300074: neutral_thescientist_37
+    21300076: neutral_thescientist_38
+    21300078: neutral_thescientist_39
+    21300080: neutral_thescientist_40
+    21300082: neutral_thescientist_41
+    21300084: neutral_thescientist_42
+    21300086: neutral_thescientist_43
+    21300088: neutral_thescientist_44
+    21300090: neutral_thescientist_45
+    21300092: neutral_thescientist_46
+    21300094: neutral_thescientist_47
+    21300096: neutral_thescientist_48
+    21300098: neutral_thescientist_49
+    21300100: neutral_thescientist_50
+    21300102: neutral_thescientist_51
+    21300104: neutral_thescientist_52
+    21300106: neutral_thescientist_53
+    21300108: neutral_thescientist_54
+    21300110: neutral_thescientist_55
+    21300112: neutral_thescientist_56
+    21300114: neutral_thescientist_57
+    21300116: neutral_thescientist_58
+    21300118: neutral_thescientist_59
+    21300120: neutral_thescientist_60
+    21300122: neutral_thescientist_61
+    21300124: neutral_thescientist_62
+    21300126: neutral_thescientist_63
+    21300128: neutral_thescientist_64
+    21300130: neutral_thescientist_65
+    21300132: neutral_thescientist_66
+    21300134: neutral_thescientist_67
+    21300136: neutral_thescientist_68
+    21300138: neutral_thescientist_69
+    21300140: neutral_thescientist_70
+    21300142: neutral_thescientist_71
+    21300144: neutral_thescientist_72
+    21300146: neutral_thescientist_73
+    21300148: neutral_thescientist_74
+    21300150: neutral_thescientist_75
+    21300152: neutral_thescientist_76
+    21300154: neutral_thescientist_77
+    21300156: neutral_thescientist_78
+    21300158: neutral_thescientist_79
+    21300160: neutral_thescientist_80
+    21300162: neutral_thescientist_81
+    21300164: neutral_thescientist_82
+    21300166: neutral_thescientist_83
+    21300168: neutral_thescientist_84
+    21300170: neutral_thescientist_85
+    21300172: neutral_thescientist_86
+    21300174: neutral_thescientist_87
+    21300176: neutral_thescientist_88
+    21300178: neutral_thescientist_89
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: neutral_thescientist_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea02e811a223c69439d87da3fc4abbb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c474ee4fff2ca0641ad5caf6104c6bb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9017c1261f7f9be4482a8e84ccb2f69d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_3
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66a7bf4a4ebaf04881b2c058bbd2d52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_4
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06377df6eee736a4f98cc676f8e659e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_5
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4d832bd0ffdbc42833e4e5f1b1cc92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_6
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f2f507bdfa611419450110a92e512f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_7
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668a9934d0b664f459541083a0f4ce27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_8
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec9d9afe26600940a4efa181daf16be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_9
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 888.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ccd9b3b6b018547bb5207839977313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d6f1f0262f2e244bed3c8f400e6021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_11
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f812bdf8d8a9f84abb6cbc83c41a51e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_12
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546874a0b252c334bb0fffe71255a7c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_13
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5daff475bb2d144b98ba39ce6ab00a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_14
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd83327160541f5429177dd7615c1654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_15
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87d3f0d236dc7c4ebf2d85c80e0e259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_16
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1d845b31f1f32429cef8afb28a7da1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_17
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcea62cb21592c4aae5392fbbbb8954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_18
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37499aaebc65a384ca5028f157b12869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_19
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 777.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d97bae5e49a88a428a959fb46a179c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133100899ba0df24b9a3d9683c70e66c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_21
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20edcc1cb9afd5047ad6344d3c6e5304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_22
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ce874fc9742e545a92717aa604609d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_23
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292e38e9af1e68e4a8fe3b50800fd906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_24
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691b0337daf715144875256607f847a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_25
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea6c361504d20d4aa5738b99514e98f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_26
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f700be7b8278742832db4a223eefe0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_27
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abb1cff8767e5447a2a5341b88f2702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_28
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7216fd043e08b1b4db62bc9e229d61d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_29
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 666.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9672f64b705d44dab41e1b1f487a3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59ab2e65d26df642a46642dc3bb1d61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_31
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e5a7348adc08f4988cbf2378b0fadb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_32
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc7b35fa9acf504491dbfa958e7e6b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_33
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f8b2b9541e5524681e34733e8e9a61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_34
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88667629c8ad5904580e89a252ac5bda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_35
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1366428b2b3efde4bb7b8d6f2e2a05ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_36
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae66dfd083c2a8468ab7b9a079298b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_37
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b32be2ae6150b94b86332d4c6164af6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_38
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707c6bc0bc81a954a9b7a7b71447308f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_39
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 555.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786e3699b5fdb2f4f9940181b3aa59f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360a1261e5a632c4a9ca499f06dd2a5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_41
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cdc072860631aa40a9255299dd854be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_42
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e6ad8fc65d38b4c84a5ce9d12481c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_43
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589f28f0c207cdc49b7c3ac616290400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_44
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b59bc09878a18b4698bc70c11767f6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_45
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ceac9d370f2ba408680f9e4dbf1da6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_46
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9b844d4619b7e4ba6b548c1a6f5f12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_47
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b40de8cd8f0724ab52699e466d4c65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_48
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284c25568e0dc5346995424112bb6856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_49
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 444.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9901d0fc59f528419cd643466d2a3de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854023ad1cf77ed49baf5dccdac64e97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_51
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8831ab60922d8f8449100ff31a51352f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_52
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3617bf76f65b8774a808d092d4f87344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_53
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b664333573797ba4bb6f3504123c4e65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_54
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f272280e376ca334281440e1b61fb1d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_55
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c773609d6c75c4ea1dab7d42c440f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_56
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f85f508fe49814cad3a0fc0577968d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_57
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f7e13e2559b164387a60f149f5a2a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_58
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75510154c2ccdb4ab7dabb891ca7198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_59
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 333.8889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d66770dc6edc9245b7d4d1b7df17a51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580e712cfea58344f869e4abdca8b36c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_61
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3039b2cc102fad84791d44646c069011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_62
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333deecbc5c99a841831861bedcfcac9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_63
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b431348f1160a94a92017f719c09ae3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_64
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc52ea46f6e1f9a42abe6c1b51345f61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_65
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890f00d93893dfd4ab9f536f98af46ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_66
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22075aebfa0407b4f8cd76aa37f2efa7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_67
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9628924d872c4db4ea422c366c0b5ee4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_68
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e37f0620168c64a9b1088eb4ab989f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_69
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 222.88889
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13526852cac198409f69c93688718c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4a4ffb78401b749bb8da5a5f5aba7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_71
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f029652b63daf74689aec0195afab36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_72
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65703637f7dd28346823d9bb1c0cdeed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_73
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a24caf4b9c252c4ca2e7067d6bf8ddf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_74
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947ea07e518019c4dafe5486e27d7fa5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_75
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d459bfa06a9e404eabdc7acdd384d81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_76
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea3431b771527247925e2042a5e3679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_77
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6595b77d862164bba07bfc3c5f68b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_78
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd625df40410d743b7ba7ba7a33ac9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_79
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 111.888885
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca73e122c9b2814196532d6a50cf438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6384f038b907d8b49855d5f34840903c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_81
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aeff48da8d7be8448d46b1ede9d9e2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_82
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3597a1feb810d428870d59ffeb92a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_83
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8496dbb47b26a7e46a76ee0aeaba6dc3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_84
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32ff95587dacff4daa5b50a440cf0ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_85
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a94dab2c01e0cb49bd7b55533e9c4bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_86
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e1ba78a2043974cb930287604df500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_87
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea2d6c053f29ba458778b69c55e3587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_88
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bf173b98e0cc44a86b949a699af81b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_thescientist_89
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 0.8888855
+        width: 111
+        height: 111.111115
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833f3369408159a45be3b88715404f9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a8a47266e4f03df4d80bd60397c81c8f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
