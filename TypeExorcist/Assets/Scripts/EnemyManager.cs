@@ -8,7 +8,7 @@ public class EnemyManager : MonoBehaviour {
 
     public List<GameObject> enemiesPrefabs;      //List of enemy types
     public List<int> enemiesSpawnRate;           //List of enemy types spawnrate
-    private List<Enemy> enemies;                 //List of all enemy entities
+    [HideInInspector] public List<Enemy> enemies;                 //List of all enemy entities
     private List<string> enemyNames;             //List of all enemy entities names
 
     public Color inactiveColor;

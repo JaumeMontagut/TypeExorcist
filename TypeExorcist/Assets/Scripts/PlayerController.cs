@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
     private void FocusEnemy(List<Enemy> enemiesToFocus)
     {
         //Security check
-        if (enemiesToFocus == null)
+        if (enemiesToFocus.Count == 0)
         {
             return;
         }
@@ -141,6 +141,7 @@ public class PlayerController : MonoBehaviour
                 scoreManager.Combo++;
                 anim.SetTrigger("attack");
                 StartMoving(focusedEnemies[i].transform.position);
+                focusedEnemies[i].DestroyEnemy();//Change for anim.settrigger die and die at the end of the animation
                 focusedEnemies.RemoveAt(i);
             }
         }

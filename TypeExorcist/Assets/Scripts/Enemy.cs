@@ -61,7 +61,6 @@ public class Enemy : MonoBehaviour
     {
         if (completedLetters == enemyName.Length)
         {
-            //anim.SetTrigger("Death");
             return true;
         }
         return false;
@@ -70,6 +69,7 @@ public class Enemy : MonoBehaviour
     //Called at the end of the animation
     public void DestroyEnemy()
     {
+        eM.enemies.Remove(this);
         Destroy(gameObject);
     }
 
