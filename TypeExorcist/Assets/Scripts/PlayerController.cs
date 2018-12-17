@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     //Move to enemy
     public float moveSpeed;
-    private Vector2 trgPos = Vector2.zero;
+    private List<Vector2> trgPositions;//Acts as a queue of target positions that the player must go to
     private const float stopDist = 0.1f;//The distance in which the player will stop moving to the enemy
 
     //References to other entities
@@ -40,9 +40,18 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Stop moving when it reaches a point
-        if (rb.velocity != Vector2.zero && Utilities.DistanceSquared(transform.position, trgPos) <= stopDist)
+        if (rb.velocity != Vector2.zero && Utilities.DistanceSquared(transform.position, trgPositions[0]) <= stopDist)
         {
-            StopMoving();
+            trgPositions.RemoveAt(0);
+            if (trgPositions.Count == 0)
+            {
+                rb.velocity = Vector2.zero;
+            }
+            else
+            {
+                Vector2 dir = trgPositions[0] - (Vector2)transform.position;
+                rb.velocity = dir.normalized * moveSpeed;
+            }
         }
     }
 
@@ -146,7 +155,7 @@ public class PlayerController : MonoBehaviour
                     {
                         scoreManager.Combo++;
                         anim.SetTrigger("attack");
-                        StartMoving(focusedEnemies[i].transform.position);
+                        AddTrgPos((Vector2)focusedEnemies[i].transform.position);
                         focusedEnemies.RemoveAt(i);
                     }
                 }
@@ -186,16 +195,20 @@ public class PlayerController : MonoBehaviour
         scoreManager.Combo = 1;
     }
 
-    private void StartMoving(Vector2 trgPos)
+    private void AddTrgPos(Vector2 trgPos)
     {
-        this.trgPos = trgPos;
-        Vector2 dir = trgPos - new Vector2(transform.position.x, transform.position.y);
-        rb.velocity = dir.normalized * moveSpeed;
+        trgPositions.Add(trgPos);
+        //If it isn't moving already (because it already has a target pos), start moving
+        if (rb.velocity == Vector2.zero)
+        {
+            SetVelocity(trgPos);
+        }
     }
 
-    private void StopMoving()
+    private void SetVelocity(Vector2 trgPos)
     {
-        rb.velocity = Vector2.zero;
+        Vector2 dir = trgPos - (Vector2)transform.position;
+        rb.velocity = dir.normalized * moveSpeed;
     }
 
     //private void OnTriggerEnter2D(Collider2D collision) 
