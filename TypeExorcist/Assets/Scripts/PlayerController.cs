@@ -133,16 +133,15 @@ public class PlayerController : MonoBehaviour
         }
         //If it reaches this point letters have been typed correctly, reduce the letter
         scoreManager.Score += 1 * scoreManager.Combo;
-        foreach (Enemy enemy in focusedEnemies)
+        for (int i = focusedEnemies.Count -1; i >= 0; --i)
         {
-            enemy.CompleteNextLetter();
-            //Dash to the enemy if you kill it
-            if (enemy.CheckDeath())
+            focusedEnemies[i].CompleteNextLetter();
+            if (focusedEnemies[i].CheckDeath())
             {
                 scoreManager.Combo++;
                 anim.SetTrigger("attack");
-                StartMoving(enemy.transform.position);
-                focusedEnemies.Remove(enemy);
+                StartMoving(focusedEnemies[i].transform.position);
+                focusedEnemies.RemoveAt(i);
             }
         }
     }
