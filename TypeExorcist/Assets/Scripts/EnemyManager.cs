@@ -44,6 +44,7 @@ public class EnemyManager : MonoBehaviour {
         enemyNamesSmall.Add("sozer");
         enemyNamesSmall.Add("tornar");
 
+        enemyNamesMedium = new List<string>();
         enemyNamesMedium.Add("dralvoth");
         enemyNamesMedium.Add("tholmith");
         enemyNamesMedium.Add("lucifer");
@@ -52,6 +53,7 @@ public class EnemyManager : MonoBehaviour {
         enemyNamesMedium.Add("xorgich");
         enemyNamesMedium.Add("golguner");
 
+        enemyNamesBig = new List<string>();
         enemyNamesBig.Add("brargarak");
         enemyNamesBig.Add("balgreren");
         enemyNamesBig.Add("xuzgemoth");
@@ -69,8 +71,8 @@ public class EnemyManager : MonoBehaviour {
 
         if (spawn_timer.GetCurrentTime() > time_btw_spawns)
         {
-            GenerateRandomEnemy("small");
-            
+            GenerateRandomEnemy("big");
+
             spawn_timer.StarTimer();
         }
 
@@ -162,18 +164,17 @@ public class EnemyManager : MonoBehaviour {
             case "big":
 
                 time_btw_spawns = spawn_time_big;
-                int totalchance3 = enemiesSpawnRate[4] + enemiesSpawnRate[5] + enemiesSpawnRate[6];
+                int totalchance3 = enemiesSpawnRate[4] + enemiesSpawnRate[5];
                 int unitvalue3 = totalchance3 / 100;
-                enemiesSpawnRate[4] = enemiesSpawnRate[0] / unitvalue3;
-                enemiesSpawnRate[1] = enemiesSpawnRate[1] / unitvalue3;
+                enemiesSpawnRate[4] = enemiesSpawnRate[4] / unitvalue3;
+                enemiesSpawnRate[5] = enemiesSpawnRate[5] / unitvalue3;
                 float randomIndex3 = Random.Range(0.0f, 100.0f);
                 if (randomIndex3 <= enemiesSpawnRate[4])
                 {
                     index = 4;
                 }
-                else if (randomIndex3 > enemiesSpawnRate[4] && randomIndex3 < enemiesSpawnRate[6])
+                else 
                     index = 5;
-                else index = 6;
 
                 CreateEnemy(position, enemiesPrefabs[index], enemyNamesBig[Random.Range(0, enemyNamesBig.Count)]);
                 break;
