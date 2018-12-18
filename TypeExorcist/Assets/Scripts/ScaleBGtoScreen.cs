@@ -16,11 +16,11 @@ public class ScaleBGtoScreen : MonoBehaviour {
 
         //Vector2 scale = transform.localScale;
         //if (cameraSize.x >= cameraSize.y)
-        //{ 
+        //{
         //    scale *= cameraSize.x / spriteSize.x;
         //}
         //else
-        //{ 
+        //{
         //    scale *= cameraSize.y / spriteSize.y;
         //}
 

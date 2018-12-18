@@ -50,35 +50,28 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (dead)
+        if (!dead && Time.timeScale != 0)
         {
-            return;
-        }
-
-        KeyCode currKey;
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            UnfocusEnemies();
-        }
-
-        for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
-        {
-            if (Input.GetKeyDown(currKey))
+            KeyCode currKey;
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                TypeLetter(currKey.ToString().ToLower()[0]);
+                UnfocusEnemies();
             }
-        }
-        currKey = KeyCode.Space;
-        if (Input.GetKeyDown(currKey))
-        {
-            TypeLetter(' ');
+
+            for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
+            {
+                if (Input.GetKeyDown(currKey))
+                {
+                    TypeLetter(currKey.ToString().ToLower()[0]);
+                }
+            }
         }
     }
 
     private void FocusEnemy(List<Enemy> enemiesToFocus)
     {
         //Security check
-        if (enemiesToFocus == null)
+        if (enemiesToFocus.Count == 0)
         {
             return;
         }
@@ -133,16 +126,16 @@ public class PlayerController : MonoBehaviour
         }
         //If it reaches this point letters have been typed correctly, reduce the letter
         scoreManager.Score += 1 * scoreManager.Combo;
-        foreach (Enemy enemy in focusedEnemies)
+        for (int i = focusedEnemies.Count -1; i >= 0; --i)
         {
-            enemy.CompleteNextLetter();
-            //Dash to the enemy if you kill it
-            if (enemy.CheckDeath())
+            focusedEnemies[i].CompleteNextLetter();
+            if (focusedEnemies[i].CheckDeath())
             {
                 scoreManager.Combo++;
                 anim.SetTrigger("attack");
-                StartMoving(enemy.transform.position);
-                focusedEnemies.Remove(enemy);
+                StartMoving(focusedEnemies[i].transform.position);
+                focusedEnemies[i].DestroyEnemy();//Change for anim.settrigger die and die at the end of the animation
+                focusedEnemies.RemoveAt(i);
             }
         }
     }

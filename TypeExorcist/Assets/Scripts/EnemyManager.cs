@@ -6,29 +6,76 @@ using TMPro;
 public class EnemyManager : MonoBehaviour {
 
 
-    public List<GameObject> enemiesPrefabs;      //List of enemy types
-    public List<int> enemiesSpawnRate;           //List of enemy types spawnrate
-    private List<Enemy> enemies;                 //List of all enemy entities
-    private List<string> enemyNames;             //List of all enemy entities names
+    public List<GameObject> enemiesPrefabs;             //List of enemy types
+    public List<int> enemiesSpawnRate;                  //List of enemy types spawnrate
+    [HideInInspector] public List<Enemy> enemies;       //List of all enemy entities
+    private List<string> enemyNamesSmall;                    //List of all enemy entities names
+    private List<string> enemyNamesMedium;
+    private List<string> enemyNamesBig;
 
     public Color inactiveColor;
     public Color32 activeColor;
     [HideInInspector]public string inactiveColorStr;
 
+
+    // Spawn logic ------------------------
+
+    private Timer spawn_timer = new Timer();
+
+    private float time_btw_spawns = 0.0f;
+    public float spawn_time_big = 0.0f;
+    public float spawn_time_medium = 0.0f;
+    public float spawn_time_small = 0.0f;
+
     private void Start()
     {
+        spawn_timer.StarTimer();
+        spawn_time_big = 3.0f;
+        spawn_time_medium = 2.0f;
+        spawn_time_small = 1.0f;
+
         enemies = new List<Enemy>();
-        enemyNames = new List<string>();
-        enemyNames.Add("holy water");
-        enemyNames.Add("bible");
-        enemyNames.Add("randomlygeneratedstring a");
-        enemyNames.Add("randomlygeneratedstring b");
+        enemyNamesSmall = new List<string>();
+        enemyNamesSmall.Add("ulvok");
+        enemyNamesSmall.Add("ogima");
+        enemyNamesSmall.Add("ragin");
+        enemyNamesSmall.Add("agran");
+        enemyNamesSmall.Add("eglog");
+        enemyNamesSmall.Add("sozer");
+        enemyNamesSmall.Add("tornar");
+
+        enemyNamesMedium = new List<string>();
+        enemyNamesMedium.Add("dralvoth");
+        enemyNamesMedium.Add("tholmith");
+        enemyNamesMedium.Add("lucifer");
+        enemyNamesMedium.Add("kizzozil");
+        enemyNamesMedium.Add("arromak");
+        enemyNamesMedium.Add("xorgich");
+        enemyNamesMedium.Add("golguner");
+
+        enemyNamesBig = new List<string>();
+        enemyNamesBig.Add("brargarak");
+        enemyNamesBig.Add("balgreren");
+        enemyNamesBig.Add("xuzgemoth");
+        enemyNamesBig.Add("tralgromas");
+        enemyNamesBig.Add("jallmokuch");
+        enemyNamesBig.Add("brallmomath");
+        enemyNamesBig.Add("thirnumith");
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
     
 
     void Update()
     {
+        print(spawn_timer.GetCurrentTime());
+
+        if (spawn_timer.GetCurrentTime() > time_btw_spawns)
+        {
+            GenerateRandomEnemy("big");
+
+            spawn_timer.StarTimer();
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -87,6 +134,7 @@ public class EnemyManager : MonoBehaviour {
         switch (type)
         {
             case "small":
+                time_btw_spawns = spawn_time_small;
                 int totalchance = enemiesSpawnRate[0] + enemiesSpawnRate[1];
                 int unitvalue = totalchance / 100;
                 enemiesSpawnRate[0] = enemiesSpawnRate[0] / unitvalue;
@@ -97,8 +145,10 @@ public class EnemyManager : MonoBehaviour {
                     index = 0;
                 }
                 else index = 1;
+                CreateEnemy(position, enemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesSmall.Count)]);
                 break;
             case "mid":
+                time_btw_spawns = spawn_time_medium;
                 int totalchance2 = enemiesSpawnRate[2] + enemiesSpawnRate[3];
                 int unitvalue2 = totalchance2 / 100;
                 enemiesSpawnRate[2] = enemiesSpawnRate[2] / unitvalue2;
@@ -109,25 +159,27 @@ public class EnemyManager : MonoBehaviour {
                     index = 2;
                 }
                 else index = 3;
+                CreateEnemy(position, enemiesPrefabs[index], enemyNamesMedium[Random.Range(0, enemyNamesMedium.Count)]);
                 break;
             case "big":
-                int totalchance3 = enemiesSpawnRate[4] + enemiesSpawnRate[5] + enemiesSpawnRate[6];
+
+                time_btw_spawns = spawn_time_big;
+                int totalchance3 = enemiesSpawnRate[4] + enemiesSpawnRate[5];
                 int unitvalue3 = totalchance3 / 100;
-                enemiesSpawnRate[4] = enemiesSpawnRate[0] / unitvalue3;
-                enemiesSpawnRate[1] = enemiesSpawnRate[1] / unitvalue3;
+                enemiesSpawnRate[4] = enemiesSpawnRate[4] / unitvalue3;
+                enemiesSpawnRate[5] = enemiesSpawnRate[5] / unitvalue3;
                 float randomIndex3 = Random.Range(0.0f, 100.0f);
                 if (randomIndex3 <= enemiesSpawnRate[4])
                 {
                     index = 4;
                 }
-                else if (randomIndex3 > enemiesSpawnRate[4] && randomIndex3 < enemiesSpawnRate[6])
+                else 
                     index = 5;
-                else index = 6;
-                break;
-            default:
+
+                CreateEnemy(position, enemiesPrefabs[index], enemyNamesBig[Random.Range(0, enemyNamesBig.Count)]);
                 break;
         }
-        CreateEnemy(position, enemiesPrefabs[index],enemyNames[Random.Range(0, enemyNames.Count)]);
+        
     }
 
     //Returns a list of all the enemies whose name starts with the specified letter
