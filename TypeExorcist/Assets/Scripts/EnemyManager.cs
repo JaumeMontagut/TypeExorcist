@@ -6,10 +6,12 @@ using TMPro;
 public class EnemyManager : MonoBehaviour {
 
 
-    public List<GameObject> enemiesPrefabs;      //List of enemy types
-    public List<int> enemiesSpawnRate;           //List of enemy types spawnrate
-    [HideInInspector] public List<Enemy> enemies;                 //List of all enemy entities
-    private List<string> enemyNames;             //List of all enemy entities names
+    public List<GameObject> enemiesPrefabs;             //List of enemy types
+    public List<int> enemiesSpawnRate;                  //List of enemy types spawnrate
+    [HideInInspector] public List<Enemy> enemies;       //List of all enemy entities
+    private List<string> enemyNamesSmall;                    //List of all enemy entities names
+    private List<string> enemyNamesMedium;
+    private List<string> enemyNamesBig;
 
     public Color inactiveColor;
     public Color32 activeColor;
@@ -23,14 +25,30 @@ public class EnemyManager : MonoBehaviour {
         spawn_timer.StarTimer();
 
         enemies = new List<Enemy>();
-        enemyNames = new List<string>();
-        enemyNames.Add("eric");
-        enemyNames.Add("jaume");
-        enemyNames.Add("aurelio");
-        enemyNames.Add("yessica");
-        enemyNames.Add("yessica");
-        enemyNames.Add("yessica");
-        enemyNames.Add("yessica");
+        enemyNamesSmall = new List<string>();
+        enemyNamesSmall.Add("ulvok");
+        enemyNamesSmall.Add("ogima");
+        enemyNamesSmall.Add("ragin");
+        enemyNamesSmall.Add("agran");
+        enemyNamesSmall.Add("eglog");
+        enemyNamesSmall.Add("sozer");
+        enemyNamesSmall.Add("tornar");
+
+        enemyNamesMedium.Add("dralvoth");
+        enemyNamesMedium.Add("tholmith");
+        enemyNamesMedium.Add("lucifer");
+        enemyNamesMedium.Add("kizzozil");
+        enemyNamesMedium.Add("arromak");
+        enemyNamesMedium.Add("xorgich");
+        enemyNamesMedium.Add("golguner");
+
+        enemyNamesBig.Add("brargarak");
+        enemyNamesBig.Add("balgreren");
+        enemyNamesBig.Add("xuzgemoth");
+        enemyNamesBig.Add("tralgromas");
+        enemyNamesBig.Add("jallmokuch");
+        enemyNamesBig.Add("brallmomath");
+        enemyNamesBig.Add("thirnumith");
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
     
@@ -42,6 +60,7 @@ public class EnemyManager : MonoBehaviour {
         if (spawn_timer.GetCurrentTime() > time_btw_spawns)
         {
             GenerateRandomEnemy("small");
+            
             spawn_timer.StarTimer();
         }
 
@@ -113,6 +132,7 @@ public class EnemyManager : MonoBehaviour {
                     index = 0;
                 }
                 else index = 1;
+                CreateEnemy(position, enemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesSmall.Count)]);
                 break;
             case "mid":
                 int totalchance2 = enemiesSpawnRate[2] + enemiesSpawnRate[3];
@@ -125,6 +145,7 @@ public class EnemyManager : MonoBehaviour {
                     index = 2;
                 }
                 else index = 3;
+                CreateEnemy(position, enemiesPrefabs[index], enemyNamesMedium[Random.Range(0, enemyNamesMedium.Count)]);
                 break;
             case "big":
                 int totalchance3 = enemiesSpawnRate[4] + enemiesSpawnRate[5] + enemiesSpawnRate[6];
@@ -139,11 +160,13 @@ public class EnemyManager : MonoBehaviour {
                 else if (randomIndex3 > enemiesSpawnRate[4] && randomIndex3 < enemiesSpawnRate[6])
                     index = 5;
                 else index = 6;
+
+                CreateEnemy(position, enemiesPrefabs[index], enemyNamesBig[Random.Range(0, enemyNamesBig.Count)]);
                 break;
             default:
                 break;
         }
-        CreateEnemy(position, enemiesPrefabs[index],enemyNames[Random.Range(0, enemyNames.Count)]);
+        
     }
 
     //Returns a list of all the enemies whose name starts with the specified letter
