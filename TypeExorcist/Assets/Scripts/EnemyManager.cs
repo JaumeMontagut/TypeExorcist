@@ -5,11 +5,18 @@ using TMPro;
 
 public class EnemyManager : MonoBehaviour {
 
+    public enum EnemyType  { none = -1, small = 0, medium = 1, big = 2}
 
-    public List<GameObject> enemiesPrefabs;             //List of enemy types
-    public List<int> enemiesSpawnRate;                  //List of enemy types spawnrate
-    [HideInInspector] public List<Enemy> enemies;       //List of all enemy entities
-    private List<string> enemyNamesSmall;                    //List of all enemy entities names
+    [HideInInspector] public List<Enemy> enemies;       //List of all active enemies  
+    public List<GameObject> smallEnemiesPrefabs;        //List of small enemy prefabs 
+    public List<GameObject> mediumEnemiesPrefabs;       //List of medium enemy prefabs 
+    public List<GameObject> bigEnemiesPrefabs;          //List of big enemy prefabs 
+
+    public float smallEnemieRate = 0.0f;
+    public float mediumEnemieRate = 0.0f;
+    public float bigEnemieRate = 0.0f;
+
+    private List<string> enemyNamesSmall;              
     private List<string> enemyNamesMedium;
     private List<string> enemyNamesBig;
 
@@ -21,7 +28,6 @@ public class EnemyManager : MonoBehaviour {
     // Spawn logic ------------------------
 
     private Timer spawn_timer = new Timer();
-
     private float time_btw_spawns = 0.0f;
     public float spawn_time_big = 0.0f;
     public float spawn_time_medium = 0.0f;
@@ -30,9 +36,6 @@ public class EnemyManager : MonoBehaviour {
     private void Start()
     {
         spawn_timer.StarTimer();
-        spawn_time_big = 3.0f;
-        spawn_time_medium = 2.0f;
-        spawn_time_small = 1.0f;
 
         enemies = new List<Enemy>();
         enemyNamesSmall = new List<string>();
@@ -71,18 +74,16 @@ public class EnemyManager : MonoBehaviour {
 
         if (spawn_timer.GetCurrentTime() > time_btw_spawns)
         {
-            GenerateRandomEnemy("big");
-
+            GenerateRandomEnemy();
             spawn_timer.StarTimer();
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            enemyPos.z = 0;
-            GenerateRandomEnemy("small");
-        }
-
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //    enemyPos.z = 0;
+        //    GenerateRandomEnemy("small");
+        //}
     }
 
     void CreateEnemy(Vector3 enemyPos,GameObject enemyPrefab,string enemyName)
@@ -94,18 +95,9 @@ public class EnemyManager : MonoBehaviour {
         enemies.Add(newEnemy);
     }
 
-
-    //Recieves the type of enemy to spawn ANY enemy by default. 
-    // "small" spawns only small enemies
-    // "mid"   spawns only mid size enemies
-    // "big"   spawns only big enemies
-    public void GenerateRandomEnemy(string type)
+    public void GenerateRandomEnemy()
     {
-        int index = -1;
-        
-
         Vector3 position = new Vector3(0, 0, 0);
-
 
         // camera data------------------------------------------------------------
         //------------------------------------------------------------------------
@@ -115,7 +107,7 @@ public class EnemyManager : MonoBehaviour {
         //------------------------------------------------------------------------
         //------------------------------------------------------------------------
 
-        //Position randomizer
+        // Position randomizer ---------------------------------------------------
         switch (startingPosition)
         {
             case 1:
@@ -126,60 +118,44 @@ public class EnemyManager : MonoBehaviour {
                 position.x = cameraWidth;
                 position.y = Random.Range(-cameraHeight, cameraHeight);
                 break;
-            default:
-                break;
         }
 
-        //Enemy type randomizer
+        // Select enemy type ------------------------------------------------
+        EnemyType type = EnemyType.none;
+
+        float probability_range = smallEnemieRate + mediumEnemieRate + bigEnemieRate;
+        float random_num = Random.Range(0, probability_range);
+
+        if (random_num >= 0 && random_num < smallEnemieRate)
+        { type = EnemyType.small; }
+        else if (random_num > smallEnemieRate && random_num <= smallEnemieRate + mediumEnemieRate)
+        { type = EnemyType.medium; }
+        else if(random_num >  smallEnemieRate + mediumEnemieRate && random_num <= smallEnemieRate + mediumEnemieRate + bigEnemieRate)
+        { type = EnemyType.big; }
+
+        int index = 0;
+
+        // Create enemy  ---------------------------------------------------
         switch (type)
         {
-            case "small":
+            case EnemyType.small:
                 time_btw_spawns = spawn_time_small;
-                int totalchance = enemiesSpawnRate[0] + enemiesSpawnRate[1];
-                int unitvalue = totalchance / 100;
-                enemiesSpawnRate[0] = enemiesSpawnRate[0] / unitvalue;
-                enemiesSpawnRate[1] = enemiesSpawnRate[1] / unitvalue;
-                float randomIndex = Random.Range(0.0f, 100.0f);
-                if (randomIndex <= enemiesSpawnRate[0])
-                {
-                    index = 0;
-                }
-                else index = 1;
-                CreateEnemy(position, enemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesSmall.Count)]);
+                index = Random.Range(0, smallEnemiesPrefabs.Count);
+                CreateEnemy(position, smallEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesSmall.Count)]);
                 break;
-            case "mid":
+
+            case EnemyType.medium:
                 time_btw_spawns = spawn_time_medium;
-                int totalchance2 = enemiesSpawnRate[2] + enemiesSpawnRate[3];
-                int unitvalue2 = totalchance2 / 100;
-                enemiesSpawnRate[2] = enemiesSpawnRate[2] / unitvalue2;
-                enemiesSpawnRate[3] = enemiesSpawnRate[3] / unitvalue2;
-                float randomIndex2 = Random.Range(0.0f, 100.0f);
-                if (randomIndex2 <= enemiesSpawnRate[2])
-                {
-                    index = 2;
-                }
-                else index = 3;
-                CreateEnemy(position, enemiesPrefabs[index], enemyNamesMedium[Random.Range(0, enemyNamesMedium.Count)]);
+                index = Random.Range(0, mediumEnemiesPrefabs.Count);
+                CreateEnemy(position, mediumEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesMedium.Count)]);
                 break;
-            case "big":
 
+            case EnemyType.big:
                 time_btw_spawns = spawn_time_big;
-                int totalchance3 = enemiesSpawnRate[4] + enemiesSpawnRate[5];
-                int unitvalue3 = totalchance3 / 100;
-                enemiesSpawnRate[4] = enemiesSpawnRate[4] / unitvalue3;
-                enemiesSpawnRate[5] = enemiesSpawnRate[5] / unitvalue3;
-                float randomIndex3 = Random.Range(0.0f, 100.0f);
-                if (randomIndex3 <= enemiesSpawnRate[4])
-                {
-                    index = 4;
-                }
-                else 
-                    index = 5;
-
-                CreateEnemy(position, enemiesPrefabs[index], enemyNamesBig[Random.Range(0, enemyNamesBig.Count)]);
+                index = Random.Range(0, bigEnemiesPrefabs.Count);
+                CreateEnemy(position, bigEnemiesPrefabs[index], enemyNamesBig[Random.Range(0, enemyNamesBig.Count)]);
                 break;
         }
-        
     }
 
     //Returns a list of all the enemies whose name starts with the specified letter

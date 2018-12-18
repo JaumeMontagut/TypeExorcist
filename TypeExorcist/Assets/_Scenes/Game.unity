@@ -10408,23 +10408,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0c1d98b9c69904686674a934818f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesPrefabs:
+  enemies: []
+  smallEnemiesPrefabs:
   - {fileID: 1035892264797216, guid: fd1c88ee3ce74d943b571b646467cba6, type: 2}
   - {fileID: 1318812027262742, guid: 7166b1274687f804c96711bf8c811d61, type: 2}
+  mediumEnemiesPrefabs:
   - {fileID: 1329497283203914, guid: 3a7d302b484296b40bef03792748b0c8, type: 2}
   - {fileID: 1776880930179564, guid: 7775e32ed3e6e734d885157bfab0c411, type: 2}
+  bigEnemiesPrefabs:
   - {fileID: 1557032909987372, guid: 194b5654daa5c0d4da90c043fbe5c36a, type: 2}
   - {fileID: 1985232620782828, guid: 73c77a6a685b13343b658a6a7784153e, type: 2}
-  enemiesSpawnRate: 640000006400000064000000640000006400000064000000
-  enemies: []
+  smallEnemieRate: 50
+  mediumEnemieRate: 35
+  bigEnemieRate: 15
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor:
     serializedVersion: 2
     rgba: 4294967295
   inactiveColorStr: 
-  spawn_time_big: 0
-  spawn_time_medium: 0
-  spawn_time_small: 0
+  spawn_time_big: 3
+  spawn_time_medium: 2
+  spawn_time_small: 1
 --- !u!4 &734225159
 Transform:
   m_ObjectHideFlags: 0
@@ -11347,7 +11351,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
+  m_fontSize: 18.5
   m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11365,7 +11369,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -11393,7 +11397,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -16964,7 +16968,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
+  m_fontSize: 19.45
   m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16982,7 +16986,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -17010,7 +17014,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
