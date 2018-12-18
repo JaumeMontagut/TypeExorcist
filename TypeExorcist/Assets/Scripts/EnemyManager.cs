@@ -23,9 +23,9 @@ public class EnemyManager : MonoBehaviour {
     private Timer spawn_timer = new Timer();
 
     private float time_btw_spawns = 0.0f;
-    private float spawn_time_big = 0.0f;
-    private float spawn_time_medium = 0.0f;
-    private float spawn_time_small = 0.0f;
+    public float spawn_time_big = 0.0f;
+    public float spawn_time_medium = 0.0f;
+    public float spawn_time_small = 0.0f;
 
     private void Start()
     {
