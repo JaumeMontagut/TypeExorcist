@@ -15,8 +15,13 @@ public class EnemyManager : MonoBehaviour {
     public Color32 activeColor;
     [HideInInspector]public string inactiveColorStr;
 
+    private Timer spawn_timer = new Timer();
+    private float time_btw_spawns = 2.0f;
+
     private void Start()
     {
+        spawn_timer.StarTimer();
+
         enemies = new List<Enemy>();
         enemyNames = new List<string>();
         enemyNames.Add("holy water");
@@ -29,6 +34,14 @@ public class EnemyManager : MonoBehaviour {
 
     void Update()
     {
+        print(spawn_timer.GetCurrentTime());
+
+        if (spawn_timer.GetCurrentTime() > time_btw_spawns)
+        {
+            GenerateRandomEnemy("small");
+            spawn_timer.StarTimer();
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
