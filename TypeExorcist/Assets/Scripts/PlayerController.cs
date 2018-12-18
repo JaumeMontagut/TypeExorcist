@@ -50,28 +50,21 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (dead)
+        if (!dead && Time.timeScale != 0)
         {
-            return;
-        }
-
-        KeyCode currKey;
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            UnfocusEnemies();
-        }
-
-        for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
-        {
-            if (Input.GetKeyDown(currKey))
+            KeyCode currKey;
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                TypeLetter(currKey.ToString().ToLower()[0]);
+                UnfocusEnemies();
             }
-        }
-        currKey = KeyCode.Space;
-        if (Input.GetKeyDown(currKey))
-        {
-            TypeLetter(' ');
+
+            for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
+            {
+                if (Input.GetKeyDown(currKey))
+                {
+                    TypeLetter(currKey.ToString().ToLower()[0]);
+                }
+            }
         }
     }
 

@@ -24,10 +24,13 @@ public class EnemyManager : MonoBehaviour {
 
         enemies = new List<Enemy>();
         enemyNames = new List<string>();
-        enemyNames.Add("holy water");
-        enemyNames.Add("bible");
-        enemyNames.Add("randomlygeneratedstring a");
-        enemyNames.Add("randomlygeneratedstring b");
+        enemyNames.Add("eric");
+        enemyNames.Add("jaume");
+        enemyNames.Add("aurelio");
+        enemyNames.Add("yessica");
+        enemyNames.Add("yessica");
+        enemyNames.Add("yessica");
+        enemyNames.Add("yessica");
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
     
