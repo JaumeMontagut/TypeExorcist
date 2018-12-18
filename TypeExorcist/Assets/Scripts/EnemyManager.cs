@@ -15,12 +15,22 @@ public class EnemyManager : MonoBehaviour {
     public Color32 activeColor;
     [HideInInspector]public string inactiveColorStr;
 
+
+    // Spawn logic ------------------------
+
     private Timer spawn_timer = new Timer();
-    private float time_btw_spawns = 2.0f;
+
+    private float time_btw_spawns = 0.0f;
+    private float spawn_time_big = 0.0f;
+    private float spawn_time_medium = 0.0f;
+    private float spawn_time_small = 0.0f;
 
     private void Start()
     {
         spawn_timer.StarTimer();
+        spawn_time_big = 3.0f;
+        spawn_time_medium = 2.0f;
+        spawn_time_small = 1.0f;
 
         enemies = new List<Enemy>();
         enemyNames = new List<string>();
@@ -103,6 +113,7 @@ public class EnemyManager : MonoBehaviour {
         switch (type)
         {
             case "small":
+                time_btw_spawns = spawn_time_small;
                 int totalchance = enemiesSpawnRate[0] + enemiesSpawnRate[1];
                 int unitvalue = totalchance / 100;
                 enemiesSpawnRate[0] = enemiesSpawnRate[0] / unitvalue;
@@ -115,6 +126,7 @@ public class EnemyManager : MonoBehaviour {
                 else index = 1;
                 break;
             case "mid":
+                time_btw_spawns = spawn_time_medium;
                 int totalchance2 = enemiesSpawnRate[2] + enemiesSpawnRate[3];
                 int unitvalue2 = totalchance2 / 100;
                 enemiesSpawnRate[2] = enemiesSpawnRate[2] / unitvalue2;
@@ -127,6 +139,8 @@ public class EnemyManager : MonoBehaviour {
                 else index = 3;
                 break;
             case "big":
+
+                time_btw_spawns = spawn_time_big;
                 int totalchance3 = enemiesSpawnRate[4] + enemiesSpawnRate[5] + enemiesSpawnRate[6];
                 int unitvalue3 = totalchance3 / 100;
                 enemiesSpawnRate[4] = enemiesSpawnRate[0] / unitvalue3;
@@ -139,8 +153,6 @@ public class EnemyManager : MonoBehaviour {
                 else if (randomIndex3 > enemiesSpawnRate[4] && randomIndex3 < enemiesSpawnRate[6])
                     index = 5;
                 else index = 6;
-                break;
-            default:
                 break;
         }
         CreateEnemy(position, enemiesPrefabs[index],enemyNames[Random.Range(0, enemyNames.Count)]);
