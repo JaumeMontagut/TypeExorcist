@@ -168,17 +168,32 @@ public class PlayerController : MonoBehaviour
 
     private void NextTargetPos()
     {
-        //trgPos.RemoveAt(0);
-        //if (trgPos.Count != 0)
-        //{
-        //    rb.velocity =
-        //}
-        //else
-        //{
-        //    rb.velocity = Vector2.zero;
-        //}
+
+        trgPos.RemoveAt(0);
+        if (trgPos.Count != 0)
+        {
+           // rb.velocity =
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
+
+    //trgPos.RemoveAt(0);
+    //if (trgPos.Count != 0)
+    //{
+    //    rb.velocity =
+    //}
+    //else
+    //{
+    //    rb.velocity = Vector2.zero;
+    //}
     //private void OnTriggerEnter2D(Collider2D collision) 
     //{
     //    if (!IsMoving() && !death)
@@ -189,8 +204,11 @@ public class PlayerController : MonoBehaviour
     //    }
     //}
 
+
     public bool IsMoving()
     {
         return (rb.velocity != Vector2.zero);
     }
 }
+
+
