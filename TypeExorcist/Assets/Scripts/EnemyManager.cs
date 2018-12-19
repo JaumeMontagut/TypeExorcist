@@ -27,11 +27,11 @@ public class EnemyManager : MonoBehaviour {
 
     // Spawn logic ------------------------
 
-    private Timer spawn_timer = new Timer();
-    private float time_btw_spawns = 0.0f;
-    public float spawn_time_big = 0.0f;
-    public float spawn_time_medium = 0.0f;
-    public float spawn_time_small = 0.0f;
+    private Timer spawnTimer = new Timer();
+    private float timeBtwSpawns = 0.0f;
+    public float spawnTimeBig = 0.0f;
+    public float spawnTimeMedium = 0.0f;
+    public float spawnTimeSmall = 0.0f;
 
     // Randomizer with letters -------------
 
@@ -40,7 +40,7 @@ public class EnemyManager : MonoBehaviour {
 
     private void Start()
     {
-        spawn_timer.StarTimer();
+        spawnTimer.StarTimer();
 
         enemies = new List<Enemy>();
         enemyNamesSmall = new List<string>();
@@ -75,10 +75,10 @@ public class EnemyManager : MonoBehaviour {
 
     void Update()
     {
-        if (spawn_timer.GetCurrentTime() > time_btw_spawns)
+        if (spawnTimer.GetCurrentTime() > timeBtwSpawns)
         {
             GenerateRandomEnemy();
-            spawn_timer.StarTimer();
+            spawnTimer.StarTimer();
         }
 
         //if (Input.GetMouseButtonDown(0))
@@ -142,19 +142,19 @@ public class EnemyManager : MonoBehaviour {
         switch (type)
         {
             case EnemyType.small:
-                time_btw_spawns = spawn_time_small;
+                timeBtwSpawns = spawnTimeSmall;
                 index = Random.Range(0, smallEnemiesPrefabs.Count);
                 CreateEnemy(position, smallEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesSmall.Count)]);
                 break;
 
             case EnemyType.medium:
-                time_btw_spawns = spawn_time_medium;
+                timeBtwSpawns = spawnTimeMedium;
                 index = Random.Range(0, mediumEnemiesPrefabs.Count);
                 CreateEnemy(position, mediumEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesMedium.Count)]);
                 break;
 
             case EnemyType.big:
-                time_btw_spawns = spawn_time_big;
+                timeBtwSpawns = spawnTimeBig;
                 index = Random.Range(0, bigEnemiesPrefabs.Count);
                 CreateEnemy(position, bigEnemiesPrefabs[index], enemyNamesBig[Random.Range(0, enemyNamesBig.Count)]);
                 break;

@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public TextMeshProUGUI text;
 
+    private SpriteRenderer spriteRenderer;
+    private float zSpriteLocalScale;
+
     private Vector2 target;
     private Animator anim;
     private Rigidbody2D rb;
@@ -17,7 +20,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-       
+        spriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         eM = FindObjectOfType<EnemyManager>();
         UpdateName();
@@ -31,6 +34,15 @@ public class Enemy : MonoBehaviour
 
     public void Update()
     {
+        if (transform.position.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+        }
+
         MoveToTarget();
     }
 

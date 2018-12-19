@@ -10394,9 +10394,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   inactiveColorStr: 
-  spawn_time_big: 3
-  spawn_time_medium: 2
-  spawn_time_small: 1
+  spawnTimeBig: 5.52
+  spawnTimeMedium: 3.49
+  spawnTimeSmall: 2.93
   availableLetters: 
 --- !u!4 &734225159
 Transform:
