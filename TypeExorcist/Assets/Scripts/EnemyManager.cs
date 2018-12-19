@@ -33,6 +33,11 @@ public class EnemyManager : MonoBehaviour {
     public float spawn_time_medium = 0.0f;
     public float spawn_time_small = 0.0f;
 
+    // Randomizer with letters -------------
+
+    [Header("Randomizer with letters")]
+    public char [] availableLetters;
+
     private void Start()
     {
         spawn_timer.StarTimer();
@@ -70,8 +75,6 @@ public class EnemyManager : MonoBehaviour {
 
     void Update()
     {
-        print(spawn_timer.GetCurrentTime());
-
         if (spawn_timer.GetCurrentTime() > time_btw_spawns)
         {
             GenerateRandomEnemy();
@@ -170,5 +173,17 @@ public class EnemyManager : MonoBehaviour {
             }
         }
         return enemiesStartingWith;
+    }
+
+    //Randomly combines available letters to create a string with the specified length
+    public string GenerateNameLetters(int numChars)
+    {
+        string enemyName = "";
+        for (int i = 0; i < numChars; ++i)
+        {
+            int randIndex = Random.Range(0, availableLetters.Length);
+            enemyName = enemyName.Insert(i, availableLetters[randIndex].ToString());
+        }
+        return enemyName;
     }
 }
