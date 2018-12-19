@@ -12,13 +12,15 @@ public class Obelysk : MonoBehaviour {
 	void Start () {
 		animator = gameObject.GetComponent<Animator>();
         slider = transform.Find("Canvas").transform.Find("Slider").gameObject;
-       slider.SetActive(false);
+      // slider.SetActive(false);
         liveSlider = slider.GetComponent<Slider>();
        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        animator.SetFloat("Lives", liveSlider.value);
+
+        if(liveSlider.value<=0)
+            animator.SetBool("Live", false);
 	}
 }
