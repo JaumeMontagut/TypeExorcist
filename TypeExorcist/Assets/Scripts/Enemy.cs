@@ -10,17 +10,18 @@ public class Enemy : MonoBehaviour
     public TextMeshProUGUI text;
 
     private Vector2 target;
-  //  private Animator anim;
+    private Animator anim;
     private Rigidbody2D rb;
     private EnemyManager eM;
     private int completedLetters = 0;//The number of completed letters
 
     void Start()
     {
-       // anim = GetComponent<Animator>();
+       
         rb = GetComponent<Rigidbody2D>();
         eM = FindObjectOfType<EnemyManager>();
         UpdateName();
+        anim = transform.Find("Sprite").gameObject.GetComponent<Animator>();
     }
 
     public void SetTarget(Vector2 target)
@@ -46,7 +47,7 @@ public class Enemy : MonoBehaviour
         //If the player hits the enemy while moving, it kills it
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PlayerController>().IsMoving())
         {
-            //anim.SetTrigger("Death");
+            anim.SetTrigger("Death");
         }
     }
 
@@ -61,6 +62,7 @@ public class Enemy : MonoBehaviour
     {
         if (completedLetters == enemyName.Length)
         {
+           //anim.SetTrigger("Death");
             return true;
         }
         return false;
