@@ -10394,9 +10394,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   inactiveColorStr: 
-  spawn_time_big: 3
-  spawn_time_medium: 2
-  spawn_time_small: 1
+  spawnTimeBig: 5.52
+  spawnTimeMedium: 3.49
+  spawnTimeSmall: 2.93
   availableLetters: 
 --- !u!4 &734225159
 Transform:
@@ -10782,7 +10782,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -12157,7 +12157,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
