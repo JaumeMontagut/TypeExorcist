@@ -44,6 +44,10 @@ public class Enemy : MonoBehaviour
         }
 
         MoveToTarget();
+        if (rb.velocity.SqrMagnitude() == 0)
+        {
+            anim.SetTrigger("Attack");
+        }
     }
 
     private void MoveToTarget()
@@ -52,6 +56,7 @@ public class Enemy : MonoBehaviour
 
         vec.Normalize();
         rb.velocity = vec;
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -74,7 +79,7 @@ public class Enemy : MonoBehaviour
     {
         if (completedLetters == enemyName.Length)
         {
-           //anim.SetTrigger("Death");
+            anim.SetBool("Death", true);
             return true;
         }
         return false;
