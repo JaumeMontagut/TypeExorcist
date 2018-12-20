@@ -44,19 +44,20 @@ public class Enemy : MonoBehaviour
         }
 
         MoveToTarget();
-        if (rb.velocity.SqrMagnitude() == 0)
-        {
-            anim.SetTrigger("Attack");
-        }
+      
     }
 
     private void MoveToTarget()
     {
         Vector2 vec = target - new Vector2(transform.position.x, transform.position.y);
-
+        if((int)vec.magnitude==0)
+        {
+            anim.SetTrigger("Attack");
+        }
+       
         vec.Normalize();
         rb.velocity = vec;
-
+       
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -64,7 +65,7 @@ public class Enemy : MonoBehaviour
         //If the player hits the enemy while moving, it kills it
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PlayerController>().IsMoving())
         {
-            anim.SetTrigger("Death");
+           // anim.SetTrigger("Death");
         }
     }
 
@@ -79,7 +80,7 @@ public class Enemy : MonoBehaviour
     {
         if (completedLetters == enemyName.Length)
         {
-            anim.SetBool("Death", true);
+            //anim.SetBool("Death", true);
             return true;
         }
         return false;
