@@ -13,6 +13,7 @@ public class GameDataManager : MonoBehaviour
     private Timer sessionTimer = new Timer();
     private string filepath;
     private XmlDocument xmlDoc = new XmlDocument();
+    private StreamWriter txtDoc;
 
     void OnApplicationQuit()
     {
@@ -22,13 +23,15 @@ public class GameDataManager : MonoBehaviour
     void Start()
     {
         sessionTimer.StarTimer();
-        filepath = Application.dataPath + @"/Data/gamedata.xml";
+        txtDoc = new StreamWriter(Application.dataPath + @"/Data/DataTxt.txt", true);
+        filepath = Application.dataPath + @"/Data/DataXml.xml";
         xmlDoc.Load(filepath);
         LoadData();
     }
 
     public void SaveData()
     {
+        // Save XML =============================================
         float sessionTime = sessionTimer.GetCurrentTime();
         totalPlayTime += sessionTime;
 
@@ -46,7 +49,12 @@ public class GameDataManager : MonoBehaviour
         session_element.AppendChild(total_time);
 
         root.AppendChild(session_element); 
-        xmlDoc.Save(filepath); // save file.
+        xmlDoc.Save(filepath);
+
+        // Save Txt =============================================
+        string line = "Session: " + "1" +"    "+ "Date: " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "------------------------------";
+        txtDoc.WriteLine(line);
+        txtDoc.Close();
     }
 
     public void LoadData()
