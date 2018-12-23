@@ -62,11 +62,14 @@ public class GameDataManager : MonoBehaviour
         }
 
         string line_1;
-        line_1 = "Session: " + sessionCount.ToString() + "  "+ "Date: " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " -----------------------";
+        line_1 = "---- " + "Session: " + sessionCount.ToString() + "  "+ "Date: " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " -----------------------";
         txtDoc.WriteLine(line_1);
         string line_2;
-        line_2 = "Time: " + sessionTime.ToString();
+        line_2 = "Time:        " + sessionTime.ToString();
         txtDoc.WriteLine(line_2);
+        string line_3;
+        line_3 = "Total Time:  " + totalPlayTime.ToString();
+        txtDoc.WriteLine(line_3);
 
         txtDoc.Close();
     }
