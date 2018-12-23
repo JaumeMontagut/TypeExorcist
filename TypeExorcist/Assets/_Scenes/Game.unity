@@ -10505,6 +10505,7 @@ MonoBehaviour:
   smallEnemieRate: 50
   mediumEnemieRate: 35
   bigEnemieRate: 15
+  Level: 1
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor:
     serializedVersion: 2

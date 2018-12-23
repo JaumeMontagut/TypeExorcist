@@ -2,8 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System.Xml;
 
-public class EnemyManager : MonoBehaviour {
+
+public class EnemyManager : MonoBehaviour
+{
 
     public enum EnemyType  { none = -1, small = 0, medium = 1, big = 2}
 
@@ -16,13 +19,17 @@ public class EnemyManager : MonoBehaviour {
     public float mediumEnemieRate = 0.0f;
     public float bigEnemieRate = 0.0f;
 
+    //Names variables --------------------------------
     private List<string> enemyNamesSmall;              
     private List<string> enemyNamesMedium;
     private List<string> enemyNamesBig;
-
+  
+    public uint Level = 1;
+    //Colors------------------------------------------
     public Color inactiveColor;
     public Color32 activeColor;
     [HideInInspector]public string inactiveColorStr;
+
 
 
     // Spawn logic ------------------------
@@ -41,34 +48,17 @@ public class EnemyManager : MonoBehaviour {
     private void Start()
     {
         spawnTimer.StarTimer();
+       
+            //SelectNode(levelNodePath);
 
         enemies = new List<Enemy>();
+
         enemyNamesSmall = new List<string>();
-        enemyNamesSmall.Add("ulvok");
-        enemyNamesSmall.Add("ogima");
-        enemyNamesSmall.Add("ragin");
-        enemyNamesSmall.Add("agran");
-        enemyNamesSmall.Add("eglog");
-        enemyNamesSmall.Add("sozer");
-        enemyNamesSmall.Add("tornar");
-
         enemyNamesMedium = new List<string>();
-        enemyNamesMedium.Add("dralvoth");
-        enemyNamesMedium.Add("tholmith");
-        enemyNamesMedium.Add("lucifer");
-        enemyNamesMedium.Add("kizzozil");
-        enemyNamesMedium.Add("arromak");
-        enemyNamesMedium.Add("xorgich");
-        enemyNamesMedium.Add("golguner");
-
         enemyNamesBig = new List<string>();
-        enemyNamesBig.Add("brargarak");
-        enemyNamesBig.Add("balgreren");
-        enemyNamesBig.Add("xuzgemoth");
-        enemyNamesBig.Add("tralgromas");
-        enemyNamesBig.Add("jallmokuch");
-        enemyNamesBig.Add("brallmomath");
-        enemyNamesBig.Add("thirnumith");
+
+        LoadWord();
+        
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
     
@@ -185,5 +175,24 @@ public class EnemyManager : MonoBehaviour {
             enemyName = enemyName.Insert(i, availableLetters[randIndex].ToString());
         }
         return enemyName;
+    }
+     void LoadWord()
+    {
+        XmlDocument doc = new XmlDocument();
+        doc.Load("Assets/txtDoc/EnemiesWords.xml");
+        
+        XmlNode LevelNode = doc.DocumentElement.SelectSingleNode("level"+ Level.ToString());
+        for (XmlNode ThisNode = LevelNode.SelectSingleNode("easy").FirstChild; ThisNode != null; ThisNode = ThisNode.NextSibling)
+        {
+            enemyNamesSmall.Add(ThisNode.InnerText);
+        }
+        for (XmlNode ThisNode = LevelNode.SelectSingleNode("medium").FirstChild; ThisNode != null; ThisNode = ThisNode.NextSibling)
+        {
+            enemyNamesMedium.Add(ThisNode.InnerText);
+        }
+        for (XmlNode ThisNode = LevelNode.SelectSingleNode("hard").FirstChild; ThisNode != null; ThisNode = ThisNode.NextSibling)
+        {
+            enemyNamesBig.Add(ThisNode.InnerText);
+        }
     }
 }
