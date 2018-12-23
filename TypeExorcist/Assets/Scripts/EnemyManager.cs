@@ -161,13 +161,13 @@ public class EnemyManager : MonoBehaviour
             case EnemyType.medium:
                 timeBtwSpawns = spawnTimeMedium;
                 index = Random.Range(0, mediumEnemiesPrefabs.Count);
-                CreateEnemy(position, mediumEnemiesPrefabs[index], enemyNamesMedium[Random.Range(0, enemyNamesMedium.Count)]);
+                CreateEnemy(position, mediumEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesSmall.Count)]);
                 break;
 
             case EnemyType.big:
                 timeBtwSpawns = spawnTimeBig;
                 index = Random.Range(0, bigEnemiesPrefabs.Count);
-                CreateEnemy(position, bigEnemiesPrefabs[index], enemyNamesBig[Random.Range(0, enemyNamesBig.Count)]);
+                CreateEnemy(position, bigEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesSmall.Count)]);
                 break;
         }
     }
