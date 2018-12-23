@@ -25,7 +25,6 @@ public class EnemyManager : MonoBehaviour
     private List<string> enemyNamesBig;
     private TextAsset allWords;
     public string charsWanted="hola";
-    public uint Level = 1;
     //Colors------------------------------------------
     public Color inactiveColor;
     public Color32 activeColor;
@@ -56,8 +55,6 @@ public class EnemyManager : MonoBehaviour
         enemyNamesMedium = new List<string>();
         enemyNamesBig = new List<string>();
         allWords = Resources.Load("Words") as TextAsset;
-        Debug.Log(allWords.text);
-
         LoadWord();
         
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
@@ -179,7 +176,6 @@ public class EnemyManager : MonoBehaviour
     }
      void LoadWord()
     {
-      
         string allText = allWords.text;
         int sizeText = allText.Length;
         string aux = "";
