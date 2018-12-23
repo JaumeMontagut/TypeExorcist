@@ -42,20 +42,17 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Stop moving when it reaches a point
+        //Stop moving when it reaches the target position
         if (IsMoving() && Utilities.DistanceSquared(transform.position, trgPos[0]) <= stopDist)
         {
             trgPos.RemoveAt(0);
-            if (trgPos.Count == 0)
-            {
-                //Stop moving
-                rb.velocity = Vector2.zero;
-            }
-            else
-            {
-                //Move to the next point
-                MoveToFirstPoint();
-            }
+            rb.velocity = Vector2.zero;
+        }
+
+        //Move to the next position if there are still positions in the list
+        if (!IsMoving() && trgPos.Count > 0)
+        {
+            MoveToFirstPoint();
         }
     }
 
@@ -146,10 +143,6 @@ public class PlayerController : MonoBehaviour
                 scoreManager.Combo++;
                 anim.SetTrigger("attack");
                 trgPos.Add(focusedEnemies[i].transform.position);
-                if (trgPos.Count == 1)
-                {
-                    MoveToFirstPoint();
-                }
                 focusedEnemies[i].DestroyEnemy();//Change for anim.settrigger die and die at the end of the animation
                 focusedEnemies.RemoveAt(i);
             }
