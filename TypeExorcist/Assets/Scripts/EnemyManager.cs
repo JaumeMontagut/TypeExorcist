@@ -4,43 +4,56 @@ using System.Collections.Generic;
 using TMPro;
 using System.Xml;
 
+public struct LevelSpawnRate
+{
+    public float smallEnemieRate;
+    public float mediumEnemieRate;
+    public float bigEnemieRate;
+}
 
 public class EnemyManager : MonoBehaviour
 {
-
+ 
     public enum EnemyType  { none = -1, small = 0, medium = 1, big = 2}
 
     [HideInInspector] public List<Enemy> enemies;       //List of all active enemies  
+
+    [Header("Enemies prefabs")]
     public List<GameObject> smallEnemiesPrefabs;        //List of small enemy prefabs 
     public List<GameObject> mediumEnemiesPrefabs;       //List of medium enemy prefabs 
     public List<GameObject> bigEnemiesPrefabs;          //List of big enemy prefabs 
 
-    public float smallEnemieRate = 0.0f;
-    public float mediumEnemieRate = 0.0f;
-    public float bigEnemieRate = 0.0f;
-
-    //Names variables --------------------------------
-    private List<string> enemyNamesSmall;              
-    private List<string> enemyNamesMedium;
-    private List<string> enemyNamesBig;
-    private TextAsset allWords;
-    public string charsWanted="hola";
-    public uint Level = 1;
-    //Colors------------------------------------------
-    public Color inactiveColor;
-    public Color32 activeColor;
-    [HideInInspector]public string inactiveColorStr;
-
-
-
     // Spawn logic ------------------------
-
+    public LevelSpawnRate[] levelsSpawnRates;
+    [Header("Spawn Rate Logic")]
+    public float smallEnemieBaseRate = 0.0f;
+    public float smallRatePercentMultiplyer = 0.0f;
+    public float mediumEnemieBaseRate = 0.0f;
+    public float mediumRatePercentMultiplyer = 0.0f;
+    public float bigEnemieBaseRate = 0.0f;
+    public float bigRatePercentMultiplyer = 0.0f;
+  
     private Timer spawnTimer = new Timer();
     private float timeBtwSpawns = 0.0f;
     public float spawnTimeBig = 0.0f;
     public float spawnTimeMedium = 0.0f;
     public float spawnTimeSmall = 0.0f;
 
+    //Names variables --------------------------------
+  
+    private List<string> enemyNamesSmall;              
+    private List<string> enemyNamesMedium;
+    private List<string> enemyNamesBig;
+    private TextAsset allWords;
+    [Header("Enemies Names")]
+    public string charsWanted="hola";
+    public uint level = 1;
+    public uint maxLevels = 9;
+    //Colors------------------------------------------
+    public Color inactiveColor;
+    public Color32 activeColor;
+    [HideInInspector]public string inactiveColorStr;
+  
     // Randomizer with letters -------------
 
     [Header("Randomizer with letters")]
@@ -49,17 +62,23 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         spawnTimer.StarTimer();
- 
         enemies = new List<Enemy>();
-
         enemyNamesSmall = new List<string>();
         enemyNamesMedium = new List<string>();
         enemyNamesBig = new List<string>();
         allWords = Resources.Load("Words") as TextAsset;
         Debug.Log(allWords.text);
-
         LoadWord();
-        
+
+        levelsSpawnRates = new LevelSpawnRate[maxLevels];
+
+        for (uint i = 0; i < maxLevels; ++i)
+        {
+            levelsSpawnRates[i].smallEnemieRate = smallEnemieBaseRate + smallEnemieBaseRate * i * smallRatePercentMultiplyer;
+            levelsSpawnRates[i].mediumEnemieRate = mediumEnemieBaseRate + mediumEnemieBaseRate * i * mediumRatePercentMultiplyer;
+            levelsSpawnRates[i].bigEnemieRate = bigEnemieBaseRate + bigEnemieBaseRate * i * bigRatePercentMultiplyer;
+        }
+
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
     
@@ -117,14 +136,14 @@ public class EnemyManager : MonoBehaviour
         // Select enemy type ------------------------------------------------
         EnemyType type = EnemyType.none;
 
-        float probability_range = smallEnemieRate + mediumEnemieRate + bigEnemieRate;
+        float probability_range = levelsSpawnRates[level -1].smallEnemieRate + levelsSpawnRates[level - 1].mediumEnemieRate + levelsSpawnRates[level - 1].bigEnemieRate;
         float random_num = Random.Range(0, probability_range);
 
-        if (random_num >= 0 && random_num < smallEnemieRate)
+        if (random_num >= 0 && random_num < levelsSpawnRates[level - 1].smallEnemieRate)
         { type = EnemyType.small; }
-        else if (random_num > smallEnemieRate && random_num <= smallEnemieRate + mediumEnemieRate)
+        else if (random_num > levelsSpawnRates[level - 1].smallEnemieRate && random_num <= levelsSpawnRates[level - 1].smallEnemieRate + levelsSpawnRates[level - 1].mediumEnemieRate)
         { type = EnemyType.medium; }
-        else if(random_num >  smallEnemieRate + mediumEnemieRate && random_num <= smallEnemieRate + mediumEnemieRate + bigEnemieRate)
+        else if(random_num > levelsSpawnRates[level - 1].smallEnemieRate + levelsSpawnRates[level - 1].mediumEnemieRate && random_num <= levelsSpawnRates[level - 1].smallEnemieRate + levelsSpawnRates[level - 1].mediumEnemieRate + levelsSpawnRates[level - 1].bigEnemieRate)
         { type = EnemyType.big; }
 
         int index = 0;
@@ -141,7 +160,7 @@ public class EnemyManager : MonoBehaviour
             case EnemyType.medium:
                 timeBtwSpawns = spawnTimeMedium;
                 index = Random.Range(0, mediumEnemiesPrefabs.Count);
-                CreateEnemy(position, mediumEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesMedium.Count)]);
+                CreateEnemy(position, mediumEnemiesPrefabs[index], enemyNamesMedium[Random.Range(0, enemyNamesMedium.Count)]);
                 break;
 
             case EnemyType.big:
@@ -179,7 +198,7 @@ public class EnemyManager : MonoBehaviour
     }
      void LoadWord()
     {
-      
+        
         string allText = allWords.text;
         int sizeText = allText.Length;
         string aux = "";
