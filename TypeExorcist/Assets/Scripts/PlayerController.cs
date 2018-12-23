@@ -58,7 +58,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-
         if (!dead && Time.timeScale != 0)
         {
             KeyCode currKey;
