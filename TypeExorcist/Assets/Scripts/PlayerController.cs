@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Stop moving when it reaches a point
-        if (rb.velocity != Vector2.zero && Utilities.DistanceSquared(transform.position, trgPos[0]) <= stopDist)
+        if (IsMoving() && Utilities.DistanceSquared(transform.position, trgPos[0]) <= stopDist)
         {
             trgPos.RemoveAt(0);
             if (trgPos.Count == 0)
@@ -51,11 +51,17 @@ public class PlayerController : MonoBehaviour
                 //Stop moving
                 rb.velocity = Vector2.zero;
             }
+            else
+            {
+                //Move to the next point
+                MoveToFirstPoint();
+            }
         }
     }
 
     private void Update()
     {
+        Debug.Log(trgPos.Count);
         if (!dead && Time.timeScale != 0)
         {
             KeyCode currKey;
@@ -139,7 +145,11 @@ public class PlayerController : MonoBehaviour
             {
                 scoreManager.Combo++;
                 anim.SetTrigger("attack");
-                StartMoving(focusedEnemies[i].transform.position);
+                trgPos.Add(focusedEnemies[i].transform.position);
+                if (trgPos.Count == 1)
+                {
+                    MoveToFirstPoint();
+                }
                 focusedEnemies[i].DestroyEnemy();//Change for anim.settrigger die and die at the end of the animation
                 focusedEnemies.RemoveAt(i);
             }
@@ -164,10 +174,10 @@ public class PlayerController : MonoBehaviour
         scoreManager.Combo = 1;
     }
 
-    private void StartMoving(Vector2 trgPos)
+    // Moves to the first point in the list
+    private void MoveToFirstPoint()
     {
-        this.trgPos.Add(trgPos);
-        Vector2 dir = trgPos - new Vector2(transform.position.x, transform.position.y);
+        Vector2 dir = trgPos[0] - new Vector2(transform.position.x, transform.position.y);
         rb.velocity = dir.normalized * moveSpeed;
     }
 
@@ -175,25 +185,6 @@ public class PlayerController : MonoBehaviour
     {
         
     }
-
-    //trgPos.RemoveAt(0);
-    //if (trgPos.Count != 0)
-    //{
-    //    rb.velocity =
-    //}
-    //else
-    //{
-    //    rb.velocity = Vector2.zero;
-    //}
-    //private void OnTriggerEnter2D(Collider2D collision) 
-    //{
-    //    if (!IsMoving() && !death)
-    //    {
-    //        death = true;
-    //        particles.SetActive(true);
-    //        TextGameOver.SetActive(true);
-    //    }
-    //}
 
 
     public bool IsMoving()
