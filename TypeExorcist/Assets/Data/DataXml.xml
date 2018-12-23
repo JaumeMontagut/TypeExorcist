@@ -1,3 +1,26 @@
 <gamedata>
-
+  <session date="2018/12/23 22:09:00">
+    <time>1.686703</time>
+    <total_time>1.686703</total_time>
+  </session>
+  <session date="2018/12/23 22:09:05">
+    <time>1.719545</time>
+    <total_time>3.406249</total_time>
+  </session>
+  <session date="2018/12/23 22:13:39">
+    <time>6.853987</time>
+    <total_time>10.26024</total_time>
+  </session>
+  <session date="2018/12/23 22:14:01">
+    <time>2.483345</time>
+    <total_time>12.74358</total_time>
+  </session>
+  <session date="2018/12/23 22:14:45">
+    <time>6.78126</time>
+    <total_time>19.52484</total_time>
+  </session>
+  <session date="2018/12/23 22:14:57">
+    <time>9.229946</time>
+    <total_time>28.75479</total_time>
+  </session>
 </gamedata>

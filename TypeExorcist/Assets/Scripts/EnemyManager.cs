@@ -179,7 +179,7 @@ public class EnemyManager : MonoBehaviour
      void LoadWord()
     {
         XmlDocument doc = new XmlDocument();
-        doc.Load("Assets/txtDoc/EnemiesWords.xml");
+        doc.Load(Application.dataPath + "/Data/EnemiesWords.xml");
         
         XmlNode LevelNode = doc.DocumentElement.SelectSingleNode("level"+ Level.ToString());
         for (XmlNode ThisNode = LevelNode.SelectSingleNode("easy").FirstChild; ThisNode != null; ThisNode = ThisNode.NextSibling)

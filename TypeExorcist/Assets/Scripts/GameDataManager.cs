@@ -24,8 +24,8 @@ public class GameDataManager : MonoBehaviour
     void Start()
     {
         sessionTimer.StarTimer();
-        txtDoc = new StreamWriter(Application.dataPath + @"/Data/DataTxt.txt", true);
-        filePath = Application.dataPath + @"/Data/DataXml.xml";
+        txtDoc = new StreamWriter(Application.dataPath + "/Data/DataTxt.txt", true);
+        filePath = Application.dataPath + "/Data/DataXml.xml";
         xmlDoc.Load(filePath);
         LoadData();
     }

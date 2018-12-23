@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(trgPos.Count);
+
         if (!dead && Time.timeScale != 0)
         {
             KeyCode currKey;
