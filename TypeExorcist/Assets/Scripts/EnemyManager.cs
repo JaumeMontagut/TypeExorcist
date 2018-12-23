@@ -138,7 +138,7 @@ public class EnemyManager : MonoBehaviour
             case EnemyType.medium:
                 timeBtwSpawns = spawnTimeMedium;
                 index = Random.Range(0, mediumEnemiesPrefabs.Count);
-                CreateEnemy(position, mediumEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesMedium.Count)]);
+                CreateEnemy(position, mediumEnemiesPrefabs[index], enemyNamesMedium[Random.Range(0, enemyNamesMedium.Count)]);
                 break;
 
             case EnemyType.big:
@@ -183,9 +183,9 @@ public class EnemyManager : MonoBehaviour
         for (int num=0; num<sizeText; ++num)
 
         {
-            if(allText[num] != ' ')
+            if(allText[num]!=' ') 
                 aux += allText[num];
-            else 
+           else 
             {
               
                 for(int i=0; i< aux.Length;++i)
@@ -202,6 +202,7 @@ public class EnemyManager : MonoBehaviour
                     if (ret == false)
                         break;
                 }
+             
                if(ret==true)
                 {
                     if(aux.Length<=5)
@@ -219,8 +220,8 @@ public class EnemyManager : MonoBehaviour
                 }
                 aux = "";
             }
-           
 
+            
         }
 
     }
