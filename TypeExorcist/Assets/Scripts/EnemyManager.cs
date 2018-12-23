@@ -181,6 +181,7 @@ public class EnemyManager : MonoBehaviour
         string aux = "";
         bool ret = false;
         for (int num=0; num<sizeText; ++num)
+
         {
             if(allText[num] != ' ')
                 aux += allText[num];
