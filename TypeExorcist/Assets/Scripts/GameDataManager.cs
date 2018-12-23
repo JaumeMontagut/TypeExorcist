@@ -11,8 +11,10 @@ public class GameDataManager : MonoBehaviour
 {
     private float totalPlayTime;
     private Timer sessionTimer = new Timer();
-    private string filepath;
+    private string filePath;
     private XmlDocument xmlDoc = new XmlDocument();
+    private StreamWriter txtDoc;
+    private int sessionCount = 0;
 
     void OnApplicationQuit()
     {
@@ -22,13 +24,15 @@ public class GameDataManager : MonoBehaviour
     void Start()
     {
         sessionTimer.StarTimer();
-        filepath = Application.dataPath + @"/Data/gamedata.xml";
-        xmlDoc.Load(filepath);
+        txtDoc = new StreamWriter(Application.dataPath + @"/Data/DataTxt.txt", true);
+        filePath = Application.dataPath + @"/Data/DataXml.xml";
+        xmlDoc.Load(filePath);
         LoadData();
     }
 
     public void SaveData()
     {
+        // Save XML =============================================
         float sessionTime = sessionTimer.GetCurrentTime();
         totalPlayTime += sessionTime;
 
@@ -46,13 +50,35 @@ public class GameDataManager : MonoBehaviour
         session_element.AppendChild(total_time);
 
         root.AppendChild(session_element); 
-        xmlDoc.Save(filepath); // save file.
+        xmlDoc.Save(filePath);
+
+        // Save Txt =============================================
+
+        XmlNodeList nodeList = root.ChildNodes;
+
+        foreach (XmlNode node in nodeList)
+        {
+            ++sessionCount;
+        }
+
+        string line_1;
+        line_1 = "---- " + "Session: " + sessionCount.ToString() + "  "+ "Date: " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " -----------------------";
+        txtDoc.WriteLine(line_1);
+        string line_2;
+        line_2 = "Time:        " + sessionTime.ToString();
+        txtDoc.WriteLine(line_2);
+        string line_3;
+        line_3 = "Total Time:  " + totalPlayTime.ToString();
+        txtDoc.WriteLine(line_3);
+
+        txtDoc.Close();
     }
 
     public void LoadData()
     {
         XmlElement root = xmlDoc.DocumentElement;
         XmlNode last_session_node = root.LastChild;
+
         XmlNodeList nodeList = last_session_node.ChildNodes;
 
         foreach (XmlNode node in nodeList)
