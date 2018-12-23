@@ -10576,17 +10576,17 @@ MonoBehaviour:
   bigEnemiesPrefabs:
   - {fileID: 1557032909987372, guid: 194b5654daa5c0d4da90c043fbe5c36a, type: 2}
   - {fileID: 1985232620782828, guid: 73c77a6a685b13343b658a6a7784153e, type: 2}
-  smallEnemieBaseRate: 50
+  smallEnemieBaseRate: 60
   smallRatePercentMultiplyer: 0
-  mediumEnemieBaseRate: 35
+  mediumEnemieBaseRate: 30
   mediumRatePercentMultiplyer: 0.3
-  bigEnemieBaseRate: 15
+  bigEnemieBaseRate: 10
   bigRatePercentMultiplyer: 0.2
-  spawnTimeBig: 2
-  spawnTimeMedium: 2
-  spawnTimeSmall: 2
+  spawnTimeBig: 7
+  spawnTimeMedium: 5
+  spawnTimeSmall: 3
   charsWanted: hola
-  level: 1
+  level: 5
   maxLevels: 9
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor:
