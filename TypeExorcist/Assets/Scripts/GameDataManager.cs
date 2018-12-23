@@ -11,9 +11,10 @@ public class GameDataManager : MonoBehaviour
 {
     private float totalPlayTime;
     private Timer sessionTimer = new Timer();
-    private string filepath;
+    private string filePath;
     private XmlDocument xmlDoc = new XmlDocument();
     private StreamWriter txtDoc;
+    private int sessionCount = 0;
 
     void OnApplicationQuit()
     {
@@ -24,8 +25,8 @@ public class GameDataManager : MonoBehaviour
     {
         sessionTimer.StarTimer();
         txtDoc = new StreamWriter(Application.dataPath + @"/Data/DataTxt.txt", true);
-        filepath = Application.dataPath + @"/Data/DataXml.xml";
-        xmlDoc.Load(filepath);
+        filePath = Application.dataPath + @"/Data/DataXml.xml";
+        xmlDoc.Load(filePath);
         LoadData();
     }
 
@@ -49,11 +50,24 @@ public class GameDataManager : MonoBehaviour
         session_element.AppendChild(total_time);
 
         root.AppendChild(session_element); 
-        xmlDoc.Save(filepath);
+        xmlDoc.Save(filePath);
 
         // Save Txt =============================================
-        string line = "Session: " + "1" +"    "+ "Date: " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "------------------------------";
-        txtDoc.WriteLine(line);
+
+        XmlNodeList nodeList = root.ChildNodes;
+
+        foreach (XmlNode node in nodeList)
+        {
+            ++sessionCount;
+        }
+
+        string line_1;
+        line_1 = "Session: " + sessionCount.ToString() + "  "+ "Date: " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " -----------------------";
+        txtDoc.WriteLine(line_1);
+        string line_2;
+        line_2 = "Time: " + sessionTime.ToString();
+        txtDoc.WriteLine(line_2);
+
         txtDoc.Close();
     }
 
@@ -61,6 +75,7 @@ public class GameDataManager : MonoBehaviour
     {
         XmlElement root = xmlDoc.DocumentElement;
         XmlNode last_session_node = root.LastChild;
+
         XmlNodeList nodeList = last_session_node.ChildNodes;
 
         foreach (XmlNode node in nodeList)
