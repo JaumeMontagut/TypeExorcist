@@ -23,7 +23,8 @@ public class EnemyManager : MonoBehaviour
     private List<string> enemyNamesSmall;              
     private List<string> enemyNamesMedium;
     private List<string> enemyNamesBig;
-  
+    private TextAsset allWords;
+    public string charsWanted="hola";
     public uint Level = 1;
     //Colors------------------------------------------
     public Color inactiveColor;
@@ -48,14 +49,14 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         spawnTimer.StarTimer();
-       
-            //SelectNode(levelNodePath);
-
+ 
         enemies = new List<Enemy>();
 
         enemyNamesSmall = new List<string>();
         enemyNamesMedium = new List<string>();
         enemyNamesBig = new List<string>();
+        allWords = Resources.Load("Words") as TextAsset;
+        Debug.Log(allWords.text);
 
         LoadWord();
         
@@ -178,21 +179,52 @@ public class EnemyManager : MonoBehaviour
     }
      void LoadWord()
     {
-        XmlDocument doc = new XmlDocument();
-        doc.Load("Assets/txtDoc/EnemiesWords.xml");
-        
-        XmlNode LevelNode = doc.DocumentElement.SelectSingleNode("level"+ Level.ToString());
-        for (XmlNode ThisNode = LevelNode.SelectSingleNode("easy").FirstChild; ThisNode != null; ThisNode = ThisNode.NextSibling)
+      
+        string allText = allWords.text;
+        int sizeText = allText.Length;
+        string aux = "";
+        bool ret = false;
+        for (int num=0; num<sizeText; ++num)
         {
-            enemyNamesSmall.Add(ThisNode.InnerText);
+            if(allText[num] != ' ')
+                aux += allText[num];
+            else 
+            {
+              
+                for(int i=0; i< aux.Length;++i)
+                {
+                    ret = false;
+                    for (int c = 0; c < charsWanted.Length; ++c)
+                    {
+                        if(aux[i]==charsWanted[c])
+                        {
+                            ret = true;
+                            break;
+                        }
+                    }
+                    if (ret == false)
+                        break;
+                }
+               if(ret==true)
+                {
+                    if(aux.Length<=5)
+                    {
+                        enemyNamesSmall.Add(aux);
+                    }
+                    else if(aux.Length<=8)
+                    {
+                        enemyNamesMedium.Add(aux);
+                    }
+                    else
+                    {
+                        enemyNamesBig.Add(aux);
+                    }
+                }
+                aux = "";
+            }
+           
+
         }
-        for (XmlNode ThisNode = LevelNode.SelectSingleNode("medium").FirstChild; ThisNode != null; ThisNode = ThisNode.NextSibling)
-        {
-            enemyNamesMedium.Add(ThisNode.InnerText);
-        }
-        for (XmlNode ThisNode = LevelNode.SelectSingleNode("hard").FirstChild; ThisNode != null; ThisNode = ThisNode.NextSibling)
-        {
-            enemyNamesBig.Add(ThisNode.InnerText);
-        }
+
     }
 }

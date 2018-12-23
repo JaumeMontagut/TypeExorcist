@@ -1,63 +1,14 @@
 <words>
   <level1>
    <easy>
-     <word>ulvok</word>
-     <word>ogima</word>
-     <word>ragin</word>
-     <word>agran</word>
-     <word>eglog</word>
-     <word>sozer</word>
-     <word>tornar</word>
+     <word>yessica</word>
   </easy>
   <medium>
-    <word>dralvoth</word>
-    <word>tholmith</word>
-    <word>lucifer</word>
-    <word>kizzozil</word>
-    <word>arromak</word>
-    <word>xorgich</word>
-    <word>golguner</word>
+    <word>yessica</word>
   </medium>
 
   <hard>
-    <word>brargarak</word>
-    <word>balgreren</word>
-    <word>xuzgemoth</word>
-    <word>tralgromas</word>
-    <word>jallmokuch</word>
-    <word>brallmomath</word>
-    <word>thirnumith</word>
+    <word>yessica</word>
   </hard>
   </level1>
-  <level2>
-    <easy>
-      <word>ulvok</word>
-      <word>ogima</word>
-      <word>ragin</word>
-      <word>agran</word>
-      <word>eglog</word>
-      <word>sozer</word>
-      <word>tornar</word>
-    </easy>
-    <medium>
-      <word>dralvoth</word>
-      <word>tholmith</word>
-      <word>lucifer</word>
-      <word>kizzozil</word>
-      <word>arromak</word>
-      <word>xorgich</word>
-      <word>golguner</word>
-    </medium>
-
-    <hard>
-      <word>brargarak</word>
-      <word>balgreren</word>
-      <word>xuzgemoth</word>
-      <word>tralgromas</word>
-      <word>jallmokuch</word>
-      <word>brallmomath</word>
-      <word>thirnumith</word>
-    </hard>
-  </level2>
-
 </words>
