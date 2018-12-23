@@ -10511,8 +10511,8 @@ MonoBehaviour:
     rgba: 4294967295
   inactiveColorStr: 
   spawnTimeBig: 1
-  spawnTimeMedium: 10
-  spawnTimeSmall: 10
+  spawnTimeMedium: 1
+  spawnTimeSmall: 1
   availableLetters: 
 --- !u!4 &734225159
 Transform:
