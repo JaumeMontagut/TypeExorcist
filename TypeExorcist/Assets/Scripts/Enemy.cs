@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
 
     public string enemyName;
     public TextMeshProUGUI text;
+
+    
 
     private SpriteRenderer spriteRenderer;
     private float zSpriteLocalScale;
@@ -17,7 +19,8 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private EnemyManager eM;
     private int completedLetters = 0;//The number of completed letters
-
+    private GameObject obelisk;
+    
     void Start()
     {
         spriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
@@ -25,6 +28,8 @@ public class Enemy : MonoBehaviour
         eM = FindObjectOfType<EnemyManager>();
         UpdateName();
         anim = transform.Find("Sprite").gameObject.GetComponent<Animator>();
+        obelisk = GameObject.FindGameObjectWithTag("Obelysk");
+       
     }
 
     public void SetTarget(Vector2 target)
@@ -52,7 +57,11 @@ public class Enemy : MonoBehaviour
         Vector2 vec = target - new Vector2(transform.position.x, transform.position.y);
         if((int)vec.magnitude==0)
         {
-            anim.SetTrigger("Attack");
+          if(anim.GetBool("Attack")==false)
+            {
+                anim.SetTrigger("Attack");
+                obelisk.GetComponent<Obelysk>().SubstractLives(0.1F);
+            }
         }
        
         vec.Normalize();

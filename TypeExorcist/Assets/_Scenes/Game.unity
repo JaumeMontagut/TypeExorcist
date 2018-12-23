@@ -10582,9 +10582,9 @@ MonoBehaviour:
   mediumRatePercentMultiplyer: 0.3
   bigEnemieBaseRate: 15
   bigRatePercentMultiplyer: 0.2
-  spawnTimeBig: 8
-  spawnTimeMedium: 6
-  spawnTimeSmall: 3
+  spawnTimeBig: 2
+  spawnTimeMedium: 2
+  spawnTimeSmall: 2
   charsWanted: hola
   level: 1
   maxLevels: 9

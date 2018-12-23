@@ -49,6 +49,7 @@ public class EnemyManager : MonoBehaviour
     public string charsWanted="hola";
     public uint level = 1;
     public uint maxLevels = 9;
+
     //Colors------------------------------------------
     public Color inactiveColor;
     public Color32 activeColor;
@@ -67,7 +68,7 @@ public class EnemyManager : MonoBehaviour
         enemyNamesMedium = new List<string>();
         enemyNamesBig = new List<string>();
         allWords = Resources.Load("Words") as TextAsset;
-        Debug.Log(allWords.text);
+
         LoadWord();
 
         levelsSpawnRates = new LevelSpawnRate[maxLevels];
@@ -198,7 +199,7 @@ public class EnemyManager : MonoBehaviour
     }
      void LoadWord()
     {
-        
+
         string allText = allWords.text;
         int sizeText = allText.Length;
         string aux = "";
