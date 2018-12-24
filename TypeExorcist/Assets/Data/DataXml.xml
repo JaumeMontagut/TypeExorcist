@@ -287,4 +287,80 @@
     <time>18.24752</time>
     <total_time>1099.005</total_time>
   </session>
+  <session date="2018/12/24 14:10:40">
+    <time>13.14159</time>
+    <total_time>1112.147</total_time>
+  </session>
+  <session date="2018/12/24 14:14:55">
+    <time>14.36775</time>
+    <total_time>1126.515</total_time>
+  </session>
+  <session date="2018/12/24 14:15:11">
+    <time>0.5358403</time>
+    <total_time>1127.051</total_time>
+  </session>
+  <session date="2018/12/24 14:15:55">
+    <time>18.42735</time>
+    <total_time>1145.478</total_time>
+  </session>
+  <session date="2018/12/24 14:16:21">
+    <time>22.22648</time>
+    <total_time>1167.704</total_time>
+  </session>
+  <session date="2018/12/24 14:17:28">
+    <time>26.62527</time>
+    <total_time>1194.329</total_time>
+  </session>
+  <session date="2018/12/24 14:18:41">
+    <time>23.21099</time>
+    <total_time>1217.54</total_time>
+  </session>
+  <session date="2018/12/24 14:24:34">
+    <time>13.21399</time>
+    <total_time>1230.754</total_time>
+  </session>
+  <session date="2018/12/24 14:25:37">
+    <time>11.9224</time>
+    <total_time>1242.676</total_time>
+  </session>
+  <session date="2018/12/24 14:30:40">
+    <time>6.717405</time>
+    <total_time>1249.393</total_time>
+  </session>
+  <session date="2018/12/24 14:31:20">
+    <time>7.217036</time>
+    <total_time>1256.61</total_time>
+  </session>
+  <session date="2018/12/24 14:31:43">
+    <time>6.509212</time>
+    <total_time>1263.119</total_time>
+  </session>
+  <session date="2018/12/24 14:31:55">
+    <time>4.634139</time>
+    <total_time>1267.753</total_time>
+  </session>
+  <session date="2018/12/24 15:02:05">
+    <time>5.353499</time>
+    <total_time>1273.107</total_time>
+  </session>
+  <session date="2018/12/24 15:07:26">
+    <time>0</time>
+    <total_time>1273.107</total_time>
+  </session>
+  <session date="2018/12/24 15:08:52">
+    <time>53.11367</time>
+    <total_time>1326.221</total_time>
+  </session>
+  <session date="2018/12/24 15:13:43">
+    <time>1.759449</time>
+    <total_time>1327.98</total_time>
+  </session>
+  <session date="2018/12/24 15:19:28">
+    <time>22.53884</time>
+    <total_time>1350.519</total_time>
+  </session>
+  <session date="2018/12/24 15:21:23">
+    <time>48.33262</time>
+    <total_time>1398.852</total_time>
+  </session>
 </gamedata>
