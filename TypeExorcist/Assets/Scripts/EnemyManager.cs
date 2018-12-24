@@ -24,7 +24,7 @@ public class EnemyManager : MonoBehaviour
     public List<GameObject> bigEnemiesPrefabs;          //List of big enemy prefabs 
 
     // Spawn logic ------------------------
-    public RoundSpawnRate levelsSpawnRates;
+    public RoundSpawnRate roundSpawnRates;
     [Header("Spawn Rate Logic")]
     public float smallEnemyBaseRate = 0.0f;
     public float smallRatePercentMultiplyer = 0.0f;
@@ -70,18 +70,11 @@ public class EnemyManager : MonoBehaviour
         enemyNamesMedium = new List<string>();
         enemyNamesBig = new List<string>();
         allWords = Resources.Load("Words") as TextAsset;
-
         LoadWord();
-
-        levelsSpawnRates = new RoundSpawnRate();
-
-        //for (uint i = 0; i < maxLevels; ++i)
-        //{
-        //    levelsSpawnRates[i].smallEnemieRate = smallEnemieBaseRate + smallEnemieBaseRate * i * smallRatePercentMultiplyer;
-        //    levelsSpawnRates[i].mediumEnemieRate = mediumEnemieBaseRate + mediumEnemieBaseRate * i * mediumRatePercentMultiplyer;
-        //    levelsSpawnRates[i].bigEnemieRate = bigEnemieBaseRate + bigEnemieBaseRate * i * bigRatePercentMultiplyer;
-        //}
-
+        roundSpawnRates = new RoundSpawnRate();
+        roundSpawnRates.smallEnemyRate = 20;
+        roundSpawnRates.mediumEnemyRate = 20;
+        roundSpawnRates.bigEnemyRate = 20;
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
     
@@ -132,14 +125,14 @@ public class EnemyManager : MonoBehaviour
         // Select enemy type ------------------------------------------------
         EnemyType type = EnemyType.none;
 
-        float probability_range = levelsSpawnRates[level -1].smallEnemieRate + levelsSpawnRates[level - 1].mediumEnemieRate + levelsSpawnRates[level - 1].bigEnemieRate;
+        float probability_range = roundSpawnRates.smallEnemyRate + roundSpawnRates.mediumEnemyRate + roundSpawnRates.bigEnemyRate;
         float random_num = Random.Range(0, probability_range);
 
-        if (random_num >= 0 && random_num < levelsSpawnRates[level - 1].smallEnemieRate)
+        if (random_num >= 0 && random_num < roundSpawnRates.smallEnemyRate)
         { type = EnemyType.small; }
-        else if (random_num > levelsSpawnRates[level - 1].smallEnemieRate && random_num <= levelsSpawnRates[level - 1].smallEnemieRate + levelsSpawnRates[level - 1].mediumEnemieRate)
+        else if (random_num > roundSpawnRates.smallEnemyRate && random_num <= roundSpawnRates.smallEnemyRate + roundSpawnRates.mediumEnemyRate)
         { type = EnemyType.medium; }
-        else if(random_num > levelsSpawnRates[level - 1].smallEnemieRate + levelsSpawnRates[level - 1].mediumEnemieRate && random_num <= levelsSpawnRates[level - 1].smallEnemieRate + levelsSpawnRates[level - 1].mediumEnemieRate + levelsSpawnRates[level - 1].bigEnemieRate)
+        else if(random_num > roundSpawnRates.smallEnemyRate + roundSpawnRates.mediumEnemyRate && random_num <= roundSpawnRates.smallEnemyRate + roundSpawnRates.mediumEnemyRate + roundSpawnRates.bigEnemyRate)
         { type = EnemyType.big; }
 
         int index = 0;
