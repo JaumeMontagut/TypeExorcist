@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     private EnemyManager enemyManger = null;
     private ScoreManager scoreManager = null;
 
+    //Tracking variables
+    private int correct = 0;
+    private int mistakes = 0;
+
     private void Start()
     {
         focusedEnemies = new List<Enemy>();
@@ -133,7 +137,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         //If it reaches this point letters have been typed correctly, reduce the letter
-        scoreManager.Score += 1 * scoreManager.Combo;
+        Correct();
         for (int i = focusedEnemies.Count - 1; i >= 0; --i)
         {
             focusedEnemies[i].CompleteNextLetter();
@@ -147,6 +151,12 @@ public class PlayerController : MonoBehaviour
                 focusedEnemies.RemoveAt(i);
             }
         }
+    }
+
+    private void Correct()
+    {
+        scoreManager.Score += 1 * scoreManager.Combo;
+        correct++;
     }
 
     //Returns false if none of the enemies in which it was typed had that letter
@@ -165,6 +175,7 @@ public class PlayerController : MonoBehaviour
     private void Mistake()
     {
         scoreManager.Combo = 1;
+        mistakes++;
     }
 
     // Moves to the first point in the list
@@ -183,6 +194,11 @@ public class PlayerController : MonoBehaviour
     public bool IsMoving()
     {
         return (rb.velocity != Vector2.zero);
+    }
+
+    public float GetAccuracy()
+    {
+        return correct / (float)(correct + mistakes);
     }
 }
 
