@@ -167,4 +167,32 @@
     <time>5.783154</time>
     <total_time>807.1461</total_time>
   </session>
+  <session date="2018/12/24 02:41:05">
+    <time>0</time>
+    <total_time>807.1461</total_time>
+  </session>
+  <session date="2018/12/24 02:41:31">
+    <time>2.047825</time>
+    <total_time>809.194</total_time>
+  </session>
+  <session date="2018/12/24 02:41:44">
+    <time>0</time>
+    <total_time>809.194</total_time>
+  </session>
+  <session date="2018/12/24 02:42:57">
+    <time>1.764282</time>
+    <total_time>810.9583</total_time>
+  </session>
+  <session date="2018/12/24 02:43:16">
+    <time>0</time>
+    <total_time>810.9583</total_time>
+  </session>
+  <session date="2018/12/24 02:53:28">
+    <time>0</time>
+    <total_time>810.9583</total_time>
+  </session>
+  <session date="2018/12/24 02:53:45">
+    <time>0</time>
+    <total_time>810.9583</total_time>
+  </session>
 </gamedata>
