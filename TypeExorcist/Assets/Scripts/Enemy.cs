@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     private EnemyManager eM;
     private int completedLetters = 0;//The number of completed letters
     private GameObject obelisk;
+    private bool move = true;
     
     void Start()
     {
@@ -54,19 +55,21 @@ public class Enemy : MonoBehaviour
 
     private void MoveToTarget()
     {
-        Vector2 vec = target - new Vector2(transform.position.x, transform.position.y);
-        if((int)vec.magnitude==0)
+        if (move)
         {
-          if(anim.GetBool("Attack")==false)
+            Vector2 vec = target - new Vector2(transform.position.x, transform.position.y);
+            if ((int)vec.magnitude == 0)
             {
-                anim.SetTrigger("Attack");
-                obelisk.GetComponent<Obelysk>().SubstractLives(0.1F);
+                if (anim.GetBool("Attack") == false)
+                {
+                    anim.SetTrigger("Attack");
+                    obelisk.GetComponent<Obelysk>().SubstractLives(0.1F);
+                }
             }
+
+            vec.Normalize();
+            rb.velocity = vec;
         }
-       
-        vec.Normalize();
-        rb.velocity = vec;
-       
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -74,7 +77,7 @@ public class Enemy : MonoBehaviour
         //If the player hits the enemy while moving, it kills it
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PlayerController>().IsMoving())
         {
-           // anim.SetTrigger("Death");
+            DestroyEnemy();
         }
     }
 
@@ -87,12 +90,13 @@ public class Enemy : MonoBehaviour
     //Called each time you type a letter and when some other effects remove letters from the string
     public bool CheckDeath()
     {
-        if (completedLetters == enemyName.Length)
-        {
-            //anim.SetBool("Death", true);
-            return true;
-        }
-        return false;
+        return (completedLetters == enemyName.Length);
+    }
+
+    public void StopMoving()
+    {
+        move = false;
+        rb.velocity = Vector2.zero;
     }
 
     //Called at the end of the animation
