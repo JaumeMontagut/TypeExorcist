@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private bool dead = false;
     private GameObject particles = null;
     private GameObject TextGameOver = null;
+
     //Player components
     private Animator anim = null;
     private Rigidbody2D rb = null;
@@ -23,8 +24,8 @@ public class PlayerController : MonoBehaviour
     private ScoreManager scoreManager = null;
 
     //Tracking variables
-    public int correct = 0;
-    public int mistakes = 0;
+    [HideInInspector] public int correct = 0;
+    [HideInInspector] public int mistakes = 0;
 
     private void Start()
     {

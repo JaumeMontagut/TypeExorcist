@@ -91,7 +91,7 @@ public class Enemy : MonoBehaviour
     //Called each time you type a letter and when some other effects remove letters from the string
     public bool CheckDeath()
     {
-        return (completedLetters == enemyName.Length);
+        return (completedLetters >= enemyName.Length - 1);
     }
 
     public void StopMoving()
