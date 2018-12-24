@@ -10714,7 +10714,7 @@ MonoBehaviour:
   bigEnemiesPrefabs:
   - {fileID: 1557032909987372, guid: 194b5654daa5c0d4da90c043fbe5c36a, type: 2}
   - {fileID: 1985232620782828, guid: 73c77a6a685b13343b658a6a7784153e, type: 2}
-  round: 15
+  round: 1
   spawnEnemies: 1
   charsWanted: 
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -11684,6 +11684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 30
+  correct: 0
+  mistakes: 0
 --- !u!82 &1393748672
 AudioSource:
   m_ObjectHideFlags: 0

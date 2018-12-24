@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class GameDataManager : MonoBehaviour
 {
+    private PlayerController player = null;
     private float totalPlayTime;
     private Timer sessionTimer = new Timer();
     private string filePath;
@@ -24,6 +25,7 @@ public class GameDataManager : MonoBehaviour
     void Start()
     {
         sessionTimer.StarTimer();
+        player = FindObjectOfType<PlayerController>();
         txtDoc = new StreamWriter(Application.dataPath + "/Data/DataTxt.txt", true);
         filePath = Application.dataPath + "/Data/DataXml.xml";
         xmlDoc.Load(filePath);
@@ -37,7 +39,6 @@ public class GameDataManager : MonoBehaviour
         totalPlayTime += sessionTime;
 
         XmlElement root = xmlDoc.DocumentElement;
-
         XmlElement session_element = xmlDoc.CreateElement("session"); 
         session_element.SetAttribute("date", System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
         XmlElement time_element = xmlDoc.CreateElement("time"); 
@@ -70,6 +71,15 @@ public class GameDataManager : MonoBehaviour
         string line_3;
         line_3 = "Total Time:  " + totalPlayTime.ToString();
         txtDoc.WriteLine(line_3);
+        string line_4;
+        line_4 = "Mistakes:    " + player.mistakes;
+        txtDoc.WriteLine(line_4);
+        string line_5;
+        line_5 = "Correct:     " + player.correct;
+        txtDoc.WriteLine(line_5);
+        string line_6;
+        line_6 = "Accuracy:    " + player.GetAccuracy() + "%";
+        txtDoc.WriteLine(line_6);
 
         txtDoc.Close();
     }

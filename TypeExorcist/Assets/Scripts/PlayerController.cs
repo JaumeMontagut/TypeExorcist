@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour
     private ScoreManager scoreManager = null;
 
     //Tracking variables
-    private int correct = 0;
-    private int mistakes = 0;
+    public int correct = 0;
+    public int mistakes = 0;
 
     private void Start()
     {

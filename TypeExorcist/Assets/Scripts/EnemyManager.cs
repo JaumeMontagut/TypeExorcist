@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour
 {
  
     public enum EnemyType  { none = -1, small = 0, medium = 1, big = 2}
-
+    AudioSource music = null;
     [HideInInspector] public List<Enemy> enemies;       //List of all active enemies  
 
     [Header("Enemies prefabs")]
@@ -33,7 +33,7 @@ public class EnemyManager : MonoBehaviour
     public uint round = 1;
 
     private uint defaultEnemiesPerRound = 10;
-    private uint enemiesPerRound = 10;
+    private uint enemiesPerRound = 4;
     private uint enemiesAddedPerRound = 2;
     private uint enemiesCount = 0;
     private float smallEnemyBaseRate = 60.0f;
@@ -74,6 +74,9 @@ public class EnemyManager : MonoBehaviour
 
     private void Start()
     {
+        GameObject audio = GameObject.Find("Audio Manager");
+        music = audio.GetComponent<AudioSource>();
+
         enemies = new List<Enemy>();
         enemyNamesSmall = new List<string>();
         enemyNamesMedium = new List<string>();
@@ -94,6 +97,7 @@ public class EnemyManager : MonoBehaviour
         {
             if (intervalRoundTimer.GetCurrentTime() > intervalRoundTime)
             {
+                //music.Pause();
                 ChangeRound(++round);
                 onIntervalRound = false;
             }
