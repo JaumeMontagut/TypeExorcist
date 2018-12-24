@@ -36,12 +36,12 @@ public class EnemyManager : MonoBehaviour
     private uint enemiesPerRound = 4;
     private uint enemiesAddedPerRound = 2;
     private uint enemiesCount = 0;
-    private float smallEnemyBaseRate = 60.0f;
-    private float mediumEnemyBaseRate = 25.0f;
-    private float bigEnemyBaseRate = 15.0f;
-    private float smallRatePercentMultiplyer = 0.0f;
-    private float mediumRatePercentMultiplyer = 0.10f;
-    private float bigRatePercentMultiplyer = 0.08f;
+    private float smallEnemyBaseRate = 240.0f;
+    private float mediumEnemyBaseRate = 100.0f;
+    private float bigEnemyBaseRate = 60.0f;
+    private float smallRatePercentMultiplyer = 1.0f;
+    private float mediumRatePercentMultiplyer = 1.0f;
+    private float bigRatePercentMultiplyer = 1.0f;
 
     private bool onIntervalRound = false;
     private Timer intervalRoundTimer = new Timer();

@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour {
 
     public GameObject gamePanel;
     public GameObject helpPanel;
+    public GameObject pausePanel;//Panel that lets you go to the main menu
 
     private void Update()
     {
@@ -28,5 +29,26 @@ public class UIManager : MonoBehaviour {
                 Time.timeScale = 1;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gamePanel.SetActive(pausePanel.activeInHierarchy);
+            pausePanel.SetActive(!gamePanel.activeInHierarchy);
+            if (pausePanel.activeInHierarchy)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        gamePanel.SetActive(true);
+        pausePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }

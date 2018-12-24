@@ -7,16 +7,13 @@ public class Obelysk : MonoBehaviour {
     Slider liveSlider;
 	Animator animator=null;
 	GameObject slider = null;
-    GameObject GameOverPanel = null;
+    public GameObject GameOverPanel;
     EnemyManager eManager = null;
 	void Start () {
 		animator = gameObject.GetComponent<Animator>();
         slider = transform.Find("Canvas").transform.Find("Slider").gameObject;
         slider.SetActive(false);
         liveSlider = slider.GetComponent<Slider>();
-    
-        GameOverPanel = transform.Find("Canvas").transform.Find("GameOverPanel").gameObject;
-        GameOverPanel.SetActive(false);
         eManager = FindObjectOfType<EnemyManager>();
 
 	}
