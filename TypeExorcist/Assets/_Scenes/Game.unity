@@ -10724,7 +10724,7 @@ MonoBehaviour:
   spawnTimeMedium: 5
   spawnTimeSmall: 3
   spawnEnemies: 1
-  charsWanted: hola
+  charsWanted: 
   level: 5
   maxLevels: 9
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

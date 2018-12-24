@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using TMPro;
 using System.Xml;
 
-public struct LevelSpawnRate
+public struct RoundSpawnRate
 {
-    public float smallEnemieRate;
-    public float mediumEnemieRate;
-    public float bigEnemieRate;
+    public float smallEnemyRate;
+    public float mediumEnemyRate;
+    public float bigEnemyRate;
 }
 
 public class EnemyManager : MonoBehaviour
@@ -24,13 +24,13 @@ public class EnemyManager : MonoBehaviour
     public List<GameObject> bigEnemiesPrefabs;          //List of big enemy prefabs 
 
     // Spawn logic ------------------------
-    public LevelSpawnRate[] levelsSpawnRates;
+    public RoundSpawnRate levelsSpawnRates;
     [Header("Spawn Rate Logic")]
-    public float smallEnemieBaseRate = 0.0f;
+    public float smallEnemyBaseRate = 0.0f;
     public float smallRatePercentMultiplyer = 0.0f;
-    public float mediumEnemieBaseRate = 0.0f;
+    public float mediumEnemyBaseRate = 0.0f;
     public float mediumRatePercentMultiplyer = 0.0f;
-    public float bigEnemieBaseRate = 0.0f;
+    public float bigEnemyBaseRate = 0.0f;
     public float bigRatePercentMultiplyer = 0.0f;
   
     private Timer spawnTimer = new Timer();
@@ -73,14 +73,14 @@ public class EnemyManager : MonoBehaviour
 
         LoadWord();
 
-        levelsSpawnRates = new LevelSpawnRate[maxLevels];
+        levelsSpawnRates = new RoundSpawnRate();
 
-        for (uint i = 0; i < maxLevels; ++i)
-        {
-            levelsSpawnRates[i].smallEnemieRate = smallEnemieBaseRate + smallEnemieBaseRate * i * smallRatePercentMultiplyer;
-            levelsSpawnRates[i].mediumEnemieRate = mediumEnemieBaseRate + mediumEnemieBaseRate * i * mediumRatePercentMultiplyer;
-            levelsSpawnRates[i].bigEnemieRate = bigEnemieBaseRate + bigEnemieBaseRate * i * bigRatePercentMultiplyer;
-        }
+        //for (uint i = 0; i < maxLevels; ++i)
+        //{
+        //    levelsSpawnRates[i].smallEnemieRate = smallEnemieBaseRate + smallEnemieBaseRate * i * smallRatePercentMultiplyer;
+        //    levelsSpawnRates[i].mediumEnemieRate = mediumEnemieBaseRate + mediumEnemieBaseRate * i * mediumRatePercentMultiplyer;
+        //    levelsSpawnRates[i].bigEnemieRate = bigEnemieBaseRate + bigEnemieBaseRate * i * bigRatePercentMultiplyer;
+        //}
 
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
     }
@@ -93,13 +93,6 @@ public class EnemyManager : MonoBehaviour
             GenerateRandomEnemy();
             spawnTimer.StarTimer();
         }
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Vector3 enemyPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //    enemyPos.z = 0;
-        //    GenerateRandomEnemy("small");
-        //}
     }
 
     void CreateEnemy(Vector3 enemyPos,GameObject enemyPrefab,string enemyName)
@@ -199,52 +192,34 @@ public class EnemyManager : MonoBehaviour
         }
         return enemyName;
     }
-     void LoadWord()
+
+    void LoadWord()
     {
-
-        string allText = allWords.text;
-        int sizeText = allText.Length;
-        string aux = "";
-        bool ret = false;
-        for (int num=0; num<sizeText; ++num)
-
+        //Goes through all the characters in the txt
+        //It keeps them in wordToAdd
+        //When it finds a \n (end of line) it adds the word in one of the lists, depending on the number of characters (thre is only one word in each line in the txt)
+        string wordToAdd = "";
+        for (int num = 0; num < allWords.text.Length; ++num)
         {
-            if(allText[num]!=' ') 
-                aux += allText[num];
-           else 
+            if (allWords.text[num] != '\n')
             {
-              
-                for(int i=0; i< aux.Length;++i)
+                wordToAdd += allWords.text[num];
+            }
+            else 
+            {
+                if (wordToAdd.Length <= 5)
                 {
-                    ret = false;
-                    for (int c = 0; c < charsWanted.Length; ++c)
-                    {
-                        if(aux[i]==charsWanted[c])
-                        {
-                            ret = true;
-                            break;
-                        }
-                    }
-                    if (ret == false)
-                        break;
+                    enemyNamesSmall.Add(wordToAdd);
                 }
-             
-               if(ret==true)
+                else if (wordToAdd.Length <= 8)
                 {
-                    if(aux.Length<=5)
-                    {
-                        enemyNamesSmall.Add(aux);
-                    }
-                    else if(aux.Length<=8)
-                    {
-                        enemyNamesMedium.Add(aux);
-                    }
-                    else
-                    {
-                        enemyNamesBig.Add(aux);
-                    }
+                    enemyNamesMedium.Add(wordToAdd);
                 }
-                aux = "";
+                else
+                {
+                    enemyNamesBig.Add(wordToAdd);
+                }
+                wordToAdd = "";
             }
 
             
