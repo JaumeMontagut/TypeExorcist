@@ -12375,17 +12375,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialText: {fileID: 398426597}
   tutorialLines:
-  - hello
-  - how
-  - are
-  - you
-  - doing
-  - my
-  - friend
-  - 
-  - 
-  - 
-  currLine: 0
+  - Hello seer
+  - My world is in danger and only... I can save it.
+  - With my awesome powers of killing monsters whom I know their name!
+  - But still... even a hero as good as me needs some help.
+  - I'll need you to tell me the names of the monsters through this keyboard device
+    you've got.
+  - Don't worry, I'll teach you as we go along.
 --- !u!1 &1712321915
 GameObject:
   m_ObjectHideFlags: 0

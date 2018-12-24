@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Tutorial : MonoBehaviour {
 
     public Text tutorialText;
+    public Text continueText;
 
     public string [] tutorialLines;
     private int currLine = 0;
@@ -19,6 +20,10 @@ public class Tutorial : MonoBehaviour {
         if (Input.anyKeyDown)
         {
             currLine++;
+            if (currLine == tutorialLines.Length - 1)
+            {
+                continueText.text = "Press SPACE";
+            }
             ShowLine();
         }
 	}

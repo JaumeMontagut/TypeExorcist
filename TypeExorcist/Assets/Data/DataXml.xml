@@ -127,4 +127,44 @@
     <time>5.101431</time>
     <total_time>641.5355</total_time>
   </session>
+  <session date="2018/12/24 02:16:28">
+    <time>8.096455</time>
+    <total_time>649.632</total_time>
+  </session>
+  <session date="2018/12/24 02:16:46">
+    <time>10.23672</time>
+    <total_time>659.8687</total_time>
+  </session>
+  <session date="2018/12/24 02:17:18">
+    <time>18.76044</time>
+    <total_time>678.6292</total_time>
+  </session>
+  <session date="2018/12/24 02:18:15">
+    <time>39.46114</time>
+    <total_time>718.0903</total_time>
+  </session>
+  <session date="2018/12/24 02:19:35">
+    <time>23.01101</time>
+    <total_time>741.1013</total_time>
+  </session>
+  <session date="2018/12/24 02:21:33">
+    <time>9.018158</time>
+    <total_time>750.1195</total_time>
+  </session>
+  <session date="2018/12/24 02:22:27">
+    <time>13.83678</time>
+    <total_time>763.9563</total_time>
+  </session>
+  <session date="2018/12/24 02:23:18">
+    <time>28.55272</time>
+    <total_time>792.509</total_time>
+  </session>
+  <session date="2018/12/24 02:32:17">
+    <time>8.85387</time>
+    <total_time>801.3629</total_time>
+  </session>
+  <session date="2018/12/24 02:32:46">
+    <time>5.783154</time>
+    <total_time>807.1461</total_time>
+  </session>
 </gamedata>
