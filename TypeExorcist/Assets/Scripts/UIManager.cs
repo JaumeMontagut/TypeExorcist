@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour {
 
     public GameObject gamePanel;
     public GameObject helpPanel;
+    public GameObject tutorialPanel;
 
     //Tutorial
     public Text tutorialText;
@@ -15,27 +16,49 @@ public class UIManager : MonoBehaviour {
     public string[] tutorialLines;
     private int currLine = 0;
 
+    private bool inTutorial = true;
+
     private void Start()
     {
         ShowLine();
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
 
     private void Update()
+    {
+        if (inTutorial)
+        {
+            TutorialUpdate();
+        }
+        else
+        {
+            GameUpdate();
+        }
+    }
+
+    private void TutorialUpdate()
     {
         if (Input.anyKeyDown)
         {
             if (currLine + 1 < tutorialLines.Length)
             {
                 currLine++;
+                ShowLine();
+                if (currLine == tutorialLines.Length - 1)
+                {
+                    continueText.text = "Press SPACE";
+                }
             }
-            if (currLine == tutorialLines.Length - 1)
+            else if (Input.GetKeyDown(KeyCode.Space))
             {
-                continueText.text = "Press SPACE";
+                tutorialPanel.SetActive(false);
+                helpPanel.SetActive(true);
             }
-            ShowLine();
         }
+    }
 
+    private void GameUpdate()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             gamePanel.SetActive(helpPanel.activeInHierarchy);
