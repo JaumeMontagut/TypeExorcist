@@ -77,6 +77,7 @@ public class Enemy : MonoBehaviour
         //If the player hits the enemy while moving, it kills it
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PlayerController>().IsMoving())
         {
+            collision.GetComponent<AudioSource>().Play();
             DestroyEnemy();
         }
     }

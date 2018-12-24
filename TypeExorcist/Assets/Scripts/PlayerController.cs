@@ -144,7 +144,6 @@ public class PlayerController : MonoBehaviour
             if (focusedEnemies[i].CheckDeath())
             {
                 scoreManager.Combo++;
-                gameObject.GetComponent<AudioSource>().Play();
                 anim.SetTrigger("attack");
                 trgPos.Add(focusedEnemies[i].transform.position);
                 focusedEnemies[i].StopMoving();
