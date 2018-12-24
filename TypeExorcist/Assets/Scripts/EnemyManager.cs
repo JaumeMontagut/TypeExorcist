@@ -30,22 +30,29 @@ public class EnemyManager : MonoBehaviour
     // Spawn logic ------------------------
     public RoundSpawnRate roundSpawnRates;
     [Header("Spawn Rate Logic")]
-    public uint round = 1;
+    [HideInInspector] public uint round = 1;
 
-    private uint defaultEnemiesPerRound = 10;
-    private uint enemiesPerRound = 4;
-    private uint enemiesAddedPerRound = 2;
+    [SerializeField] private uint defaultEnemiesPerRound;
+    private uint enemiesPerRound;
+    [SerializeField] private uint enemiesAddedPerRound;
     private uint enemiesCount = 0;
-    private float smallEnemyBaseRate = 240.0f;
-    private float mediumEnemyBaseRate = 100.0f;
-    private float bigEnemyBaseRate = 60.0f;
-    private float smallRatePercentMultiplyer = 1.0f;
-    private float mediumRatePercentMultiplyer = 1.0f;
-    private float bigRatePercentMultiplyer = 1.0f;
+    [Tooltip("Percentage of small enemies that are going to spawn initially.")]
+    [SerializeField] private float smallEnemyBaseRate;
+    [SerializeField] private float mediumEnemyBaseRate;
+    [SerializeField] private float bigEnemyBaseRate;
+    [SerializeField] private float smallRatePercentMultiplyer;
+    [SerializeField] private float mediumRatePercentMultiplyer;
+    [SerializeField] private float bigRatePercentMultiplyer;
+    [SerializeField] private float smallBaseSpawnTime;
+    [SerializeField] private float mediumBaseSpawnTime;
+    [SerializeField] private float bigBaseSpawnTime;
+    [SerializeField] private float smallSpawnTimeIncrease;
+    [SerializeField] private float mediumSpawnTimeIncrease;
+    [SerializeField] private float bigSpawnTimeIncrease;
 
     private bool onIntervalRound = false;
     private Timer intervalRoundTimer = new Timer();
-    private float intervalRoundTime = 10.0f;
+    [SerializeField] private float intervalRoundTime = 10.0f;
 
     private Timer spawnTimer = new Timer();
     private float timeBtwSpawns = 0.0f;
@@ -59,8 +66,6 @@ public class EnemyManager : MonoBehaviour
     private List<string> enemyNamesMedium;
     private List<string> enemyNamesBig;
     private TextAsset allWords;
-    [Header("Enemies Names")]
-    public string charsWanted="hola";
 
     //Colors------------------------------------------
     public Color inactiveColor;
@@ -129,19 +134,20 @@ public class EnemyManager : MonoBehaviour
         roundSpawnRates.mediumEnemyRate = mediumEnemyBaseRate + new_round * mediumRatePercentMultiplyer * mediumEnemyBaseRate;
         roundSpawnRates.bigEnemyRate = bigEnemyBaseRate + new_round * bigRatePercentMultiplyer * bigEnemyBaseRate;
 
-        roundSpawnRates.spawnTimeSmall = 3.0f - 3.0f * 0.05f * new_round;
-        roundSpawnRates.spawnTimeMedium = 5.0f - 5.0f * 0.05f * new_round;
-        roundSpawnRates.spawnTimeBig = 7.0f - 7.0f * 0.05f * new_round;
+        roundSpawnRates.spawnTimeSmall = smallBaseSpawnTime - smallBaseSpawnTime * smallSpawnTimeIncrease * new_round;
+        roundSpawnRates.spawnTimeMedium = mediumBaseSpawnTime - mediumBaseSpawnTime * mediumSpawnTimeIncrease * new_round;
+        roundSpawnRates.spawnTimeBig = bigBaseSpawnTime - bigBaseSpawnTime * bigSpawnTimeIncrease * new_round;
 
 
-        if (roundSpawnRates.spawnTimeSmall < 1.0f)
-            roundSpawnRates.spawnTimeSmall = 1.0f;
+        //Don't make negative time (but yes impossible to win)
+        if (roundSpawnRates.spawnTimeSmall < 0.01f)
+            roundSpawnRates.spawnTimeSmall = 0.01f;
 
-        if (roundSpawnRates.spawnTimeMedium < 1.0f)
-            roundSpawnRates.spawnTimeMedium = 1.0f;
+        if (roundSpawnRates.spawnTimeMedium < 0.01f)
+            roundSpawnRates.spawnTimeMedium = 0.01f;
 
-        if (roundSpawnRates.spawnTimeBig < 1.0f)
-            roundSpawnRates.spawnTimeBig = 1.0f;
+        if (roundSpawnRates.spawnTimeBig < 0.01f)
+            roundSpawnRates.spawnTimeBig = 0.01f;
     }
 
     void CreateEnemy(Vector3 enemyPos, GameObject enemyPrefab, string enemyName)

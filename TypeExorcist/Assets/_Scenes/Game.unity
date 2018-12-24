@@ -11025,8 +11025,22 @@ MonoBehaviour:
   - {fileID: 1557032909987372, guid: 194b5654daa5c0d4da90c043fbe5c36a, type: 2}
   - {fileID: 1985232620782828, guid: 73c77a6a685b13343b658a6a7784153e, type: 2}
   round: 1
+  defaultEnemiesPerRound: 10
+  enemiesAddedPerRound: 3
+  smallEnemyBaseRate: 60
+  mediumEnemyBaseRate: 25
+  bigEnemyBaseRate: 30
+  smallRatePercentMultiplyer: 0
+  mediumRatePercentMultiplyer: 0.1
+  bigRatePercentMultiplyer: 0.08
+  smallBaseSpawnTime: 3
+  mediumBaseSpawnTime: 5
+  bigBaseSpawnTime: 7
+  smallSpawnTimeIncrease: 0.05
+  mediumSpawnTimeIncrease: 0.05
+  bigSpawnTimeIncrease: 0.05
+  intervalRoundTime: 2.5
   spawnEnemies: 1
-  charsWanted: 
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor:
     serializedVersion: 2
@@ -12068,7 +12082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamePanel: {fileID: 406008339}
   helpPanel: {fileID: 511534775}
-  pausePanel: {fileID: 0}
+  pausePanel: {fileID: 1884709653}
 --- !u!4 &1152645199
 Transform:
   m_ObjectHideFlags: 0
@@ -18119,7 +18133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1884709654
 RectTransform:
   m_ObjectHideFlags: 0

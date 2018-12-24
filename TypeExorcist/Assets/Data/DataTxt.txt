@@ -70,3 +70,33 @@ Total Time:  514.2851
 Mistakes:    0
 Correct:     4
 Accuracy:    100%
+---- Session: 30  Date: 2018/12/24 21:48:29 -----------------------
+Time:        80.86397
+Total Time:  595.149
+Mistakes:    10
+Correct:     82
+Accuracy:    89%
+---- Session: 31  Date: 2018/12/24 21:57:10 -----------------------
+Time:        11.31433
+Total Time:  606.4633
+Mistakes:    0
+Correct:     18
+Accuracy:    100%
+---- Session: 32  Date: 2018/12/24 21:59:49 -----------------------
+Time:        78.2762
+Total Time:  684.7395
+Mistakes:    3
+Correct:     79
+Accuracy:    96%
+---- Session: 33  Date: 2018/12/24 22:05:15 -----------------------
+Time:        40.36766
+Total Time:  725.1072
+Mistakes:    10
+Correct:     52
+Accuracy:    83%
+---- Session: 34  Date: 2018/12/24 22:07:07 -----------------------
+Time:        93.34169
+Total Time:  818.4489
+Mistakes:    17
+Correct:     57
+Accuracy:    77%
