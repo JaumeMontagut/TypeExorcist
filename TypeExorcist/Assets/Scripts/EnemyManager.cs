@@ -9,6 +9,10 @@ public struct RoundSpawnRate
     public float smallEnemyRate;
     public float mediumEnemyRate;
     public float bigEnemyRate;
+
+    public float spawnTimeBig;
+    public float spawnTimeMedium;
+    public float spawnTimeSmall;
 }
 
 public class EnemyManager : MonoBehaviour
@@ -26,18 +30,26 @@ public class EnemyManager : MonoBehaviour
     // Spawn logic ------------------------
     public RoundSpawnRate roundSpawnRates;
     [Header("Spawn Rate Logic")]
-    public float smallEnemyBaseRate = 0.0f;
-    public float smallRatePercentMultiplyer = 0.0f;
-    public float mediumEnemyBaseRate = 0.0f;
-    public float mediumRatePercentMultiplyer = 0.0f;
-    public float bigEnemyBaseRate = 0.0f;
-    public float bigRatePercentMultiplyer = 0.0f;
-  
+    public uint round = 1;
+
+    private uint defaultEnemiesPerRound = 10;
+    private uint enemiesPerRound = 10;
+    private uint enemiesAddedPerRound = 2;
+    private uint enemiesCount = 0;
+    private float smallEnemyBaseRate = 60.0f;
+    private float mediumEnemyBaseRate = 25.0f;
+    private float bigEnemyBaseRate = 15.0f;
+    private float smallRatePercentMultiplyer = 0.0f;
+    private float mediumRatePercentMultiplyer = 0.10f;
+    private float bigRatePercentMultiplyer = 0.08f;
+
+    private bool onIntervalRound = false;
+    private Timer intervalRoundTimer = new Timer();
+    private float intervalRoundTime = 10.0f;
+
     private Timer spawnTimer = new Timer();
     private float timeBtwSpawns = 0.0f;
-    public float spawnTimeBig = 0.0f;
-    public float spawnTimeMedium = 0.0f;
-    public float spawnTimeSmall = 0.0f;
+
 
     [HideInInspector] public bool spawnEnemies = true;
 
@@ -49,8 +61,6 @@ public class EnemyManager : MonoBehaviour
     private TextAsset allWords;
     [Header("Enemies Names")]
     public string charsWanted="hola";
-    public uint level = 1;
-    public uint maxLevels = 9;
 
     //Colors------------------------------------------
     public Color inactiveColor;
@@ -64,7 +74,6 @@ public class EnemyManager : MonoBehaviour
 
     private void Start()
     {
-        spawnTimer.StarTimer();
         enemies = new List<Enemy>();
         enemyNamesSmall = new List<string>();
         enemyNamesMedium = new List<string>();
@@ -72,23 +81,66 @@ public class EnemyManager : MonoBehaviour
         allWords = Resources.Load("Words") as TextAsset;
         LoadWord();
         roundSpawnRates = new RoundSpawnRate();
-        roundSpawnRates.smallEnemyRate = 20;
-        roundSpawnRates.mediumEnemyRate = 20;
-        roundSpawnRates.bigEnemyRate = 20;
         inactiveColorStr = "<color=#" + ColorUtility.ToHtmlStringRGB(inactiveColor) + ">";
+
+        ChangeRound(round);
+        spawnTimer.StarTimer();
     }
     
 
     void Update()
     {
-        if (spawnEnemies && spawnTimer.GetCurrentTime() > timeBtwSpawns)
+        if(onIntervalRound)
+        {
+            if (intervalRoundTimer.GetCurrentTime() > intervalRoundTime)
+            {
+                ChangeRound(++round);
+                onIntervalRound = false;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        if (enemiesCount < enemiesPerRound && spawnEnemies && spawnTimer.GetCurrentTime() > timeBtwSpawns )
         {
             GenerateRandomEnemy();
             spawnTimer.StarTimer();
         }
+
+        if (enemiesCount == enemiesPerRound && enemies.Count == 0)
+        {
+            onIntervalRound = true;
+            intervalRoundTimer.StarTimer();
+            enemiesCount = 0;
+        }
     }
 
-    void CreateEnemy(Vector3 enemyPos,GameObject enemyPrefab,string enemyName)
+    void ChangeRound(float new_round)
+    {
+        enemiesPerRound = defaultEnemiesPerRound + enemiesAddedPerRound * (uint)new_round;
+
+        roundSpawnRates.smallEnemyRate = smallEnemyBaseRate + new_round * smallRatePercentMultiplyer * smallEnemyBaseRate;
+        roundSpawnRates.mediumEnemyRate = mediumEnemyBaseRate + new_round * mediumRatePercentMultiplyer * mediumEnemyBaseRate;
+        roundSpawnRates.bigEnemyRate = bigEnemyBaseRate + new_round * bigRatePercentMultiplyer * bigEnemyBaseRate;
+
+        roundSpawnRates.spawnTimeSmall = 3.0f - 3.0f * 0.05f * new_round;
+        roundSpawnRates.spawnTimeMedium = 5.0f - 5.0f * 0.05f * new_round;
+        roundSpawnRates.spawnTimeBig = 7.0f - 7.0f * 0.05f * new_round;
+
+
+        if (roundSpawnRates.spawnTimeSmall < 1.0f)
+            roundSpawnRates.spawnTimeSmall = 1.0f;
+
+        if (roundSpawnRates.spawnTimeMedium < 1.0f)
+            roundSpawnRates.spawnTimeMedium = 1.0f;
+
+        if (roundSpawnRates.spawnTimeBig < 1.0f)
+            roundSpawnRates.spawnTimeBig = 1.0f;
+    }
+
+    void CreateEnemy(Vector3 enemyPos, GameObject enemyPrefab, string enemyName)
     {
         Enemy newEnemy = Instantiate(enemyPrefab, enemyPos, Quaternion.identity).GetComponent<Enemy>();
         newEnemy.SetTarget(Vector2.zero);//Move to the center
@@ -141,23 +193,25 @@ public class EnemyManager : MonoBehaviour
         switch (type)
         {
             case EnemyType.small:
-                timeBtwSpawns = spawnTimeSmall;
+                timeBtwSpawns = roundSpawnRates.spawnTimeSmall;
                 index = Random.Range(0, smallEnemiesPrefabs.Count);
                 CreateEnemy(position, smallEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesSmall.Count)]);
                 break;
 
             case EnemyType.medium:
-                timeBtwSpawns = spawnTimeMedium;
+                timeBtwSpawns = roundSpawnRates.spawnTimeMedium;
                 index = Random.Range(0, mediumEnemiesPrefabs.Count);
                 CreateEnemy(position, mediumEnemiesPrefabs[index], enemyNamesMedium[Random.Range(0, enemyNamesMedium.Count)]);
                 break;
 
             case EnemyType.big:
-                timeBtwSpawns = spawnTimeBig;
+                timeBtwSpawns = roundSpawnRates.spawnTimeBig;
                 index = Random.Range(0, bigEnemiesPrefabs.Count);
                 CreateEnemy(position, bigEnemiesPrefabs[index], enemyNamesSmall[Random.Range(0, enemyNamesSmall.Count)]);
                 break;
         }
+
+        ++enemiesCount;
     }
 
     //Returns a list of all the enemies whose name starts with the specified letter
