@@ -185,52 +185,34 @@ public class EnemyManager : MonoBehaviour
         }
         return enemyName;
     }
-     void LoadWord()
+
+    void LoadWord()
     {
-
-        string allText = allWords.text;
-        int sizeText = allText.Length;
-        string aux = "";
-        bool ret = false;
-        for (int num=0; num<sizeText; ++num)
-
+        //Goes through all the characters in the txt
+        //It keeps them in wordToAdd
+        //When it finds a \n (end of line) it adds the word in one of the lists, depending on the number of characters (thre is only one word in each line in the txt)
+        string wordToAdd = "";
+        for (int num = 0; num < allWords.text.Length; ++num)
         {
-            if(allText[num]!=' ') 
-                aux += allText[num];
-           else 
+            if (allWords.text[num] != '\n')
             {
-              
-                for(int i=0; i< aux.Length;++i)
+                wordToAdd += allWords.text[num];
+            }
+            else 
+            {
+                if (wordToAdd.Length <= 5)
                 {
-                    ret = false;
-                    for (int c = 0; c < charsWanted.Length; ++c)
-                    {
-                        if(aux[i]==charsWanted[c])
-                        {
-                            ret = true;
-                            break;
-                        }
-                    }
-                    if (ret == false)
-                        break;
+                    enemyNamesSmall.Add(wordToAdd);
                 }
-             
-               if(ret==true)
+                else if (wordToAdd.Length <= 8)
                 {
-                    if(aux.Length<=5)
-                    {
-                        enemyNamesSmall.Add(aux);
-                    }
-                    else if(aux.Length<=8)
-                    {
-                        enemyNamesMedium.Add(aux);
-                    }
-                    else
-                    {
-                        enemyNamesBig.Add(aux);
-                    }
+                    enemyNamesMedium.Add(wordToAdd);
                 }
-                aux = "";
+                else
+                {
+                    enemyNamesBig.Add(wordToAdd);
+                }
+                wordToAdd = "";
             }
 
             
