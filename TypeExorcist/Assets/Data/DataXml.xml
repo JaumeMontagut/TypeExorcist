@@ -239,4 +239,36 @@
     <time>20.87066</time>
     <total_time>893.4521</total_time>
   </session>
+  <session date="2018/12/24 04:01:14">
+    <time>41.24296</time>
+    <total_time>934.6951</total_time>
+  </session>
+  <session date="2018/12/24 04:01:47">
+    <time>10.42998</time>
+    <total_time>945.1251</total_time>
+  </session>
+  <session date="2018/12/24 04:03:50">
+    <time>13.31491</time>
+    <total_time>958.44</total_time>
+  </session>
+  <session date="2018/12/24 04:04:14">
+    <time>12.00483</time>
+    <total_time>970.4448</total_time>
+  </session>
+  <session date="2018/12/24 04:05:55">
+    <time>1.743842</time>
+    <total_time>972.1887</total_time>
+  </session>
+  <session date="2018/12/24 04:06:02">
+    <time>2.233618</time>
+    <total_time>974.4224</total_time>
+  </session>
+  <session date="2018/12/24 04:06:13">
+    <time>1.853345</time>
+    <total_time>976.2758</total_time>
+  </session>
+  <session date="2018/12/24 04:07:49">
+    <time>53.75264</time>
+    <total_time>1030.028</total_time>
+  </session>
 </gamedata>

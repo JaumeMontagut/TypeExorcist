@@ -39,6 +39,8 @@ public class EnemyManager : MonoBehaviour
     public float spawnTimeMedium = 0.0f;
     public float spawnTimeSmall = 0.0f;
 
+    [HideInInspector] public bool spawnEnemies = true;
+
     //Names variables --------------------------------
   
     private List<string> enemyNamesSmall;              
@@ -86,7 +88,7 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
-        if (spawnTimer.GetCurrentTime() > timeBtwSpawns)
+        if (spawnEnemies && spawnTimer.GetCurrentTime() > timeBtwSpawns)
         {
             GenerateRandomEnemy();
             spawnTimer.StarTimer();

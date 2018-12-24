@@ -17,13 +17,14 @@ public class UIManager : MonoBehaviour {
     private int currLine = 0;
 
     private bool inTutorial = true;
-    private GameObject em;
+    private EnemyManager em;
     public List<char> letters;//The letters that are going to be tested in this level
 
     private void Start()
     {
-        em = FindObjectOfType<EnemyManager>().gameObject;
-        em.SetActive(false);
+        em = FindObjectOfType<EnemyManager>();
+        em.spawnEnemies = false;
+        //em.SetActive(false);
         ShowLine();
         //Time.timeScale = 0;
     }
@@ -73,7 +74,7 @@ public class UIManager : MonoBehaviour {
                     {
                         //Start game
                         inTutorial = false;
-                        em.SetActive(true);
+                        em.spawnEnemies = true;
                         helpPanel.SetActive(false);
                         gamePanel.SetActive(true);
                     }
