@@ -271,4 +271,16 @@
     <time>53.75264</time>
     <total_time>1030.028</total_time>
   </session>
+  <session date="2018/12/24 04:09:58">
+    <time>9.475351</time>
+    <total_time>1039.503</total_time>
+  </session>
+  <session date="2018/12/24 04:10:32">
+    <time>3.248772</time>
+    <total_time>1042.752</total_time>
+  </session>
+  <session date="2018/12/24 04:13:13">
+    <time>38.00505</time>
+    <total_time>1080.757</total_time>
+  </session>
 </gamedata>

@@ -30,16 +30,7 @@ public class Enemy : MonoBehaviour
         UpdateName();
         anim = transform.Find("Sprite").gameObject.GetComponent<Animator>();
         obelisk = GameObject.FindGameObjectWithTag("Obelysk");
-       
-    }
 
-    public void SetTarget(Vector2 target)
-    {
-        this.target = target;
-    }
-
-    public void Update()
-    {
         if (transform.position.x > 0)
         {
             spriteRenderer.flipX = true;
@@ -49,14 +40,23 @@ public class Enemy : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
+    }
+
+    public void SetTarget(Vector2 target)
+    {
+        this.target = target;
+    }
+
+    public void Update()
+    {
         MoveToTarget();
-      
     }
 
     private void MoveToTarget()
     {
         if (move)
         {
+            //TODO: enemies don't change path, so there is no need to evaluate their path every frame
             Vector2 vec = target - new Vector2(transform.position.x, transform.position.y);
             if ((int)vec.magnitude == 0)
             {
