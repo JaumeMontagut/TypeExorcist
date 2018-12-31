@@ -52,3 +52,45 @@ Total Time:  180.3573
 Mistakes:    0
 Correct:     0
 Accuracy:    0%
+---- Session: 18  Date: 2018/12/31 14:38:55 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    0
+Correct:     6
+Accuracy:    100%
+---- Session: 19  Date: 2018/12/31 14:39:28 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    2
+Correct:     7
+Accuracy:    77%
+---- Session: 20  Date: 2018/12/31 14:41:11 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    21
+Correct:     129
+Accuracy:    86%
+---- Session: 21  Date: 2018/12/31 14:45:30 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    48
+Correct:     410
+Accuracy:    89%
+---- Session: 22  Date: 2018/12/31 14:54:55 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    0
+Correct:     0
+Accuracy:    0%
+---- Session: 23  Date: 2018/12/31 14:55:04 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    0
+Correct:     0
+Accuracy:    0%
+---- Session: 24  Date: 2018/12/31 15:01:52 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    2
+Correct:     54
+Accuracy:    96%

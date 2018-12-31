@@ -19,7 +19,8 @@ public class EnemyManager : MonoBehaviour
 {
  
     public enum EnemyType  { none = -1, small = 0, medium = 1, big = 2}
-    AudioSource next_wave = null;
+
+AudioSource next_wave = null;
     [HideInInspector] public List<Enemy> enemies;       //List of all active enemies  
 
     [Header("Enemies prefabs")]
