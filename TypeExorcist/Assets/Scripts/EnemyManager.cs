@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using System.Xml;
+using UnityEngine.UI;
 
 public struct RoundSpawnRate
 {
@@ -33,7 +34,7 @@ AudioSource next_wave = null;
     private uint enemiesCount = 0;
     private RoundSpawnRate roundSpawnRates;
     private uint round = 1;
-
+    public Text roundText; 
     [Header("Spawn Rate Logic")]
 
     private uint defaultEnemiesPerRound = 10;
@@ -106,6 +107,7 @@ AudioSource next_wave = null;
                 //music.Pause();
                 ChangeRound(++round);
                 onIntervalRound = false;
+                roundText.text = "Round " + round.ToString(); 
             }
             else
             {

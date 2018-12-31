@@ -10,3 +10,21 @@ Total Time:  0
 Mistakes:    59
 Correct:     456
 Accuracy:    88%
+---- Session: 3  Date: 2018/12/31 15:53:34 -----------------------
+Time:        0
+Total Time:  0
+Mistakes:    7
+Correct:     88
+Accuracy:    92%
+---- Session: 4  Date: 2018/12/31 15:54:34 -----------------------
+Time:        0
+Total Time:  0
+Mistakes:    2
+Correct:     40
+Accuracy:    95%
+---- Session: 5  Date: 2018/12/31 15:55:21 -----------------------
+Time:        0
+Total Time:  0
+Mistakes:    1
+Correct:     34
+Accuracy:    97%
