@@ -198,7 +198,12 @@ public class PlayerController : MonoBehaviour
 
     public float GetAccuracy()
     {
-        return (correct * 100) / (correct + mistakes);
+        if (correct + mistakes > 0)
+        {
+            return (correct * 100) / (correct + mistakes);
+        }
+
+        return 0.0f;
     }
 }
 

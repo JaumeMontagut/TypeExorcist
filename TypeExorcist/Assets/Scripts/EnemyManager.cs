@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour
 {
  
     public enum EnemyType  { none = -1, small = 0, medium = 1, big = 2}
-    AudioSource music = null;
+    AudioSource next_wave = null;
     [HideInInspector] public List<Enemy> enemies;       //List of all active enemies  
 
     [Header("Enemies prefabs")]
@@ -28,27 +28,27 @@ public class EnemyManager : MonoBehaviour
     public List<GameObject> bigEnemiesPrefabs;          //List of big enemy prefabs 
 
     // Spawn logic ------------------------
-    public RoundSpawnRate roundSpawnRates;
-    [Header("Spawn Rate Logic")]
-    [HideInInspector] public uint round = 1;
-
-    [SerializeField] private uint defaultEnemiesPerRound;
     private uint enemiesPerRound;
-    [SerializeField] private uint enemiesAddedPerRound;
     private uint enemiesCount = 0;
-    [Tooltip("Percentage of small enemies that are going to spawn initially.")]
-    [SerializeField] private float smallEnemyBaseRate;
-    [SerializeField] private float mediumEnemyBaseRate;
-    [SerializeField] private float bigEnemyBaseRate;
-    [SerializeField] private float smallRatePercentMultiplyer;
-    [SerializeField] private float mediumRatePercentMultiplyer;
-    [SerializeField] private float bigRatePercentMultiplyer;
-    [SerializeField] private float smallBaseSpawnTime;
-    [SerializeField] private float mediumBaseSpawnTime;
-    [SerializeField] private float bigBaseSpawnTime;
-    [SerializeField] private float smallSpawnTimeIncrease;
-    [SerializeField] private float mediumSpawnTimeIncrease;
-    [SerializeField] private float bigSpawnTimeIncrease;
+    private RoundSpawnRate roundSpawnRates;
+    private uint round = 1;
+
+    [Header("Spawn Rate Logic")]
+
+    private uint defaultEnemiesPerRound = 10;
+    private uint enemiesAddedPerRound = 4;
+    private float smallEnemyBaseRate = 50;
+    private float mediumEnemyBaseRate = 30;
+    private float bigEnemyBaseRate = 20;
+    private float smallRatePercentMultiplyer = 0.0f;
+    private float mediumRatePercentMultiplyer = 0.3f;
+    private float bigRatePercentMultiplyer = 0.4f;
+    private float smallBaseSpawnTime = 3;
+    private float mediumBaseSpawnTime = 4;
+    private float bigBaseSpawnTime = 5;
+    private float smallSpawnTimeDecrease = 0.2f;
+    private float mediumSpawnTimeDecrease =  0.25f;
+    private float bigSpawnTimeDecrease = 0.3f;
 
     private bool onIntervalRound = false;
     private Timer intervalRoundTimer = new Timer();
@@ -80,7 +80,7 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         GameObject audio = GameObject.Find("Audio Manager");
-        music = audio.GetComponent<AudioSource>();
+        next_wave = audio.GetComponent<AudioSource>();
 
         enemies = new List<Enemy>();
         enemyNamesSmall = new List<string>();
@@ -134,9 +134,9 @@ public class EnemyManager : MonoBehaviour
         roundSpawnRates.mediumEnemyRate = mediumEnemyBaseRate + new_round * mediumRatePercentMultiplyer * mediumEnemyBaseRate;
         roundSpawnRates.bigEnemyRate = bigEnemyBaseRate + new_round * bigRatePercentMultiplyer * bigEnemyBaseRate;
 
-        roundSpawnRates.spawnTimeSmall = smallBaseSpawnTime - smallBaseSpawnTime * smallSpawnTimeIncrease * new_round;
-        roundSpawnRates.spawnTimeMedium = mediumBaseSpawnTime - mediumBaseSpawnTime * mediumSpawnTimeIncrease * new_round;
-        roundSpawnRates.spawnTimeBig = bigBaseSpawnTime - bigBaseSpawnTime * bigSpawnTimeIncrease * new_round;
+        roundSpawnRates.spawnTimeSmall = smallBaseSpawnTime - smallBaseSpawnTime * smallSpawnTimeDecrease * new_round;
+        roundSpawnRates.spawnTimeMedium = mediumBaseSpawnTime - mediumBaseSpawnTime * mediumSpawnTimeDecrease * new_round;
+        roundSpawnRates.spawnTimeBig = bigBaseSpawnTime - bigBaseSpawnTime * bigSpawnTimeDecrease * new_round;
 
 
         //Don't make negative time (but yes impossible to win)
@@ -148,6 +148,8 @@ public class EnemyManager : MonoBehaviour
 
         if (roundSpawnRates.spawnTimeBig < 0.01f)
             roundSpawnRates.spawnTimeBig = 0.01f;
+
+        next_wave.Play();
     }
 
     void CreateEnemy(Vector3 enemyPos, GameObject enemyPrefab, string enemyName)
