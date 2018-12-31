@@ -196,6 +196,17 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    public void RemoveFromFocused(Enemy enemyToDestroy)
+    {
+        for (int i = focusedEnemies.Count - 1; i >= 0; --i)
+        {
+            if (focusedEnemies[i] == enemyToDestroy)
+            {
+                focusedEnemies[i].CompleteNextLetter();
+            }
+        }
+    }
+
 
     public bool IsMoving()
     {

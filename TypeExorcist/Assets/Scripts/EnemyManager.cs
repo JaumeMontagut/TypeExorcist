@@ -80,7 +80,7 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         GameObject audio = GameObject.Find("Audio Manager");
-        next_wave = audio.GetComponent<AudioSource>();
+        next_wave = GetComponent<AudioSource>();
 
         enemies = new List<Enemy>();
         enemyNamesSmall = new List<string>();

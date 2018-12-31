@@ -21,10 +21,12 @@ public class Enemy : MonoBehaviour
     private int completedLetters = 0;//The number of completed letters
     private GameObject obelisk;
     private bool move = true;
+    private PlayerController player;
     
     void Start()
     {
         spriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
+        player = FindObjectOfType<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         eM = FindObjectOfType<EnemyManager>();
         UpdateName();
@@ -104,6 +106,7 @@ public class Enemy : MonoBehaviour
     public void DestroyEnemy()
     {
         eM.enemies.Remove(this);
+        player.RemoveFromFocused(this);
         Destroy(gameObject);
     }
 
