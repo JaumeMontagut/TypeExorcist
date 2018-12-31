@@ -17,7 +17,7 @@ public class GameDataManager : MonoBehaviour
     private StreamWriter txtDoc;
     private int sessionCount = 0;
 
-    void OnApplicationQuit()
+    public void OnDestroy()
     {
         SaveData();
     }

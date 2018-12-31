@@ -1,7 +1,6 @@
-
----- Session: 1  Date: 2018/12/31 12:36:21 -----------------------
-Time:        0
-Total Time:  0
-Mistakes:    0
-Correct:     0
-Accuracy:    0%
+---- Session: 1  Date: 2018/12/31 13:17:37 -----------------------
+Time:        10.34993
+Total Time:  10.34993
+Mistakes:    1
+Correct:     11
+Accuracy:    91%
