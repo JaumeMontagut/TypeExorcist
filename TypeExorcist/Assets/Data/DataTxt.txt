@@ -94,3 +94,9 @@ Total Time:  180.3573
 Mistakes:    2
 Correct:     54
 Accuracy:    96%
+---- Session: 25  Date: 2018/12/31 15:07:26 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    79
+Correct:     375
+Accuracy:    82%

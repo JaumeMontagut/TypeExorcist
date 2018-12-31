@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
         //If the player hits the enemy while moving, it kills it
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PlayerController>().IsMoving())
