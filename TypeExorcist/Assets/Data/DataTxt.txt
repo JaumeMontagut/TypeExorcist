@@ -1,42 +1,7 @@
----- Session: 1  Date: 2018/12/31 12:20:30 -----------------------
-Time:        23.65267
-Total Time:  23.65267
-Mistakes:    16
-Correct:     11
-Accuracy:    40%
----- Session: 2  Date: 2018/12/31 12:20:40 -----------------------
-Time:        5.730849
-Total Time:  29.38352
+
+---- Session: 1  Date: 2018/12/31 12:36:21 -----------------------
+Time:        0
+Total Time:  0
 Mistakes:    0
 Correct:     0
 Accuracy:    0%
----- Session: 3  Date: 2018/12/31 12:21:28 -----------------------
-Time:        1.759861
-Total Time:  31.14338
-Mistakes:    0
-Correct:     0
-Accuracy:    0%
----- Session: 4  Date: 2018/12/31 12:22:32 -----------------------
-Time:        45.83329
-Total Time:  76.97667
-Mistakes:    8
-Correct:     68
-Accuracy:    89%
----- Session: 5  Date: 2018/12/31 12:30:10 -----------------------
-Time:        102.3565
-Total Time:  179.3332
-Mistakes:    21
-Correct:     163
-Accuracy:    88%
----- Session: 6  Date: 2018/12/31 12:32:58 -----------------------
-Time:        2.419299
-Total Time:  181.7525
-Mistakes:    0
-Correct:     0
-Accuracy:    0%
----- Session: 7  Date: 2018/12/31 12:35:37 -----------------------
-Time:        18.73211
-Total Time:  200.4846
-Mistakes:    4
-Correct:     32
-Accuracy:    88%

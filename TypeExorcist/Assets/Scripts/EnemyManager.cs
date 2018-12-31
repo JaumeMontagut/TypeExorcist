@@ -46,9 +46,9 @@ public class EnemyManager : MonoBehaviour
     private float smallBaseSpawnTime = 3;
     private float mediumBaseSpawnTime = 4;
     private float bigBaseSpawnTime = 5;
-    private float smallSpawnTimeDecrease = 0.2f;
-    private float mediumSpawnTimeDecrease =  0.25f;
-    private float bigSpawnTimeDecrease = 0.3f;
+    private float smallSpawnTimeDecrease = 0.15f;
+    private float mediumSpawnTimeDecrease =  0.15f;
+    private float bigSpawnTimeDecrease = 0.16f;
 
     private bool onIntervalRound = false;
     private Timer intervalRoundTimer = new Timer();
