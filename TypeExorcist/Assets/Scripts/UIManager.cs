@@ -9,6 +9,11 @@ public class UIManager : MonoBehaviour {
     public GameObject helpPanel;
     public GameObject pausePanel;//Panel that lets you go to the main menu
 
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
+
     private void Update()
     {
         GameUpdate();

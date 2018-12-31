@@ -1,0 +1,54 @@
+---- Session: 9  Date: 2018/12/31 14:19:37 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    0
+Correct:     4
+Accuracy:    100%
+---- Session: 10  Date: 2018/12/31 14:20:34 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    0
+Correct:     0
+Accuracy:    0%
+---- Session: 11  Date: 2018/12/31 14:21:46 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    2
+Correct:     15
+Accuracy:    88%
+---- Session: 12  Date: 2018/12/31 14:30:06 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    18
+Correct:     152
+Accuracy:    89%
+---- Session: 13  Date: 2018/12/31 14:31:08 -----------------------
+Time:        0
+Total Time:  180.3573
+Mistakes:    0
+Correct:     0
+Accuracy:    0%
+---- Session: 14  Date: 2018/12/31 14:31:39 -----------------------
+Time:        19.99109
+Total Time:  200.3484
+Mistakes:    1
+Correct:     22
+Accuracy:    95%
+---- Session: 15  Date: 2018/12/31 14:32:10 -----------------------
+Time:        -19.99109
+Total Time:  180.3573
+Mistakes:    0
+Correct:     0
+Accuracy:    0%
+---- Session: 16  Date: 2018/12/31 14:34:39 -----------------------
+Time:        3.329179
+Total Time:  183.6865
+Mistakes:    0
+Correct:     3
+Accuracy:    100%
+---- Session: 17  Date: 2018/12/31 14:34:42 -----------------------
+Time:        -3.329179
+Total Time:  180.3573
+Mistakes:    0
+Correct:     0
+Accuracy:    0%

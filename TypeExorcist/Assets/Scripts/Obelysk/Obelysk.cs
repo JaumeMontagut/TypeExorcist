@@ -41,6 +41,5 @@ public class Obelysk : MonoBehaviour {
     public void RestartLevel()
     {
         SceneManager.LoadScene("Game");
-
     }
 }

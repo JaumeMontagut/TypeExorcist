@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     //Player components
     private Animator anim = null;
     private Rigidbody2D rb = null;
+    private AudioSource audioSrc = null;
 
     //Move to enemy
     public float moveSpeed;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        audioSrc = GetComponent<AudioSource>();
 
         trgPos = new List<Vector2>();
         enemyManger = FindObjectOfType<EnemyManager>();
@@ -152,9 +154,17 @@ public class PlayerController : MonoBehaviour
             {
                 scoreManager.Combo++;
                 anim.SetTrigger("attack");
-                trgPos.Add(focusedEnemies[i].transform.position);
                 focusedEnemies[i].StopMoving();
-                focusedEnemies.RemoveAt(i);
+                if (Utilities.DistanceSquared(transform.position, focusedEnemies[i].transform.position) > stopDist)
+                {
+                    trgPos.Add(focusedEnemies[i].transform.position);
+                    focusedEnemies.RemoveAt(i);
+                }
+                else
+                {
+                    audioSrc.Play();
+                    focusedEnemies[i].DestroyEnemy();
+                }
             }
         }
     }
