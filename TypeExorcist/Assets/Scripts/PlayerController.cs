@@ -45,7 +45,33 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
+    {
+        Movement();
+        Input();
+    }
+
+    private void Input()
+    {
+        if (!dead && Time.timeScale != 0)
+        {
+            KeyCode currKey;
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Return))
+            {
+                UnfocusEnemies();
+            }
+
+            for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
+            {
+                if (UnityEngine.Input.GetKeyDown(currKey))
+                {
+                    TypeLetter(currKey.ToString().ToLower()[0]);
+                }
+            }
+        }
+    }
+
+    private void Movement()
     {
         //Stop moving when it reaches the target position
         if (IsMoving() && Utilities.DistanceSquared(transform.position, trgPos[0]) <= stopDist)
@@ -58,26 +84,6 @@ public class PlayerController : MonoBehaviour
         if (!IsMoving() && trgPos.Count > 0)
         {
             MoveToFirstPoint();
-        }
-    }
-
-    private void Update()
-    {
-        if (!dead && Time.timeScale != 0)
-        {
-            KeyCode currKey;
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                UnfocusEnemies();
-            }
-
-            for (currKey = KeyCode.A; currKey < KeyCode.Z + 1; currKey++)
-            {
-                if (Input.GetKeyDown(currKey))
-                {
-                    TypeLetter(currKey.ToString().ToLower()[0]);
-                }
-            }
         }
     }
 

@@ -3,4 +3,16 @@
     <time>0</time>
     <total_time>0</total_time>
   </session>
+  <session date="2018/12/31 12:30:10">
+    <time>102.3565</time>
+    <total_time>179.3332</total_time>
+  </session>
+  <session date="2018/12/31 12:32:58">
+    <time>2.419299</time>
+    <total_time>181.7525</total_time>
+  </session>
+  <session date="2018/12/31 12:35:37">
+    <time>18.73211</time>
+    <total_time>200.4846</total_time>
+  </session>
 </gamedata>
