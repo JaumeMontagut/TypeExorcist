@@ -1,6 +1,0 @@
----- Session: 1  Date: 2018/12/31 13:17:37 -----------------------
-Time:        10.34993
-Total Time:  10.34993
-Mistakes:    1
-Correct:     11
-Accuracy:    91%
