@@ -75,6 +75,12 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
+        //Update the vector
+        if (trgPos.Count > 0)
+        {
+            MoveToFirstPoint();
+        }
+
         //Stop moving when it reaches the target position
         if (IsMoving() && Utilities.DistanceSquared(transform.position, trgPos[0]) <= stopDist)
         {
@@ -87,6 +93,7 @@ public class PlayerController : MonoBehaviour
         {
             MoveToFirstPoint();
         }
+
     }
 
     private void FocusEnemy(List<Enemy> enemiesToFocus)

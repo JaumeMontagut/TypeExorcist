@@ -1,0 +1,12 @@
+---- Session: 1  Date: 2018/12/31 15:14:19 -----------------------
+Time:        0
+Total Time:  0
+Mistakes:    21
+Correct:     141
+Accuracy:    87%
+---- Session: 2  Date: 2018/12/31 15:23:02 -----------------------
+Time:        0
+Total Time:  0
+Mistakes:    59
+Correct:     456
+Accuracy:    88%
