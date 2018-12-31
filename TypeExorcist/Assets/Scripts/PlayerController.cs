@@ -219,7 +219,7 @@ public class PlayerController : MonoBehaviour
         {
             if (focusedEnemies[i] == enemyToDestroy)
             {
-                focusedEnemies[i].CompleteNextLetter();
+                focusedEnemies.RemoveAt(i);
             }
         }
     }
