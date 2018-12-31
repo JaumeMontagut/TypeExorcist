@@ -38,7 +38,7 @@ AudioSource next_wave = null;
     [Header("Spawn Rate Logic")]
 
     private uint defaultEnemiesPerRound = 10;
-    private uint enemiesAddedPerRound = 4;
+    private uint enemiesAddedPerRound = 6;
     private float smallEnemyBaseRate = 50;
     private float mediumEnemyBaseRate = 30;
     private float bigEnemyBaseRate = 20;
@@ -143,14 +143,14 @@ AudioSource next_wave = null;
 
 
         //Don't make negative time (but yes impossible to win)
-        if (roundSpawnRates.spawnTimeSmall < 0.01f)
-            roundSpawnRates.spawnTimeSmall = 0.01f;
+        if (roundSpawnRates.spawnTimeSmall < 1.0F)
+            roundSpawnRates.spawnTimeSmall = 1.0F;
 
-        if (roundSpawnRates.spawnTimeMedium < 0.01f)
-            roundSpawnRates.spawnTimeMedium = 0.01f;
+        if (roundSpawnRates.spawnTimeMedium < 1.0F)
+            roundSpawnRates.spawnTimeMedium = 1.0F;
 
-        if (roundSpawnRates.spawnTimeBig < 0.01f)
-            roundSpawnRates.spawnTimeBig = 0.01f;
+        if (roundSpawnRates.spawnTimeBig < 1.0F)
+            roundSpawnRates.spawnTimeBig = 1.0F;
 
         next_wave.Play();
     }
